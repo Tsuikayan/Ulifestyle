@@ -1,0 +1,34 @@
+{% extends "admin_ver/base.html" %}
+
+{% block content %}
+<body>
+<div class="container">
+    <div class="custom-file">
+        <div class="form-group"><label for="title"></label><textarea class="form-control" placeholder="Title" name="title" required></textarea></div>
+        <div class="form-group"><label for="subject"></label><textarea class="form-control" placeholder="Subject" name="subject" required></textarea></div>
+        <input type="file" class="custom-file-input" id="customFile">
+        Browse your video here!<label class="custom-file-label" for="customFile"></label>
+    </div>
+</div>
+</body>
+{% endblock %}
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
