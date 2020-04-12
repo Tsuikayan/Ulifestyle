@@ -1,7 +1,7 @@
-{% extends "admin_ver/base.html" %}
+{% extends "base1.html" %}
 
 {% block content %}
-<html>
+
     <title>會員登記</title>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,48 +11,48 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        <section class="bg-light">
-            <div class="container col-md-5">
-                <div class="shadow p-4 bg-white rounded border bg-white">
-                    <form class="">
+    <section class="bg-light">{# change bg #}
 
-                        <div class="text-center text-muted ">
-                            <h2><strong>註冊成為 U Lifestyle 會員</strong></h2>
-                            {# icon #}
-                            歡迎您! 請完成以下新會員註冊簡易程序：
-                        </div>
-                        <br>
+        <div class="container col-md-5">
+            <div class="shadow p-4 bg-white rounded border bg-white">
+                <form class="">
 
-                        {# email #}
-                        <div class="">
+                    <div class="text-center text-muted ">
+                        <h2><strong>註冊成為 U Lifestyle 會員</strong></h2>
+                        {# icon #}
+                        歡迎您! 請完成以下新會員註冊簡易程序：
+                    </div>
+                    <br>
+
+                    {# email #}
+                    <div class="">
                         <div class="float-right">
                            <label class="font-weight-light small">(作為登入使用)</label>
                         </div>
                            <label class="font-weight-bold small">*必填</label>
-                        </div>
+                    </div>
 
-                        <div class="form-group ">
+                    <div class="form-group ">
                             <label for="email" class="font-weight-bold control-label ">註冊電郵地址*：</label>
                             <div class="bmd-label-floating">
                                 <input type="email" id="email" class="form-control" name= "email">
                             </div>
                         </div>
 
-                        {# name #}
-                        <div class="float-right">
+                    {# name #}
+                    <div class="float-right">
                             <label class="font-weight-light small">(只限20中文字以內)</label>
                         </div>
 
-                        <div class="form-group ">
+                    <div class="form-group ">
                             <label for="name" class="font-weight-bold control-label">會員名稱*：</label>
                             <div class="">
                                 <input type="text" id="name" class="form-control">
                             </div>
                         </div>
 
-                        {# gender #}
-                        <div class="form-row ">
+                    {# gender #}
+                    <div class="form-row ">
                             <label class="font-weight-bold control-label">性別*：</label>
                             <div class="float-right">
                                 <input class="btn " type="radio" name="gender" id="gender" value="M" checked="checked">男</button>
@@ -60,17 +60,17 @@
                             </div>
                         </div>
 
-                        {# phoneNo #}
-                        <div class="form-group ">
+                    {# phoneNo #}
+                    <div class="form-group ">
                             <label for="phoneNumber" class="font-weight-bold control-label">聯絡電話：</label>
                             <div class="">
                                 <input type="phoneNumber" name="phoneNumber" id="phoneNumber" class="form-control">
                             </div>
                         </div>
 
-                        {# birthDate #}
-                        <label for="birthDate" class="font-weight-bold">出生日期*：</label>
-                        <div class="form-row">
+                    {# birthDate #}
+                    <label for="birthDate" class="font-weight-bold">出生日期*：</label>
+                    <div class="form-row">
                             <div class="form-group col">
                                 <select class="form-control" style="text-align:center;text-align-last:center;" id="year" name="year">
                                         <option hidden="true" selected="true" value disabled="disabled">年份</option>
@@ -232,8 +232,8 @@
                             </div>
                         </div>
 
-                        {# education level #}
-                        <div class="form-group">
+                    {# education level #}
+                    <div class="form-group">
                             <label for="educationLevel" class="font-weight-bold" >教育程度：</label>
                             <select class="form-control" style="text-align:center;text-align-last:center;" id="educationLevel" name="educationLevel">
                                 <option hidden="true" selected="true" value disabled="disabled">請選擇</option>
@@ -246,8 +246,8 @@
                             </select>
                         </div>
 
-                        {# income #}
-                        <div class="form-group">
+                    {# income #}
+                    <div class="form-group">
                             <label for="income" class="font-weight-bold">每月收入：</label>
                             <select class="form-control" style="text-align:center;text-align-last:center;" id="income" name="income">
                                 <option hidden="true" selected="true" value disabled="disabled">請選擇</option>
@@ -261,8 +261,8 @@
                             </select>
                         </div>
 
-                        {# password #}
-                        <div class="form-group ">
+                    {# password #}
+                    <div class="form-group ">
                              <div class="float-right">
                                 <label class="font-weight-light small">(請用6至10個字元，無空格及區分大小寫)</label>
                              </div>
@@ -272,15 +272,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group ">
+                    <div class="form-group ">
                             <label for="password" class="font-weight-bold control-label">再輸入密碼*：</label>
                             <div class="">
                                 <input type="password" id="password" class="form-control">
                             </div>
                         </div>
 
-                        {# 推廣資訊 #}
-                        <div class="form-group">
+                    {# 推廣資訊 #}
+                    <div class="form-group">
                              <div class="">
                                  <label class="font-weight-bold text-muted checkbox-inline">
                                      <input type="checkbox" checked="checked">本人同意收取香港經濟日報集團所發出的推廣資訊
@@ -288,17 +288,15 @@
                             </div>
                         </div>
 
-                        {# 私隱政策與使用條款 #}
-                        <div class="form-group">
+                    {# 私隱政策與使用條款 #}
+                    <div class="form-group">
                             <span class="font-weight-bold text-muted help-block">按下「註冊」代表本人已詳細閱讀及同意本網站的<a href="/about_us">私隱政策與使用條款</a></span>
                         </div>
-                        <br>
-                        <button type="submit" class="btn btn-block btn-dark">註冊</button>
-                    </form>
-                </div>
+                    <br>
+                    <button type="submit" class="btn btn-block btn-dark">註冊</button>
+                </form>
             </div>
+        </div>
+    </section>
 
-        </section>
-    </body>
-</html>
 {% endblock %}
