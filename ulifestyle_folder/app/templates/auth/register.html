@@ -16,13 +16,13 @@
 
                     <div class="text-center text-muted ">
                         <h2><strong>註冊成為 U Lifestyle 會員</strong></h2>
-                        {# icon https://member.ulifestyle.com.hk/images/v2/btn_upload.png #}
+                        {# icon #}
                         <div class="image-upload">
                             <label for="file-input">
-                                <img id="blah" style="max-width: 124px;max-height: 124px"  src="https://member.ulifestyle.com.hk/images/v2/ul_upload_profilepic.png">
+                                <img id="image" style="max-width: 124px;max-height: 124px"  src="https://member.ulifestyle.com.hk/images/v2/ul_upload_profilepic.png">
                             </label>
 
-                            <input id="file-input" type="file" style="display: none;" onchange="readURL(this)">
+                            <input id="file-input" type="file" style="display: none;" onchange="readURL(this)" accept=".gif,.jpeg,.jpg,.png">
                         </div>
                         <p>歡迎您! 請完成以下新會員註冊簡易程序：</p>
                     </div>
@@ -415,7 +415,7 @@
                     var reader = new FileReader();
 
                     reader.onload = function (e) {
-                        $('#blah')
+                        $('#image')
                             .attr('src', e.target.result);
                     };
 
