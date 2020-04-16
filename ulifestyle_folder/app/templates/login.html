@@ -1,0 +1,115 @@
+{% extends "base1.html" %}
+
+{% block content %}
+    <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+
+        <section>
+            <div class="container st">
+                <div class="shadow p-4 bg-white rounded border bg-white">
+
+                    {# login form #}
+                    <form name="loginForm" onsubmit="return validateForm()" method="post">
+
+                        <div class="text-center text-muted " >
+
+                            <h4><strong>U Lifestyle 會員登入</strong></h4>
+                            <img src="https://login.ulifestyle.com.hk/cas/images/ul_login_logo.png">
+                            <p style="font-size: 18px;" class="font-weight-bold">立即登記成為 U Lifestyle 會員，盡享獨家優惠及活動！</p>
+                            <hr>
+                        </div>
+
+                        <p class="text-center text-muted" style="font-size: 18px;">或使用U Lifestyle帳戶登入</p>
+
+                        {# email #}
+                        <label for="email" class="font-weight-bold control-label">用戶名：</label>
+                        <div class="bmd-label-floating">
+                            <input type="text" id="email" class="form-control" name= "email">
+                        </div>
+                        <p id="error_e" class="text-danger font-weight-bold"></p>
+
+                        {# password #}
+                        <label for="password" class="font-weight-bold control-label">密碼：</label>
+                        <input type="password" id="password" class="form-control" name="password">
+                        <p id="error_p" class="text-danger font-weight-bold"></p>
+
+                        {# keep login #}
+                        <p class="font-weight-bold text-muted"><input type="checkbox" name="keeplogin">保持登入</p><br>
+
+                        {# login button #}
+                        <button type="submit" class="btn btn-block btn-dark text-center">登入</button>
+                        <br>
+
+                        {# link #}
+                        <div class="text-center text-muted">
+                            <p>
+                                <a href="/forgetpassword" class="font-weight-light text-muted">忘記密碼?</a><br>
+                                <a href="/resendactivation" class="font-weight-light text-muted">重發註冊確認電郵</a><br>
+                                <a href="/register" class="font-weight-bold text-muted">登記成為 U Lifestyle 會員</a><br>
+                            </p>
+                            一經登記或登入，即表示閣下已詳細閱讀並且同意 U Lifestyle 網站<br>
+                            <a href="/about_us" class="font-weight-light text-muted">私隱政策與使用條款。</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+        <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+                }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;
+            }
+            }
+        </style>
+        <script>
+            function email(){
+                var text;
+                var e = document.forms["loginForm"]["email"].value;
+                var c = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+                if (e == "") {
+                    text = "請輸入電郵地址";
+                    document.getElementById("error_e").innerHTML = text;
+                    return false;
+                } else if(c.test(e) == false){
+                    text = "請輸入正確電郵格式";
+                    document.getElementById("error_e").innerHTML = text;
+                    return false;
+                } else {
+                    text = "";
+                    document.getElementById("error_e").innerHTML = text;
+                }
+            }
+
+            function password(){
+                var text;
+                var p = document.forms["loginForm"]["password"].value;
+                if (p == "") {
+                    text = "請輸入密碼";
+                    document.getElementById("error_p").innerHTML = text;
+                    return false;
+                } else if (p.length <6 || p.length >10) {
+                    text = "請輸入最少6個字元為密碼";
+                    document.getElementById("error_p").innerHTML = text;
+                    return false;
+                } else {
+                    text = "";
+                    document.getElementById("error_p").innerHTML = text;
+                }
+            }
+
+            function validateForm(){
+                if (email() || password() == false){
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+{% endblock %}

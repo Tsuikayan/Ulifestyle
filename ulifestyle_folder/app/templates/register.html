@@ -1,17 +1,13 @@
 {% extends "base1.html" %}
 
 {% block content %}
-    <head>
-        <title>會員登記</title>
-    </head>
-
     <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
     background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
 
     <section >
 
-        <div class="container col-xl-5 col-lg-5 col-md-12 col-sm-12">
-            <div class="shadow p-4 bg-white rounded border bg-white" style="width: 500px;margin:120px auto 50px auto;">
+        <div class="container st">
+            <div class="shadow p-4 bg-white rounded border bg-white">
                 <form name="registerForm" onsubmit="return validateForm()" method="post">
 
                     <div class="text-center text-muted ">
@@ -50,9 +46,7 @@
 
                     <div class="form-group ">
                         <label for="name" class="font-weight-bold control-label">會員名稱*：</label>
-                        <div class="">
-                            <input type="text" id="name" class="form-control">
-                        </div>
+                        <input type="text" id="name" class="form-control" name="name">
                         <p id="error_n" class="text-danger font-weight-bold"></p>
                     </div>
 
@@ -68,9 +62,7 @@
                     {# phoneNo #}
                     <div class="form-group ">
                         <label for="phoneNumber" class="font-weight-bold control-label">聯絡電話：</label>
-                        <div class="">
-                            <input type="phoneNumber" name="phoneNumber" id="phoneNumber" class="form-control">
-                        </div>
+                        <input type="phoneNumber" name="phoneNumber" id="phoneNumber" class="form-control">
                     </div>
 
 
@@ -274,27 +266,21 @@
                             <label class="font-weight-light small">(請用6至10個字元，無空格及區分大小寫)</label>
                         </div>
                         <label for="password" class="font-weight-bold control-label">設定密碼*：</label>
-                        <div class="">
-                            <input type="password" id="password" class="form-control">
-                        </div>
+                        <input type="password" id="password" class="form-control" name="password">
                         <p id="error_p" class="text-danger font-weight-bold"></p>
                     </div>
 
                     <div class="form-group ">
-                        <label for="password" class="font-weight-bold control-label">再輸入密碼*：</label>
-                        <div class="">
-                            <input type="password" id="password2" class="form-control">
-                        </div>
+                        <label for="password2" class="font-weight-bold control-label">再輸入密碼*：</label>
+                        <input type="password" id="password2" class="form-control">
                         <p id="error_p2" class="text-danger font-weight-bold"></p>
                     </div>
 
                     {# 推廣資訊 #}
                     <div class="form-group">
-                        <div class="">
-                            <label class="font-weight-bold text-muted checkbox-inline">
-                                <input type="checkbox" checked="checked">本人同意收取香港經濟日報集團所發出的推廣資訊
-                            </label>
-                        </div>
+                        <label class="font-weight-bold text-muted checkbox-inline">
+                            <input type="checkbox" checked="checked">本人同意收取香港經濟日報集團所發出的推廣資訊
+                        </label>
                     </div>
 
                     {# 私隱政策與使用條款 #}
@@ -306,6 +292,18 @@
                 </form>
             </div>
         </div>
+        <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+                }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;
+            }
+            }
+        </style>
         <script>
 
             {# form check #}
