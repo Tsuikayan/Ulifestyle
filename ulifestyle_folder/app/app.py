@@ -22,8 +22,6 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('index'))
     return render_template('login.html', title="會員登入")
 
 
