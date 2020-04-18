@@ -31,5 +31,10 @@ def logout():
     return redirect(url_for('index'))
 
 
+@app.route('/blog', methods=['GET', 'POST'])
+def blog():
+    return render_template('blog.html', title="博客主頁–U Blog")
+
+
 if __name__ == '__main__':
     app.run()
