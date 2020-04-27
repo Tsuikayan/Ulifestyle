@@ -8,7 +8,9 @@
 
         <div class="container st">
             <div class="shadow p-4 bg-white rounded border bg-white">
-                <form name="registerForm" onsubmit="return validateForm()" method="post">
+                <form name="RegistrationForm" onsubmit="return validateForm()" enctype='multipart/form-data' method="post">
+
+                    {{ form.csrf_token }}
 
                     <div class="text-center text-muted ">
                         <h2><strong>註冊成為 U Lifestyle 會員</strong></h2>
@@ -18,7 +20,7 @@
                                 <img id="image" style="max-width: 124px;max-height: 124px"  src="https://member.ulifestyle.com.hk/images/v2/ul_upload_profilepic.png">
                             </label>
 
-                            <input id="file-input" type="file" style="display: none;" onchange="readURL(this)" accept=".gif,.jpeg,.jpg,.png">
+                            <input id="file-input" type="file" name="icon" style="display: none;" onchange="readURL(this)" accept=".gif,.jpeg,.jpg,.png">
                         </div>
                         <p>歡迎您! 請完成以下新會員註冊簡易程序：</p>
                     </div>
@@ -46,7 +48,7 @@
 
                     <div class="form-group ">
                         <label for="name" class="font-weight-bold control-label">會員名稱*：</label>
-                        <input type="text" id="name" class="form-control" name="name">
+                        <input type="text" id="name" class="form-control" name="username">
                         <p id="error_n" class="text-danger font-weight-bold"></p>
                     </div>
 
@@ -61,8 +63,8 @@
 
                     {# phoneNo #}
                     <div class="form-group ">
-                        <label for="phoneNumber" class="font-weight-bold control-label">聯絡電話：</label>
-                        <input type="phoneNumber" name="phoneNumber" id="phoneNumber" class="form-control">
+                        <label for="phonenumber" class="font-weight-bold control-label">聯絡電話：</label>
+                        <input type="text" name="phonenumber" id="phonenumber" class="form-control">
                     </div>
 
 
@@ -233,8 +235,8 @@
 
                     {# education level #}
                     <div class="form-group">
-                        <label for="educationLevel" class="font-weight-bold" >教育程度：</label>
-                        <select class="form-control" style="text-align:center;text-align-last:center;" id="educationLevel" name="educationLevel">
+                        <label for="educationlevel" class="font-weight-bold" >教育程度：</label>
+                        <select class="form-control" style="text-align:center;text-align-last:center;" id="educationlevel" name="educationlevel">
                             <option hidden="true" selected="true" value disabled="disabled">請選擇</option>
                             <option value="1">中四或以下</option>
                             <option value="2">中五至中七或DSE</option>
@@ -279,7 +281,7 @@
                     {# 推廣資訊 #}
                     <div class="form-group">
                         <label class="font-weight-bold text-muted checkbox-inline">
-                            <input type="checkbox" checked="checked">本人同意收取香港經濟日報集團所發出的推廣資訊
+                            <input type="checkbox" checked="checked" name="getinfo">本人同意收取香港經濟日報集團所發出的推廣資訊
                         </label>
                     </div>
 
@@ -288,7 +290,9 @@
                         <span class="font-weight-bold text-muted help-block">按下「註冊」代表本人已詳細閱讀及同意本網站的<a href="/about_us">私隱政策與使用條款</a></span>
                     </div>
                     <br>
+                    <input type='hidden' name='usergroup' value='user'>
                     <button type="submit" class="btn btn-block btn-dark">註冊</button>
+
                 </form>
             </div>
         </div>
@@ -309,7 +313,7 @@
             {# form check #}
             function email(){
                 var text;
-                var e = document.forms["registerForm"]["email"].value;
+                var e = document.forms["RegistrationForm"]["email"].value;
                 var c = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
                 if (e == "") {
                     text = "請輸入電郵地址";
@@ -327,7 +331,7 @@
 
             function name(){
                 var text;
-                var n = document.forms["registerForm"]["name"].value;
+                var n = document.forms["RegistrationForm"]["name"].value;
                 if (n == "") {
                     text = "請輸入暱稱";
                     document.getElementById("error_n").innerHTML = text;
@@ -344,9 +348,9 @@
 
             function date(){
                 var text;
-                var y = document.forms["registerForm"]["year"].value;
-                var m = document.forms["registerForm"]["month"].value;
-                var d = document.forms["registerForm"]["day"].value;
+                var y = document.forms["RegistrationForm"]["year"].value;
+                var m = document.forms["RegistrationForm"]["month"].value;
+                var d = document.forms["RegistrationForm"]["day"].value;
                 if (y == "") {
                     text = "請選擇出生日期";
                     document.getElementById("error_b").innerHTML = text;
@@ -367,15 +371,18 @@
 
             function password(){
                 var text;
-                var p = document.forms["registerForm"]["password"].value;
+                var p = document.forms["RegistrationForm"]["password"].value;
                 if (p == "") {
                     text = "請輸入密碼";
                     document.getElementById("error_p").innerHTML = text;
                     return false;
-                } else if (p.length <6 || p.length >10) {
+                } else if (p.length <6) {
                     text = "請輸入最少6個字元為密碼";
                     document.getElementById("error_p").innerHTML = text;
                     return false;
+                } else if (p.length >10) {
+                    text = "請輸入最多10個字元為密碼";
+                    document.getElementById("error_p").innerHTML = text;
                 } else {
                     text = "";
                     document.getElementById("error_p").innerHTML = text;
@@ -384,8 +391,8 @@
 
             function password2(){
                 var text;
-                var p = document.forms["registerForm"]["password"].value;
-                var p2 = document.forms["registerForm"]["password2"].value;
+                var p = document.forms["RegistrationForm"]["password"].value;
+                var p2 = document.forms["RegistrationForm"]["password2"].value;
                 if (p2 == "") {
                     text = "請輸入密碼";
                     document.getElementById("error_p2").innerHTML = text;

@@ -9,7 +9,9 @@
                 <div class="shadow p-4 bg-white rounded border bg-white">
 
                     {# login form #}
-                    <form name="loginForm" onsubmit="return validateForm()" method="post">
+                    <form name="loginForm" action="{{ url_for('login') }}" onsubmit="return validateForm()" method="post">
+
+                        {{ form.csrf_token }}
 
                         <div class="text-center text-muted " >
 
@@ -24,7 +26,7 @@
                         {# email #}
                         <label for="email" class="font-weight-bold control-label">用戶名：</label>
                         <div class="bmd-label-floating">
-                            <input type="text" id="email" class="form-control" name= "email">
+                            <input type="text" id="email" class="form-control" name="email">
                         </div>
                         <p id="error_e" class="text-danger font-weight-bold"></p>
 
@@ -45,11 +47,12 @@
                             <p>
                                 <a href="/forgetpassword" class="font-weight-light text-muted">忘記密碼?</a><br>
                                 <a href="/resendactivation" class="font-weight-light text-muted">重發註冊確認電郵</a><br>
-                                <a href="/register" class="font-weight-bold text-muted">登記成為 U Lifestyle 會員</a><br>
+                                <a href="{{ url_for('register') }}" class="font-weight-bold text-muted">登記成為 U Lifestyle 會員</a><br>
                             </p>
                             一經登記或登入，即表示閣下已詳細閱讀並且同意 U Lifestyle 網站<br>
                             <a href="/about_us" class="font-weight-light text-muted">私隱政策與使用條款。</a>
                         </div>
+
                     </form>
 
                 </div>
