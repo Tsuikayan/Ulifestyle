@@ -1,0 +1,59 @@
+{% extends "base1.html" %}
+
+{% block content %}
+    <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+
+        <section>
+            <div class="container st">
+                <div class="shadow p-4 bg-white rounded border bg-white">
+                    <div class="text-center text-muted">
+                        <h4><strong>U Lifestyle 會員登入</strong></h4>
+                        <img src="https://login.ulifestyle.com.hk/cas/images/ul_login_logo.png">
+                        <p style="font-size: 18px;" class="font-weight-bold">立即登記成為 U Lifestyle 會員，盡享獨家優惠及活動！</p>
+                        <hr>
+                    </div>
+                    <p class="text-center text-muted" style="font-size: 18px;">或使用U Lifestyle帳戶登入</p>
+                    <form name="LoginForm" action="{{ url_for('index') }}" method="post">
+
+                        {{ form.hidden_tag() }}
+                        <p>
+                            {{ form.username.label }}<br>
+                            {{ form.username(size=32) }}<br>
+                            {% for error in form.username.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ form.password.label }}<br>
+                            {{ form.password(size=32) }}<br>
+                            {% for error in form.password.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                        <p>{{ form.submit() }}</p>
+                        <p class="text-center text-muted">
+                            <a href="/forgetpassword" class="font-weight-light text-muted">忘記密碼?</a><br>
+                            <a href="/resendactivation" class="font-weight-light text-muted">重發註冊確認電郵</a><br>
+                            <a href="{{ url_for('register_test') }}" class="font-weight-bold text-muted">登記成為 U Lifestyle 會員</a><br>
+                            一經登記或登入，即表示閣下已詳細閱讀並且同意 U Lifestyle 網站<br>
+                            <a href="/about_us" class="font-weight-light text-muted">私隱政策與使用條款。</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+            }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;}
+            }
+        </style>
+    </body>
+{% endblock %}

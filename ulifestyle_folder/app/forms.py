@@ -1,24 +1,15 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, RadioField, SubmitField, HiddenField,\
-    SelectField, FileField
-from wtforms.validators import ValidationError
+from wtforms import *
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
 
 
 class RegistrationForm(FlaskForm):
-    icon = FileField()
-    username = StringField()
-    email = StringField()
-    gender = RadioField()
-    phonenumber = StringField()
-    year = SelectField()
-    month = SelectField()
-    day = SelectField()
-    educationlevel = SelectField()
-    income = SelectField()
-    usergroup = HiddenField(default="user")
-    password = PasswordField()
-    submit = SubmitField()
+    email = StringField('註冊電郵地址*：', validators=[DataRequired(), Email()])
+    username = StringField('會員名稱*：', validators=[DataRequired()])
+    password = PasswordField('設定密碼*：', validators=[DataRequired()])
+    password2 = PasswordField('再輸入密碼*：', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('註冊')
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
@@ -30,13 +21,9 @@ class RegistrationForm(FlaskForm):
         if user is not None:
             raise ValidationError('用戶名稱已被使用')
 
-    def validate_password(self, password):
-        user = User.query.filter_by(password=password.data).first()
-        if user is not None:
-            raise ValidationError('密碼已被使用')
-
 
 class LoginForm(FlaskForm):
-    email = StringField()
-    password = PasswordField()
-    submit = SubmitField()
+    username = StringField('用戶名：', validators=[DataRequired()])
+    password = PasswordField('密碼：', validators=[DataRequired()])
+    remember_me = BooleanField('保持登入')
+    submit = SubmitField('登入')
