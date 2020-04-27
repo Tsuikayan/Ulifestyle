@@ -16,32 +16,32 @@
                 </ol>
             <div class="carousel-inner">
             <div class="carousel-item active">
-
-                <img src="https://hk.ulifestyle.com.hk/cms/images/slider_photo/1220x686/202004/20200406133625-1-20200405014625-0-71500226-2580101015366602-2951650337838071808-n.jpg" class="d-block w-100">
+                {# it should be a function (for admin) 一陣先搞:3 #}
+                <a href="#"><img src="https://hk.ulifestyle.com.hk/cms/images/slider_photo/1220x686/202004/20200406133625-1-20200405014625-0-71500226-2580101015366602-2951650337838071808-n.jpg" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="background: rgba(25, 124, 188, 0.85);">【外賣優惠】香港8大連鎖餐廳外賣優惠 BEANS/牛角/譚仔三哥米線/KFC/PizzaHut</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://travel.ulifestyle.com.hk/cms/theme_photo/20200406115037_3_banner2.png" class="d-block w-100">
+                <a href="#"><img src="https://travel.ulifestyle.com.hk/cms/theme_photo/20200406115037_3_banner2.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="background: rgba(94, 175, 49, 0.85);">脫北者爆4大北韓集中營恐怖內幕 政治犯屍體變人體肥料/吃生老鼠充飢</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://www.ulifestyle.com.hk/store/content/slider/1586314667_286697.jpg" class="d-block w-100">
+                <a href="#"><img src="https://www.ulifestyle.com.hk/store/content/slider/1586314667_286697.jpg" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="background: rgba(234, 100, 43, 0.85);">安坐家中歎鐵板燒肉外賣　鹿兒島A4和牛／日本鮑魚／帶子</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://beauty.ulifestyle.com.hk/cms/images/upload/homeslider/original/20200406190333__d529dced71859700b64831464c1f3c5d.jpg" class="d-block w-100">
+                <a href="#"><img src="https://beauty.ulifestyle.com.hk/cms/images/upload/homeslider/original/20200406190333__d529dced71859700b64831464c1f3c5d.jpg" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="background: rgba(221, 0, 119, 0.85);">乾淨系女生必看！15款春夏「日系輕透感」美甲提案！</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://www.ulifestyle.com.hk/store/content/slider/1586314783_664057.jpg" class="d-block w-100">
+                <a href="#"><img src="https://www.ulifestyle.com.hk/store/content/slider/1586314783_664057.jpg" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="background: rgba(218, 139, 98, 0.85);">飯後快煮最啱！自製足料紫薯椰汁西米露</h5>
                 </div>
@@ -66,10 +66,10 @@
 
                             <div class="section video">
                         <div class="title-video">
-                                <a href="/video" target="_blank">
+                                <a href="{{url_for('video')}}" target="_blank">
                                     <img src="https://www.ulifestyle.com.hk/res/images/v2/UL-video-title.svg" title="影片頻道">
                                 </a>
-                                <a class="more" href="/video" target="_blank">更多 &gt;</a>
+                                <a class="more" href="{{url_for('video')}}" target="_blank">更多 &gt;</a>
                         </div>
                     </div>
                         <div class ="vline"></div>
@@ -122,10 +122,10 @@
 
                             <div class="section hk">
                         <div class="title-hk">
-                                <a href="/hk" target="_blank">
+                                <a href="{{url_for('hk')}}" target="_blank">
                                     <img src="https://www.ulifestyle.com.hk/res/images/v2/uhk_logo_2.png" title="HK港生活">
                                 </a>
-                                <a class="more" href="/hk" target="_blank">更多 &gt;</a>
+                                <a class="more" href="{{url_for('hk')}}" target="_blank">更多 &gt;</a>
                         </div>
                     </div>
                         <div class ="hline"></div>
@@ -177,10 +177,10 @@
 
                             <div class="section travel">
                         <div class="title-travel">
-                                <a href="/travel" target="_blank">
+                                <a href="{{url_for('travel')}}" target="_blank">
                                     <img src="https://www.ulifestyle.com.hk/res/images/v2/ut_logo.png" title="Travel旅遊">
                                 </a>
-                                <a class="more" href="/travel" target="_blank">更多 ></a>
+                                <a class="more" href="{{url_for('travel')}}" target="_blank">更多 ></a>
                                 <a class="aboutus" href="http://travel.ulifestyle.com.hk/AboutUs.php" target="_blank">全港瀏覽人數No.1旅遊資訊內容網站</a>
                         </div>
                     </div>
@@ -233,10 +233,10 @@
 
                             <div class="section food">
                         <div class="title-food">
-                                <a href="/food" target="_blank">
+                                <a href="{{url_for('food')}}" target="_blank">
                                     <img src="https://www.ulifestyle.com.hk/res/images/v2/uf_logo.png" title="Food美食">
                                 </a>
-                                <a class="more" href="/food" target="_blank">更多 &gt;</a>
+                                <a class="more" href="{{url_for('food')}}" target="_blank">更多 &gt;</a>
                         </div>
                     </div>
                         <div class ="fline"></div>
@@ -288,10 +288,10 @@
 
                             <div class="section beauty">
                         <div class="title-beauty">
-                                <a href="/beauty" target="_blank">
+                                <a href="{{url_for('beauty')}}" target="_blank">
                                     <img src="https://www.ulifestyle.com.hk/res/images/v2/ub_logo.png" title="Beauty美容">
                                 </a>
-                                <a class="more" href="/beauty" target="_blank">更多 &gt;</a>
+                                <a class="more" href="{{url_for('beauty')}}" target="_blank">更多 &gt;</a>
                         </div>
                     </div>
                         <div class ="bline"></div>
@@ -346,8 +346,7 @@
 
                                 <div class="section tag">
                             <div class="title-tag">
-                                    <a href="/tag" target="_blank">
-                                        <img src="https://www.ulifestyle.com.hk/res/images/v2/section-icon-05.png" title="熱門標籤">
+                                    <a><img src="https://www.ulifestyle.com.hk/res/images/v2/section-icon-05.png" title="熱門標籤">
                                     </a><span>熱門標籤</span><div class ="tagline"></div>
                             </div>
                         </div>
@@ -408,8 +407,403 @@
                                     </ul>
                                 </div>
                 </div>
-            </div>
 
+
+
+
+                                <div class="section rank">
+                            <div class="title-rank">
+                                    <a><img src="https://www.ulifestyle.com.hk/res/images/v2/rank_logo.png" style="margin: 5.9em auto 0em;"></a>
+                            </div>
+                                    <div class ="rankline"></div>
+                        </div>
+
+                <div id="ranking_tab" class="tab-content">
+                    <div>
+                        <div class="card">
+                            <ul class="nav nav-tabs1">
+                                <li class="active"><a data-toggle="tab" href="#rank-tab-01" style="color: #0076B7; position: relative; left: 20px;">HK</a></li>
+                                <li><a data-toggle="tab" href="#rank-tab-02" style="color: #5EAF31;">Travel</a></li>
+                                <li><a data-toggle="tab" href="#rank-tab-03" style="color: #EA642B;">Food</a></li>
+                                <li><a data-toggle="tab" href="#rank-tab-04" style="color: #DD0077;">Beauty</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="rank-tab-01" class="tab-pane fade active in">
+                                    <div class="col-xs-12" style="border-bottom: 3px solid #0076B7;">
+                                        <div class="col-xs-3"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow.png" style="height: 10px; width: 16px; display: block; margin-left: 23px;"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                    </div>
+                                    <div class="ranking_tab_content" style="display: block;">
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_hk">1</div>
+                                            <div class="ranking_title">
+                                                <a href="https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50">
+                                                【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_hk">2</div>
+                                            <div class="ranking_title">
+                                                <a href="https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50">
+                                                【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_hk">3</div>
+                                            <div class="ranking_title">
+                                                <a href="https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50">
+                                                【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_hk">4</div>
+                                            <div class="ranking_title">
+                                                <a href="https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50">
+                                                【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_hk">5</div>
+                                            <div class="ranking_title">
+                                                <a href="https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50">
+                                                【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="rank-tab-02" class="tab-pane fade">
+                                    <div class="col-xs-12" style="border-bottom: 3px solid #5EAF31;">
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_ut.png" style="height: 10px; width: 16px; display: block; margin-left: 90px;"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                    </div>
+                                    <div class="ranking_tab_content">
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ut">1</div>
+                                            <div class="ranking_title">
+                                                <a href="https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客">
+                                                馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ut">2</div>
+                                            <div class="ranking_title">
+                                                <a href="https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客">
+                                                馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ut">3</div>
+                                            <div class="ranking_title">
+                                                <a href="https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客">
+                                                馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ut">4</div>
+                                            <div class="ranking_title">
+                                                <a href="https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客">
+                                                馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ut">5</div>
+                                            <div class="ranking_title">
+                                                <a href="https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客">
+                                                馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="rank-tab-03" class="tab-pane fade">
+                                    <div class="col-xs-12" style="border-bottom: 3px solid #EA642B;">
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_uf.png" style="height: 10px; width: 16px; display: block; margin-left: 160px;"></div>
+                                        <div class="col-xs-3"></div>
+                                    </div>
+                                    <div class="ranking_tab_content">
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_uf">1</div>
+                                            <div class="ranking_title">
+                                                <a href="https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事">
+                                                【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_uf">2</div>
+                                            <div class="ranking_title">
+                                                <a href="https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事">
+                                                【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_uf">3</div>
+                                            <div class="ranking_title">
+                                                <a href="https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事">
+                                                【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_uf">4</div>
+                                            <div class="ranking_title">
+                                                <a href="https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事">
+                                                【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_uf">5</div>
+                                            <div class="ranking_title">
+                                                <a href="https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事">
+                                                【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="rank-tab-04" class="tab-pane fade">
+                                    <div class="col-xs-12" style="border-bottom: 3px solid #DD0077;">
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"></div>
+                                        <div class="col-xs-3"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_ub.png" style="height: 10px; width: 16px; display: block; margin-left: 245px;"></div>
+                                    </div>
+                                    <div class="ranking_tab_content">
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ub">1</div>
+                                            <div class="ranking_title">
+                                                <a href="https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地">
+                                                【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ub">2</div>
+                                            <div class="ranking_title">
+                                                <a href="https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地">
+                                                【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ub">3</div>
+                                            <div class="ranking_title">
+                                                <a href="https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地">
+                                                【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ub">4</div>
+                                            <div class="ranking_title">
+                                                <a href="https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地">
+                                                【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！</a>
+                                            </div>
+                                        </div>
+                                        <div class="ranking_row">
+                                            <div class="ranking_number_ub">5</div>
+                                            <div class="ranking_title">
+                                                <a href="https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地">
+                                                【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                                <div class="section blog">
+                            <div class="title-blog">
+                                    <a><img src="https://www.ulifestyle.com.hk/res/images/v2/ublog_logo.png" style="margin: 5.6em auto 0em;">
+                                    </a><div class ="blogline"></div>
+                            </div>
+                                </div>
+
+                <div id="ublog_tab" class="tab-content">
+                    <div>
+                        <div class="card">
+                            <ul id="ublog" class="nav nav-tabs2">
+                                <li class="active"><a data-toggle="tab" href="#ublog-tab-01" style="color: #0076B7;">推薦博客</a></li>
+                                <li><a data-toggle="tab" href="#ublog-tab-02" style="color: #0076B7;">會員博客</a></li>
+                                <li><a data-toggle="tab" href="#ublog-tab-03" style="color: #0076B7;">最新回應</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="ublog-tab-01" class="tab-pane fade active in">
+                                    <div class="col-xs-12">
+                                        <div class="ranking_arrow col-xs-4"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_ublog.png" style="height: 10px; width: 16px; display: block; margin-left: 45px;"></div>
+                                        <div class="col-xs-4"></div>
+                                        <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="ubling" style="border-bottom: 3px solid #DE9464;"></div>
+                                    <div class="ublog_tab_content">
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/"><img src="https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=71288">【中部北陸】從名古屋出發玩日本中部 利用</a></div>
+                                                <div class="blogger">沙米旅行手帖 Somewhere Journ</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/"><img src="https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=71288">【中部北陸】從名古屋出發玩日本中部 利用</a></div>
+                                                <div class="blogger">沙米旅行手帖 Somewhere Journ</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/"><img src="https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=71288">【中部北陸】從名古屋出發玩日本中部 利用</a></div>
+                                                <div class="blogger">沙米旅行手帖 Somewhere Journ</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/"><img src="https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=71288">【中部北陸】從名古屋出發玩日本中部 利用</a></div>
+                                                <div class="blogger">沙米旅行手帖 Somewhere Journ</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/"><img src="https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=71288">【中部北陸】從名古屋出發玩日本中部 利用</a></div>
+                                                <div class="blogger">沙米旅行手帖 Somewhere Journ</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div id="ublog-tab-02" class="tab-pane fade">
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-4"></div>
+                                        <div class="ranking_arrow col-xs-4"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_ublog.png" style="height: 10px; width: 16px; display: block; margin-left: 145px;"></div>
+                                        <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="ubling" style="border-bottom: 3px solid #DE9464;"></div>
+                                    <div class="ublog_tab_content">
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147">日本北海道遊記 攻略 輕旅遊 小樽 三角</a></div>
+                                                <div class="blogger">林公子生活遊記</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147">日本北海道遊記 攻略 輕旅遊 小樽 三角</a></div>
+                                                <div class="blogger">林公子生活遊記</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147">日本北海道遊記 攻略 輕旅遊 小樽 三角</a></div>
+                                                <div class="blogger">林公子生活遊記</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147">日本北海道遊記 攻略 輕旅遊 小樽 三角</a></div>
+                                                <div class="blogger">林公子生活遊記</div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="blog_title"><a href="https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147">日本北海道遊記 攻略 輕旅遊 小樽 三角</a></div>
+                                                <div class="blogger">林公子生活遊記</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="ublog-tab-03" class="tab-pane fad">
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-4"></div>
+                                        <div class="col-xs-4"></div>
+                                        <div class="ranking_arrow col-xs-4"><img src="https://www.ulifestyle.com.hk/res/images/v2/arrow_ublog.png" style="height: 10px; width: 16px; display: block; margin-left: 240px;"></div>
+                                    </div>
+                                    <div class="ubling" style="border-bottom: 3px solid #DE9464;"></div>
+                                    <div class="ublog_tab_content">
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/9/190756/1571550456-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="comment"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661">S O L D 。 O U T</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/9/190756/1571550456-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="comment"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661">S O L D 。 O U T</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/9/190756/1571550456-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="comment"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661">S O L D 。 O U T</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/9/190756/1571550456-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="comment"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661">S O L D 。 O U T</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="ublog_row">
+                                            <div class="ublog_icon"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661"><img src="https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/9/190756/1571550456-bpfull.jpg"></a></div>
+                                            <div class="ublog_title">
+                                                <div class="comment"><a href="https://blog.ulifestyle.com.hk/blogger/madeline/?p=3946883/#comment-1092661">S O L D 。 O U T</a></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="copyright_link">
+                    <div class="copyright_link_wrapper">
+                        <div class="copyright_link_div_first"><a href="https://www.ulifestyle.com.hk/aboutus">關於我們</a></div>
+                        <div class="copyright_link_div_r"><a href="https://www.ulifestyle.com.hk/careers">招聘人才</a></div>
+                        <div class="copyright_link_div_r"><a href="https://www.ulifestyle.com.hk/res/app/index.html">應用程式</a></div>
+                    </div>
+                    <div class="copyright_index">香港經濟日報版權所有@2020</div>
+                </div>
+
+
+
+        </div>
     </div>
 </div>
 
@@ -581,7 +975,6 @@
 
     .title-tag {
         margin: 1.1em auto 0em;
-        float: left;
         font-size: 28px;
         font-weight: 700;
         color: #353535;
@@ -590,7 +983,6 @@
         border-bottom: 4px solid #dc3545;
         margin: 0.5em auto 0.5em;
     }
-
     .tag-list li a{
         color: #757575;
     }
@@ -611,7 +1003,188 @@
         padding: 0;
     }
 
+
+    .rankline{
+        border-bottom: 4px solid #000000;
+        margin: 0.5em auto 0.5em;
+    }
+    #ranking_tab{
+        margin-top: 12px;
+    }
+    .nav {
+        padding-left: unset;
+    }
+    .nav-tabs1 >li {
+        float: left;
+        width: 25%;
+        margin-bottom: 1px;
+    }
+    .ranking_tab .nav >li > a{
+        padding-top: 10px;
+        padding-bottom: 2px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .ranking_row{
+        border-bottom: 1px solid #D8D8D8;
+        width: 100%;
+        height: 65px;
+        display: table;
+        padding: 0px 10px 0 5px;
+    }
+    .ranking_number_hk{
+        font-size: 25px;
+        font-weight: bold;
+        color: #0076B7;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 0px !important;
+        width: 22%;
+        text-align: center;
+    }
+    .ranking_number_ut{
+        font-size: 25px;
+        font-weight: bold;
+        color: #5EAF31;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 0px !important;
+        width: 22%;
+        text-align: center;
+    }
+    .ranking_number_uf{
+        font-size: 25px;
+        font-weight: bold;
+        color: #EA642B;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 0px !important;
+        width: 22%;
+        text-align: center;
+    }
+    .ranking_number_ub{
+        font-size: 25px;
+        font-weight: bold;
+        color: #DD0077;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 0px !important;
+        width: 22%;
+        text-align: center;
+    }
+    .ranking_title{
+        display: table-cell;
+        vertical-align: middle;
+        height: 58px;
+        padding: 10px 0px !important;
+        overflow: hidden;
+        float: none;
+    }
+    .ranking_title > a{
+        color: #757575;
+    }
+    .col-xs-3{
+        width: 25%
+    }
+    .col-xs-12{
+        width: 100%;
+    }
+    .tab-content>.active{
+        display: contents;
+    }
+
+
+
+    .blogline{
+        border-bottom: 4px solid #DE9464;
+        margin: 0.5em auto 0.5em;
+    }
+    #ublog_tab{
+        margin-top: 12px;
+    }
+    .nav-tabs2 >li {
+        float: left;
+        width: 33%;
+        margin-bottom: 1px;
+        position: relative;
+        left: 20px;
+    }
+    .ublog_tab .nav >li > a{
+        padding-top: 10px;
+        padding-bottom: 2px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .ublog_row{
+        border-bottom: 1px solid #D8D8D8;
+        width: 100%;
+        height: 75px;
+        display: table;
+        padding-left: 5px !important;
+        padding-right: 10px !important;
+    }
+    .ublog_icon{
+        width: 28%;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+    .ublog_icon >a>img{
+        display: inline-block;
+        border-radius: 50%;
+        width: 50px;
+        max-width: inherit;
+        height: 50px;
+    }
+    .ublog_title{
+        display: table-cell;
+        vertical-align: middle;
+        height: 70px;
+        padding: 5px 0px !important;
+        overflow: hidden;
+        float: none;
+    }
+    .blog_title>a{
+        color: #757575;
+    }
+    .blogger{
+        color: #DE9464;
+        font-size: 12px;
+    }
+    .comment>a{
+        font-size: 12px;
+        color: #757575;
+    }
+
+
+
+    .copyright_link{
+        margin-top: 100px;
+        padding: 0px 15px;
+        color: #999999;
+        margin-bottom: 20px;
+    }
+    .copyright_link a{
+        color: #999999;
+    }
+    .copyright_link_div_first{
+        display: inline-block;
+    }
+    .copyright_link_div_r{
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .copyright_index{
+        font-size: 12px;
+        display: block;
+    }
+
+
 </style>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
