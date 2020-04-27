@@ -25,7 +25,7 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        return redirect(url_for('login'))
+        return redirect(url_for('register'))
     return render_template('register.html', title="會員登記", form=form)
 
 
@@ -48,5 +48,39 @@ def blog():
     return render_template('blog.html', title="博客主頁–U Blog")
 
 
+
+@app.route('/hk', methods=['GET', 'POST'])
+def hk():
+    return render_template('hk.html', title="HK港生活")
+
+
+@app.route('/travel', methods=['GET', 'POST'])
+def travel():
+    return render_template('travel.html', title="Travel旅遊")
+
+
+@app.route('/food', methods=['GET', 'POST'])
+def food():
+    return render_template('food.html', title="Food美食")
+
+
+@app.route('/beauty', methods=['GET', 'POST'])
+def beauty():
+    return render_template('beauty.html', title="Beauty美容")
+
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    return render_template('download.html', title="download")
+
+
+@app.route('/video', methods=['GET', 'POST'])
+def video():
+    return render_template('video.html', title="影片頻道")
+
+
+@app.route('/sky_post', methods=['GET', 'POST'])
+def sky_post():
+    return render_template('sky_post.html', title="晴報SkyPost")
 if __name__ == '__main__':
     app.run()
