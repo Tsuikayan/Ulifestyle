@@ -2,300 +2,102 @@
 
 {% block content %}
     <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
-    background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
 
-    <section >
+        <section>
 
-        <div class="container st">
-            <div class="shadow p-4 bg-white rounded border bg-white">
-                <form name="RegistrationForm" onsubmit="return validateForm()" enctype='multipart/form-data' method="post">
+            <div class="container st">
+                <div class="shadow p-4 bg-white rounded border bg-white">
+                    <h2 class="text-center text-muted title">註冊成為 U Lifestyle 會員</h2>
+                    <form action="" enctype='multipart/form-data' method="post">
 
-                    {{ form.csrf_token }}
+                        {{ form.hidden_tag() }}
 
-                    <div class="text-center text-muted ">
-                        <h2><strong>註冊成為 U Lifestyle 會員</strong></h2>
-                        {# icon #}
-                        <div class="image-upload">
-                            <label for="file-input">
-                                <img id="image" style="max-width: 124px;max-height: 124px"  src="https://member.ulifestyle.com.hk/images/v2/ul_upload_profilepic.png">
-                            </label>
-
-                            <input id="file-input" type="file" name="icon" style="display: none;" onchange="readURL(this)" accept=".gif,.jpeg,.jpg,.png">
-                        </div>
-                        <p>歡迎您! 請完成以下新會員註冊簡易程序：</p>
-                    </div>
-
-                    {# email #}
-                    <div class="">
+                        <p class="text-center text-muted">歡迎您! 請完成以下新會員註冊簡易程序：</p>
+                        <p>
+                            <div class="float-right">
+                               <label class="font-weight-light small">(作為登入使用)</label>
+                            </div>
+                           <label class="font-weight-bold small">*必填</label><br>
+                            {{ form.email.label(class="font-weight-bold") }}<br>
+                            {{ form.email(size=32, class="form-control") }}
+                            {% for error in form.email.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
                         <div class="float-right">
-                           <label class="font-weight-light small">(作為登入使用)</label>
+                            <label class="font-weight-light small">(只限20中文字以內)</label>
                         </div>
-                           <label class="font-weight-bold small">*必填</label>
-                    </div>
+                        <p>
+                            {{ form.username.label(class="font-weight-bold") }}<br>
+                            {{ form.username(size=32, class="form-control") }}
+                            {% for error in form.username.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>
+                        {{ form.gender.label(class="font-weight-bold") }}<div class="form-row">{{ form.gender() }}</div>
+                        </p>
+                        <p>
+                            {{ form.phoneNumber.label(class="font-weight-bold") }}<br>
+                            {{ form.phoneNumber(size=32, class="form-control") }}
+                        </p>
+                        <label class="font-weight-bold">出生日期*：</label>
+                        <p>
+                            <div class="form-row">
+                                {{ form.year(class="form-control form-group col",style="text-align:center;text-align-last:center;") }}
 
-                    <div class="form-group ">
-                        <label for="email" class="font-weight-bold control-label ">註冊電郵地址*：</label>
-                        <div class="bmd-label-floating">
-                            <input type="text" id="email" class="form-control" name= "email">
-                        </div>
-                        <p id="error_e" class="text-danger font-weight-bold"></p>
-                    </div>
+                                {{ form.month(class="form-control form-group col",style="text-align:center;text-align-last:center;") }}
 
-                    {# name #}
-                    <div class="float-right">
-                        <label class="font-weight-light small">(只限20中文字以內)</label>
-                    </div>
+                                {{ form.day(class="form-control form-group col",style="text-align:center;text-align-last:center;") }}
+                            </div>
+                        {% for error in form.year.errors or form.month.errors or form.day.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                        </p>
 
-                    <div class="form-group ">
-                        <label for="name" class="font-weight-bold control-label">會員名稱*：</label>
-                        <input type="text" id="name" class="form-control" name="username">
-                        <p id="error_n" class="text-danger font-weight-bold"></p>
-                    </div>
-
-                    {# gender #}
-                    <div class="form-row ">
-                        <label class="font-weight-bold control-label">性別*：</label>
-                        <div class="float-right">
-                            <input type="radio" name="gender" id="gender" value="M" checked="checked">男</button>
-                            <input type="radio" name="gender" id="gender" value="F">女</input>
-                        </div>
-                    </div>
-
-                    {# phoneNo #}
-                    <div class="form-group ">
-                        <label for="phonenumber" class="font-weight-bold control-label">聯絡電話：</label>
-                        <input type="text" name="phonenumber" id="phonenumber" class="form-control">
-                    </div>
-
-
-                    {# birthDate #}
-                    <label for="birthDate" class="font-weight-bold">出生日期*：</label>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <select class="form-control" style="text-align:center;text-align-last:center;" id="year" name="year">
-                                        <option hidden="true" selected="true" value disabled="disabled">年份</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2014">2014</option>
-                                        <option value="2013">2013</option>
-                                        <option value="2012">2012</option>
-                                        <option value="2011">2011</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2009">2009</option>
-                                        <option value="2008">2008</option>
-                                        <option value="2007">2007</option>
-                                        <option value="2006">2006</option>
-                                        <option value="2005">2005</option>
-                                        <option value="2004">2004</option>
-                                        <option value="2003">2003</option>
-                                        <option value="2002">2002</option>
-                                        <option value="2001">2001</option>
-                                        <option value="2000">2000</option>
-                                        <option value="1999">1999</option>
-                                        <option value="1998">1998</option>
-                                        <option value="1997">1997</option>
-                                        <option value="1996">1996</option>
-                                        <option value="1995">1995</option>
-                                        <option value="1994">1994</option>
-                                        <option value="1993">1993</option>
-                                        <option value="1992">1992</option>
-                                        <option value="1991">1991</option>
-                                        <option value="1990">1990</option>
-                                        <option value="1989">1989</option>
-                                        <option value="1988">1988</option>
-                                        <option value="1987">1987</option>
-                                        <option value="1986">1986</option>
-                                        <option value="1985">1985</option>
-                                        <option value="1984">1984</option>
-                                        <option value="1983">1983</option>
-                                        <option value="1982">1982</option>
-                                        <option value="1981">1981</option>
-                                        <option value="1980">1980</option>
-                                        <option value="1979">1979</option>
-                                        <option value="1978">1978</option>
-                                        <option value="1977">1977</option>
-                                        <option value="1976">1976</option>
-                                        <option value="1975">1975</option>
-                                        <option value="1974">1974</option>
-                                        <option value="1973">1973</option>
-                                        <option value="1972">1972</option>
-                                        <option value="1971">1971</option>
-                                        <option value="1970">1970</option>
-                                        <option value="1969">1969</option>
-                                        <option value="1968">1968</option>
-                                        <option value="1967">1967</option>
-                                        <option value="1966">1966</option>
-                                        <option value="1965">1965</option>
-                                        <option value="1964">1964</option>
-                                        <option value="1963">1963</option>
-                                        <option value="1962">1962</option>
-                                        <option value="1961">1961</option>
-                                        <option value="1960">1960</option>
-                                        <option value="1959">1959</option>
-                                        <option value="1958">1958</option>
-                                        <option value="1957">1957</option>
-                                        <option value="1956">1956</option>
-                                        <option value="1955">1955</option>
-                                        <option value="1954">1954</option>
-                                        <option value="1953">1953</option>
-                                        <option value="1952">1952</option>
-                                        <option value="1951">1951</option>
-                                        <option value="1950">1950</option>
-                                        <option value="1949">1949</option>
-                                        <option value="1948">1948</option>
-                                        <option value="1947">1947</option>
-                                        <option value="1946">1946</option>
-                                        <option value="1945">1945</option>
-                                        <option value="1944">1944</option>
-                                        <option value="1943">1943</option>
-                                        <option value="1942">1942</option>
-                                        <option value="1941">1941</option>
-                                        <option value="1940">1940</option>
-                                        <option value="1939">1939</option>
-                                        <option value="1938">1938</option>
-                                        <option value="1937">1937</option>
-                                        <option value="1936">1936</option>
-                                        <option value="1935">1935</option>
-                                        <option value="1934">1934</option>
-                                        <option value="1933">1933</option>
-                                        <option value="1932">1932</option>
-                                        <option value="1931">1931</option>
-                                        <option value="1930">1930</option>
-                                        <option value="1929">1929</option>
-                                        <option value="1928">1928</option>
-                                        <option value="1927">1927</option>
-                                        <option value="1926">1926</option>
-                                        <option value="1925">1925</option>
-                                        <option value="1924">1924</option>
-                                        <option value="1923">1923</option>
-                                        <option value="1922">1922</option>
-                                        <option value="1921">1921</option>
-                                        <option value="1920">1920</option>
-                                    </select>
-                        </div>
-                        <div class="form-group col">
-                            <select class="form-control" style="text-align:center;text-align-last:center;" id="month" name="month">
-                                        <option hidden="true" selected="true" value disabled="disabled">月份</option>
-                                        <option value="01">1</option>
-                                        <option value="02">2</option>
-                                        <option value="03">3</option>
-                                        <option value="04">4</option>
-                                        <option value="05">5</option>
-                                        <option value="06">6</option>
-                                        <option value="07">7</option>
-                                        <option value="08">8</option>
-                                        <option value="09">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                        </div>
-                        <div class="form-group col">
-                            <select class="form-control" style="text-align:center;text-align-last:center;" id="day" name="day">
-                                        <option hidden="true" selected="true" value disabled="disabled">日期</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29" id="29">29</option>
-                                        <option value="30" id="30">30</option>
-                                        <option value="31" id="31">31</option>
-                                    </select>
-                        </div>
-                    </div>
-                    <p id="error_b" class="text-danger font-weight-bold"></p>
-
-                    {# education level #}
-                    <div class="form-group">
-                        <label for="educationlevel" class="font-weight-bold" >教育程度：</label>
-                        <select class="form-control" style="text-align:center;text-align-last:center;" id="educationlevel" name="educationlevel">
-                            <option hidden="true" selected="true" value disabled="disabled">請選擇</option>
-                            <option value="1">中四或以下</option>
-                            <option value="2">中五至中七或DSE</option>
-                            <option value="3">文憑或證書課程</option>
-                            <option value="4">高級文憑或副學士</option>
-                            <option value="5">學士</option>
-                            <option value="6">碩士或以上</option>
-                        </select>
-                    </div>
-
-                    {# income #}
-                    <div class="form-group">
-                        <label for="income" class="font-weight-bold">每月收入：</label>
-                        <select class="form-control" style="text-align:center;text-align-last:center;" id="income" name="income">
-                            <option hidden="true" selected="true" value disabled="disabled">請選擇</option>
-                            <option value="1">$10,000 或以下</option>
-                            <option value="2">$10,001 - $20,000</option>
-                            <option value="3">$20,001 - $30,000</option>
-                            <option value="4">$30,001 - $40,000</option>
-                            <option value="5">$40,001 - $50,000</option>
-                            <option value="6">$50,001 - $60,000</option>
-                            <option value="7">$60,001 或以上</option>
-                        </select>
-                    </div>
-
-                    {# password #}
-                    <div class="form-group ">
+                        <p>
+                            {{ form.educationLevel.label(class="font-weight-bold") }}<br>
+                            {{ form.educationLevel(class="form-control",style="text-align:center;text-align-last:center;") }}
+                        </p>
+                        <p>
+                            {{ form.income.label(class="font-weight-bold") }}<br>
+                            {{ form.income(class="form-control",style="text-align:center;text-align-last:center;") }}
+                        </p>
                         <div class="float-right">
                             <label class="font-weight-light small">(請用6至10個字元，無空格及區分大小寫)</label>
                         </div>
-                        <label for="password" class="font-weight-bold control-label">設定密碼*：</label>
-                        <input type="password" id="password" class="form-control" name="password">
-                        <p id="error_p" class="text-danger font-weight-bold"></p>
-                    </div>
+                        <p>
+                            {{ form.password.label(class="font-weight-bold") }}<br>
+                            {{ form.password(size=32, class="form-control") }}
+                            {% for error in form.password.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ form.password2.label(class="font-weight-bold") }}<br>
+                            {{ form.password2(size=32, class="form-control") }}
+                            {% for error in form.password2.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ form.usergroup.label(class="font-weight-bold d-none") }}<br>
+                            {{ form.usergroup(class="form-control d-none",style="text-align:center;text-align-last:center;") }}
+                        </p>
+                        <p>
+                            {{ form.getinfo(size=32) }}{{ form.getinfo.label(class="font-weight-bold text-muted") }}
+                        </p>
+                        <p>
+                            <span class="font-weight-bold text-muted help-block">按下「註冊」代表本人已詳細閱讀及同意本網站的<a href="/about_us">私隱政策與使用條款</a></span>
+                        </p>
+                        <p>{{ form.submit(class="btn btn-block btn-dark") }}</p>
+                    </form>
 
-                    <div class="form-group ">
-                        <label for="password2" class="font-weight-bold control-label">再輸入密碼*：</label>
-                        <input type="password" id="password2" class="form-control">
-                        <p id="error_p2" class="text-danger font-weight-bold"></p>
-                    </div>
 
-                    {# 推廣資訊 #}
-                    <div class="form-group">
-                        <label class="font-weight-bold text-muted checkbox-inline">
-                            <input type="checkbox" checked="checked" name="getinfo">本人同意收取香港經濟日報集團所發出的推廣資訊
-                        </label>
-                    </div>
-
-                    {# 私隱政策與使用條款 #}
-                    <div class="form-group">
-                        <span class="font-weight-bold text-muted help-block">按下「註冊」代表本人已詳細閱讀及同意本網站的<a href="/about_us">私隱政策與使用條款</a></span>
-                    </div>
-                    <br>
-                    <input type='hidden' name='usergroup' value='user'>
-                    <button type="submit" class="btn btn-block btn-dark">註冊</button>
-
-                </form>
+                </div>
             </div>
-        </div>
+        </section>
         <style>
             .st{
                 max-width: 100%;
@@ -308,126 +110,5 @@
             }
             }
         </style>
-        <script>
-
-            {# form check #}
-            function email(){
-                var text;
-                var e = document.forms["RegistrationForm"]["email"].value;
-                var c = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-                if (e == "") {
-                    text = "請輸入電郵地址";
-                    document.getElementById("error_e").innerHTML = text;
-                    return false;
-                } else if(c.test(e) == false){
-                    text = "請輸入正確電郵格式";
-                    document.getElementById("error_e").innerHTML = text;
-                    return false;
-                } else {
-                    text = "";
-                    document.getElementById("error_e").innerHTML = text;
-                }
-            }
-
-            function name(){
-                var text;
-                var n = document.forms["RegistrationForm"]["name"].value;
-                if (n == "") {
-                    text = "請輸入暱稱";
-                    document.getElementById("error_n").innerHTML = text;
-                    return false;
-                } else if (n.length <2 || n.length >20) {
-                    text = "暱稱必須由2至20字組成";
-                    document.getElementById("error_n").innerHTML = text;
-                    return false;
-                } else {
-                    text = "";
-                    document.getElementById("error_n").innerHTML = text;
-                }
-            }
-
-            function date(){
-                var text;
-                var y = document.forms["RegistrationForm"]["year"].value;
-                var m = document.forms["RegistrationForm"]["month"].value;
-                var d = document.forms["RegistrationForm"]["day"].value;
-                if (y == "") {
-                    text = "請選擇出生日期";
-                    document.getElementById("error_b").innerHTML = text;
-                    return false;
-                } else if (m == "") {
-                    text = "請選擇出生日期";
-                    document.getElementById("error_b").innerHTML = text;
-                    return false;
-                } else if (d == "") {
-                    text = "請選擇出生日期";
-                    document.getElementById("error_b").innerHTML = text;
-                    return false;
-                } else {
-                    text = "";
-                    document.getElementById("error_b").innerHTML = text;
-                }
-            }
-
-            function password(){
-                var text;
-                var p = document.forms["RegistrationForm"]["password"].value;
-                if (p == "") {
-                    text = "請輸入密碼";
-                    document.getElementById("error_p").innerHTML = text;
-                    return false;
-                } else if (p.length <6) {
-                    text = "請輸入最少6個字元為密碼";
-                    document.getElementById("error_p").innerHTML = text;
-                    return false;
-                } else if (p.length >10) {
-                    text = "請輸入最多10個字元為密碼";
-                    document.getElementById("error_p").innerHTML = text;
-                } else {
-                    text = "";
-                    document.getElementById("error_p").innerHTML = text;
-                }
-            }
-
-            function password2(){
-                var text;
-                var p = document.forms["RegistrationForm"]["password"].value;
-                var p2 = document.forms["RegistrationForm"]["password2"].value;
-                if (p2 == "") {
-                    text = "請輸入密碼";
-                    document.getElementById("error_p2").innerHTML = text;
-                    return false;
-                } else if (p != p2) {
-                    text = "確認密碼不一致";
-                    document.getElementById("error_p2").innerHTML = text;
-                    return false;
-                } else {
-                    text = "";
-                    document.getElementById("error_p2").innerHTML = text;
-                }
-            }
-
-            function validateForm(){
-                if (email() || name() || date() || password() || password2() == false){
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-
-             function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#image')
-                            .attr('src', e.target.result);
-                    };
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-             }
-        </script>
-    </section>
     </body>
 {% endblock %}
