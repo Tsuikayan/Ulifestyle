@@ -1,0 +1,28 @@
+{% extends "base1.html" %}
+
+{% block content %}
+    <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+        <div class="container st">
+            <div class="shadow p-4 bg-white rounded border bg-white float-center">
+                <p>對不起!</p>
+                <p>你輸入錯誤的網址或尋找的網頁不存在。<br>
+                    請點擊<a href="{{ url_for('index') }}">這裡</a>返回首頁。<br>
+                    如需更多協助，請<a href="/about_us">按此</a>聯絡我們。
+                </p>
+            </div>
+        </div>
+    <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+                }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;
+            }
+            }
+        </style>
+    </body>
+{% endblock %}

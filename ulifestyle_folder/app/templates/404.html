@@ -1,0 +1,25 @@
+{% extends "base1.html" %}
+
+{% block content %}
+    <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+        <div class="container st">
+            <div class="shadow p-4 bg-white rounded border bg-white float-center">
+                <h1>Not Found</h1>
+                <p><a href="{{ url_for('index') }}">回到首頁</a></p>
+            </div>
+        </div>
+    <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+                }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;
+            }
+            }
+        </style>
+    </body>
+{% endblock %}
