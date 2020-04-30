@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="779545dc-30ee-4a93-9bf4-2548b78af41f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,12 +20,13 @@
     <session id="1589479405">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -116,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1003">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -154,7 +154,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1116" />
     <option name="width" value="1152" />
     <option name="height" value="1467" />
@@ -204,7 +204,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ulifestyle_folder" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -309,7 +309,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1519" height="977" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26113775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26525018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,13 +354,14 @@
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin_ver/add_article.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/app.py" />
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/.idea/dataSources.local.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -374,7 +375,7 @@
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
@@ -387,9 +388,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/.idea/dataSources.local.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/blog.html">
       <provider selected="true" editor-type-id="text-editor">
