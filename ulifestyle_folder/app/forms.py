@@ -240,7 +240,7 @@ class Post(FlaskForm):
     body2 = TextAreaField('內容2')
     theme = StringField('主題')
     tag = StringField('標籤')
-    type = SelectField(choices=['video','影片'] or ['article','文章'])
+    type = SelectField(choices=['video', '影片'] or ['article', '文章'])
 
 
 class author(FlaskForm):
