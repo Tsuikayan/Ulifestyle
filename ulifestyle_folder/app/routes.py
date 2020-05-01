@@ -307,7 +307,7 @@ def reset_password(token):
         db.session.commit()
         flash('Your password has been reset.')
         return redirect(url_for('login'))
-    return render_template('reset_password.html', form=form)
+    return render_template('reset_password.html', title="重設密碼", form=form)
 
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
@@ -322,7 +322,7 @@ def reset_password_request():
         flash('Check your email for the instructions to reset your password')
         return redirect(url_for('login'))
     return render_template('reset_password_request.html',
-                           title='Reset Password', form=form)
+                           title='忘記密碼', form=form)
 
 
 @app.route('/logout')
@@ -333,7 +333,7 @@ def logout():
 
 @app.route('/blog', methods=['GET', 'POST'])
 def blog():
-    return render_template('blog.html', title="博客主頁–U Blog")
+    return render_template('blog.html', title="博客主頁")
 
 
 @app.route('/hk', methods=['GET', 'POST'])
