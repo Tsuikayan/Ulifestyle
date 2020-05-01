@@ -1,110 +1,59 @@
-2020-05-01 04:07:35,608 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:07:56,915 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:08:49,657 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:10:35,737 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:10:57,271 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:11:15,761 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:12:12,663 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:20:25,749 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:24:39,478 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:27:42,384 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:30:44,450 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:36:04,638 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:36:31,875 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:36:46,499 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 04:38:04,638 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 14:38:10,064 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 14:38:13,149 ERROR: Exception on / [GET] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 19, in index
-    slides = {
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\index.html", line 1, in top-level template code
-    {% extends "base1.html" %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\base1.html", line 10, in top-level template code
-    {% block navbar %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\base1.html", line 145, in block "navbar"
-    {% block content %}{% endblock %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\index.html", line 20, in block "content"
-    <a href="{{slides.link1}}"><img src="{{slides.img1}}" class="d-block w-100"></a>
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'slides' is undefined
-2020-05-01 14:38:25,344 ERROR: Exception on / [GET] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 19, in index
-    slides = {
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\index.html", line 1, in top-level template code
-    {% extends "base1.html" %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\base1.html", line 10, in top-level template code
-    {% block navbar %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\base1.html", line 145, in block "navbar"
-    {% block content %}{% endblock %}
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\index.html", line 20, in block "content"
-    <a href="{{slides.link1}}"><img src="{{slides.img1}}" class="d-block w-100"></a>
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'slides' is undefined
-2020-05-01 14:42:04,082 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 14:52:37,278 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 14:56:46,784 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 14:59:42,210 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:02:54,542 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:11:09,584 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:11:47,010 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:12:11,975 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:12:18,160 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:13:06,943 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:14:19,776 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:18:27,535 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:18:34,580 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:25:34,526 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:26:21,993 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
-2020-05-01 15:29:55,659 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:31:06,716 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:31:42,841 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:32:24,495 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:33:04,169 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:33:19,263 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:34:06,228 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:37:09,794 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:37:21,396 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:38:02,557 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:41:39,571 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:42:47,525 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:43:23,117 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:44:33,669 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:51:50,625 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:52:41,797 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:53:02,181 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 15:58:39,302 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:03:00,250 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:03:30,889 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:03:44,245 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:04:04,142 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:04:36,391 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:06:01,199 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:07:17,230 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:08:11,935 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:10:09,745 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:10:38,040 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:12:02,969 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:13:48,928 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:16:52,813 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:17:40,144 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:17:57,869 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:18:23,262 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:19:01,969 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:19:41,739 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:22:45,630 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:23:18,302 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:23:40,528 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 16:27:54,485 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:01:03,589 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:13:36,205 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:18:40,959 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:19:08,027 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:22:00,230 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:22:53,655 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:25:52,155 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:30:20,649 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:34:54,416 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:38:59,480 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:39:40,089 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:40:46,128 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:42:55,783 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:46:00,955 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:46:23,746 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:46:36,500 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:49:15,008 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:53:10,393 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:55:44,607 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 17:57:12,369 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
