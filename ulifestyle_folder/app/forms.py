@@ -204,3 +204,17 @@ class LoginForm(FlaskForm):
     password = PasswordField('密碼：', validators=[DataRequired()])
     remember_me = BooleanField('保持登入')
     submit = SubmitField('登入')
+
+
+class Post(FlaskForm):
+    title = StringField('標題')
+    author = StringField('作者')
+    body1 = TextAreaField('內容1')
+    body2 = TextAreaField('內容2')
+    theme = StringField('主題')
+    tag = StringField('標籤')
+    type = SelectField(choices=['video','影片'] or ['article','文章'])
+
+class author(FlaskForm):
+    username = StringField('name')
+    usergroup = SelectField('usergroup', choice=[('author')])
