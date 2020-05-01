@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import *
 from wtforms.fields import html5
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 
 
@@ -204,3 +204,30 @@ class LoginForm(FlaskForm):
     password = PasswordField('密碼：', validators=[DataRequired()])
     remember_me = BooleanField('保持登入')
     submit = SubmitField('登入')
+
+
+class ResetPasswordRequestForm(FlaskForm):
+    email = StringField('電郵地址*：', validators=[DataRequired(message="請輸入電郵地址"), Email(message="請輸入正確電郵格式")])
+    submit = SubmitField('完成')
+
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('密碼：', validators=[DataRequired()])
+    password2 = PasswordField('再輸入密碼：', validators=[DataRequired(),
+                                           EqualTo('password')])
+    submit = SubmitField('重設密碼')
+
+
+class EditProfileForm(FlaskForm):
+    username = StringField('用戶名：', validators=[DataRequired()])
+    submit = SubmitField('完成')
+
+    def __init__(self, original_username, *args, **kwargs):
+        super(EditProfileForm, self).__init__(*args, **kwargs)
+        self.original_username = original_username
+
+    def validate_username(self, username):
+        if username.data != self.original_username:
+            user = User.query.filter_by(username=self.username.data).first()
+            if user is not None:
+                raise ValidationError('Please use a different username.')

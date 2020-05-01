@@ -1,4 +1,7 @@
-2020-04-30 21:32:11,811 ERROR: Exception on /register [POST] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
+2020-04-30 21:42:06,344 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
+2020-05-01 02:43:17,335 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
+2020-05-01 03:05:28,948 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:05:48,335 ERROR: Exception on /reset_password_request [GET] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,122 +15,78 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 39, in register
-    getinfo=form.getinfo.data)
-  File "<string>", line 4, in __init__
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 417, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 414, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 699, in _declarative_constructor
-    (k, cls_.__name__))
-TypeError: 'password' is an invalid keyword argument for User
-2020-04-30 21:32:39,078 ERROR: Exception on /register [POST] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 91, in reset_password_request
+    title='Reset Password', form=form)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 39, in register
-    getinfo=form.getinfo.data)
-  File "<string>", line 4, in __init__
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 417, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 414, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 699, in _declarative_constructor
-    (k, cls_.__name__))
-TypeError: 'password' is an invalid keyword argument for User
-2020-04-30 21:32:39,433 ERROR: Exception on /register [POST] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 39, in register
-    getinfo=form.getinfo.data)
-  File "<string>", line 4, in __init__
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 417, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 414, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 699, in _declarative_constructor
-    (k, cls_.__name__))
-TypeError: 'password' is an invalid keyword argument for User
-2020-04-30 21:33:09,811 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
-2020-04-30 21:33:28,920 ERROR: Exception on /register [POST] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 37, in register
-    getinfo=form.getinfo.data)
-  File "<string>", line 4, in __init__
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 417, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\state.py", line 414, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 699, in _declarative_constructor
-    (k, cls_.__name__))
-TypeError: 'password' is an invalid keyword argument for User
-2020-04-30 21:36:51,294 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
-2020-04-30 21:39:12,925 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
-2020-04-30 21:39:13,984 ERROR: Exception on /login [GET] [in C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 50, in login
-    if form.valisdate_on_submit():
-AttributeError: 'LoginForm' object has no attribute 'valisdate_on_submit'
-2020-04-30 21:40:10,238 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:44]
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html
+2020-05-01 03:06:47,369 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:09:12,845 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:10:22,467 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:11:19,922 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:13:01,438 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:17:36,348 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:18:31,384 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:19:03,809 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:19:39,526 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:20:46,309 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:21:01,143 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:21:14,637 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:21:48,556 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:22:32,958 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:22:48,555 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:23:05,513 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:23:15,019 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:23:36,062 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:24:24,495 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:24:59,591 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:26:36,069 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:28:17,827 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:28:58,825 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:31:19,736 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:31:49,791 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:31:58,095 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:32:20,407 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:34:01,007 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:34:20,747 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:35:25,518 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:35:38,712 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:35:51,158 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:36:12,246 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:37:54,598 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:42:53,578 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:43:38,929 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:44:23,227 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:44:26,373 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:46:45,296 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:47:10,708 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:47:30,758 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:48:03,318 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:48:27,974 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:49:48,976 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:50:37,007 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:50:57,883 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:52:12,603 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:56:56,682 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 03:57:59,901 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 04:04:34,059 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 04:05:10,665 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 04:06:07,104 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 04:06:38,706 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-01 04:06:47,946 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]

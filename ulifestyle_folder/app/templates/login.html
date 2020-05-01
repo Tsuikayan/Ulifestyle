@@ -34,7 +34,7 @@
                         <p>{{ form.remember_me() }} {{ form.remember_me.label(class="font-weight-bold") }}</p>
                         <p>{{ form.submit(class="btn btn-block btn-dark") }}</p>
                         <p class="text-center text-muted">
-                            <a href="/forgetpassword" class="font-weight-light text-muted">忘記密碼?</a><br>
+                            <a href="{{ url_for('reset_password_request') }}" class="font-weight-light text-muted">忘記密碼?</a><br>
                             <a href="/resendactivation" class="font-weight-light text-muted">重發註冊確認電郵</a><br>
                             <a href="{{ url_for('register') }}" class="font-weight-bold text-muted">登記成為 U Lifestyle 會員</a><br>
                             一經登記或登入，即表示閣下已詳細閱讀並且同意 U Lifestyle 網站<br>
