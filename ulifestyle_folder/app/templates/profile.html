@@ -1,5 +1,32 @@
 {% extends "base1.html" %}
 
 {% block content %}
+    <body class="container col-md-6 col-sm-12 bg-light" style="margin-top: 100px;">
+        <table class="table table-striped border border-secondary">
+            <tbody class="text-center">
+                <tr>
+                    <td><div class="border-0 rounded-circle mx-auto d-block" style="width: 200px;"><img src="https://www.ulifestyle.com.hk/res/images/v2/ul_upload_profilepic.png"></div></td>
+                </tr>
+                <tr>
+                    <td><h3>會員名稱：{{ current_user.username }}</h3></td>
+                </tr>
+                <tr>
+                    <td><h3>電郵地址：{{ current_user.email }}</h3></td>
+                </tr>
+                <tr>
+                    <td><h3>聯絡電話：{{ current_user.phoneNumber }}</h3></td>
+                </tr>
+                <tr>
+                    <td><h3>出生日期：{{ current_user.year }}年{{ current_user.month }}月{{ current_user.day }}日</h3></td>
+                </tr>
+                <tr>
+                    <td><h3>教育程度：{{ current_user.educationLevel }}</h3></td>
+                </tr>
+                <tr>
+                    <td><h3>每月收入：{{ current_user.income }}</h3></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
 
 {% endblock %}

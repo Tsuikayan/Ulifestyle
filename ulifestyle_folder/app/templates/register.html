@@ -82,8 +82,7 @@
                             {% endfor %}
                         </p>
                         <p>
-                            {{ form.usergroup.label(class="font-weight-bold d-none") }}<br>
-                            {{ form.usergroup(class="form-control d-none",style="text-align:center;text-align-last:center;") }}
+                            {{ form.usergroup(class="form-control d-none",style="text-align:center;text-align-last:center;", disabled=True) }}
                         </p>
                         <p>
                             {{ form.getinfo(size=32) }}{{ form.getinfo.label(class="font-weight-bold text-muted") }}

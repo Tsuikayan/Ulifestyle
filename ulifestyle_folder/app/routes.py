@@ -234,6 +234,7 @@ def add_post():
 
 
 @app.route('/profile')
+@login_required
 def profile():
     return render_template('profile.html', title="個人檔案")
 

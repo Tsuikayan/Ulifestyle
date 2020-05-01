@@ -178,8 +178,7 @@ class RegistrationForm(FlaskForm):
                                   ('$40,001 - $50,000', '$40,001 - $50,000'),
                                   ('$50,001 - $60,000', '$50,001 - $60,000'),
                                   ('$60,001 或以上', '$60,001 或以上')])
-    usergroup = SelectField('usergroup:',
-                            choices=[('admin', 'admin'),
+    usergroup = SelectField(choices=[('admin', 'admin'),
                                      ('author', 'author'),
                                      ('normalUser', 'normalUser')],
                             default='normalUser')

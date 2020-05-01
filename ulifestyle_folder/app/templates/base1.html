@@ -41,6 +41,13 @@
         </ul>
       </div>
 
+      {% if current_user.usergroup == "admin" %}
+          <a class="nav-link" href="{{url_for('add_post')}}">
+              <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
+              <span id="download-app">新增貼文</span>
+          </a>
+      {% endif %}
+
       <div class="form-inline my-2 my-lg-0">
         <a class="nav-link" href="{{url_for('download')}}">
           <i id="download-icon"></i>
@@ -49,17 +56,12 @@
         <button type="button" data-container="body" data-toggle="popover" data-placement="bottom" style="border: aliceblue; background-color: transparent;">
           <img src="https://www.ulifestyle.com.hk/res/images/v2/user.png" />
         </button>
+
           <div class="popover-content">
               <div class="popover-head" style="text-align: center">
                   U Lifestyle 會員
               </div>
               <div class="popover-body">
-                  {% if current_user.usergroup == "admin" %}
-                      <a class="nav-link" href="{{url_for('add_post')}}">
-                          <i id="download-icon"></i>
-                          <span id="download-app"><img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png"></span>
-                      </a>
-                  {% endif %}
 
                   {% if current_user.is_anonymous %}
                       <div>
