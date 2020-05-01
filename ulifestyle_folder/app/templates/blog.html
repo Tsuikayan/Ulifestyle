@@ -1,4 +1,4 @@
-{% extends "base1.html" %}
+{% extends "base3.html" %}
 
 
 {% block head %}
@@ -9,48 +9,6 @@
 {% block content %}
 <html>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col"><span></span>
-        <table id="ublog-login-table" cellpadding="0" cellspacing="0" border="0" align="right">
-            <tr>
-              <th><a href="{{ url_for('register') }}">新登記</a></th>
-              <th style="padding:0 10px; color:#8a6a3d;">|</th>
-              <th><a href="{{ url_for('login') }}">會員登入</a></th>
-            </tr>
-        </table>
-
-      </div>
-  </div>
-</div>
-{#??#}
-{#  blof nav#}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="blog.html">
-      <img src="https://blog.ulifestyle.com.hk/blogger/wp-content/plugins/decorator/channels/images/ul/logo-ublog.png">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-
-      <li class="nav-item active">
-        <a class="nav-link" href="https://blog.ulifestyle.com.hk/blogger/?s=&memberType=invite">推薦博客 <span class="sr-only">(current)</span></a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="https://blog.ulifestyle.com.hk/blogger/?s=&memberType=member">會員博客</a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="https://blog.ulifestyle.com.hk/blogger/?notification">身邊動向</a>
-      </li>
-
-    </ul>
-  </div>
-</nav>
 
 <div class="container">
 <div id="ublog-content-f-l">
