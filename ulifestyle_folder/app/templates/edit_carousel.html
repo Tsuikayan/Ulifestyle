@@ -1,0 +1,48 @@
+{% extends "base1.html" %}
+
+{% block content %}
+    <body style="background-color: #fff;">
+
+        <div class="bg-light">
+        <div class="container col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <img width="273" src="https://www.ulifestyle.com.hk/res/images/v2/ul-logo-v2.png">
+        </div>
+        </div>
+        <br>
+        <div class="container col-md-8 col-sm-12">
+            <p class="text-center" style="font-size: 20px;color: #5862aa;">忘記密碼</p>
+            <hr>
+            <div class="st">
+                <form action="" method="post">
+                    {{ form.hidden_tag() }}
+                    <p style="font-size: 16px;">
+                        {{ form.email.label(class="font-weight-bold") }}<br>
+                        {{ form.email(class="form-control") }}<br>
+                        {% for error in form.email.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>{{ form.submit(style="background-color: #5862aa;color: white;", class="btn btn-block") }}</p>
+                </form>
+
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+
+        <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+                }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:320px;
+                    margin:0 auto 50px auto;
+            }
+            }
+
+        </style>
+    </body>
+
+{% endblock %}
