@@ -57,147 +57,44 @@ def index():
         'link1': 'https://hk.ulifestyle.com.hk/activity/detail/116891/買口罩-oxyair-mask-hk口罩4月15日起開賣-手機app每日2次抽籤發售-附教學',
         'img1': 'https://hk.ulifestyle.com.hk/cms/images/event/300x200/202004/20200401142415_0_90924817-126544275614156-8982620320842121216-n.jpg',
         'title1': '【買口罩】Oxyair Mask HK口罩4月15日起開賣 手機App每日2次抽籤發售(附教學)',
-
-        'link2': 'https://hk.ulifestyle.com.hk/activity/detail/116972/外賣優惠-7大燒肉店抵食外賣優惠48折起-牛角-熊本燒肉-炑八韓烤-平昌bbq',
-        'img2': 'https://hk.ulifestyle.com.hk/cms/images/event/300x200/202004/20200416005924_0_79602858-2757858467590855-7819798070509436928-n.jpg',
-        'title2': '【外賣優惠】7大燒肉店抵食外賣優惠48折起 牛角/熊本燒肉/炑八韓烤/平昌BBQ ',
-
-        'link3': 'https://hk.ulifestyle.com.hk/activity/detail/116988/買口罩-pasión口罩4月16日起登記抽籤發售現貨-登記網址-口罩價錢-規格一覽',
-        'img3': 'https://hk.ulifestyle.com.hk/cms/images/event/300x200/202004/20200415222823_0_disposable-face-mask-hk.jpg',
-        'title3': '【買口罩】Pasión口罩4月16日起登記抽籤發售現貨 登記網址/口罩價錢/規格一覽',
     }
     travel = {
-        'link1': 'https://travel.ulifestyle.com.hk/news/detail/31555/李敏鎬主演韓劇-the-king-永遠的君主-本周開播',
-        'img1': 'https://travel.ulifestyle.com.hk/cms/news_photo/300x200/20200416192758__Screen20Shot202020-04-1620at205.10.0720PM.png',
-        'title1': '李敏鎬主演韓劇《The King：永遠的君主》本周開播！　劇情及人物簡介率先睇',
-
-        'link2': 'https://travel.ulifestyle.com.hk/news/detail/31554/直送上門-台灣網購6大人氣美食',
-        'img2': 'https://travel.ulifestyle.com.hk/cms/news_photo/300x200/20200416190006__1111.jpg',
-        'title2': '直送上門！台灣網購6大人氣美食　台式麻辣火鍋/多款夜市小食/愛文芒時令水果 ',
-
-        'link3': 'https://travel.ulifestyle.com.hk/news/detail/31553/日本單日增526確診累積逾9-000病例',
-        'img3': 'https://travel.ulifestyle.com.hk/cms/news_photo/300x200/20200416173149__japan-4141578_19202028129.jpg',
-        'title3': '日本單日增526確診累積逾9,000病例　安倍晉三擬全國進入緊急狀態',
+        'link1': 'https://travel.ulifestyle.com.hk/news/detail/31706/日本派每人10萬日圓補助金',
+        'img1': 'https://travel.ulifestyle.com.hk/cms/news_photo/300x200/20200430150725__340503_s.jpg',
+        'title1': '日本派每人10萬日圓補助金　黑幫霸氣拒領：平時已為社會添麻煩',
     }
     food = {
         'link1': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2619728/kfc優惠4月2020-KFC全新推出椒麻脆辣雞-著數折扣券-外賣速遞優惠碼-手機app限定coupon一覽',
         'img1': 'https://resource01-proxy.ulifestyle.com.hk/res/v3/image/content/2615000/2619728/s2_300.jpg',
         'title1': '【kfc優惠4月2020】KFC全新推出椒麻脆辣雞！著數折扣券／外賣速遞優惠碼／手機app限定coupon一覽',
-
-        'link2': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2617875/海景餐廳2020-三間維港海景海傍餐廳推介-日落海景歎咖啡-草地野餐-5-500呎露天空間',
-        'img2': 'https://resource01-proxy.ulifestyle.com.hk/res/v3/image/content/2615000/2617875/forcover_300.png',
-        'title2': '【海景餐廳2020】三間維港海景海傍餐廳推介　日落海景歎咖啡／草地野餐／5,500呎露天空間 ',
-
-        'link3': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2618486/400次咖啡-中環Check-In-Taipei推出全新400次咖啡系列-OREO鮮奶麻糬瀑布-寒天啫喱400次伯爵茶咖啡',
-        'img3': 'https://resource01-proxy.ulifestyle.com.hk/res/v3/image/content/2615000/2618486/93355430_1228617997345884_4675751292507783168_o_300.jpg',
-        'title3': '【400次咖啡】中環Check-In Taipei推出全新400次咖啡系列 OREO鮮奶麻糬瀑布／寒天啫喱400次伯爵茶咖啡',
     }
     beauty = {
         'link1': 'https://beauty.ulifestyle.com.hk/shopping/sale/18418/名牌網購-farfetch低至半價-精選20款百搭手袋-全部港幣-4000以下',
         'img1': 'https://beauty.ulifestyle.com.hk/cms/images/upload/news/thumbnail/20200416190036__8fa14cdd754f91cc6554c9e71929cce7.jpg',
         'title1': '【名牌網購】FARFETCH低至半價！精選20款百搭手袋！全部港幣$4000以下！',
-
-        'link2': 'https://beauty.ulifestyle.com.hk/trend/bags/18412/夫妻的世界-金喜愛-韓素希手袋一覽-襯出知性優雅氣質-原來-這款-大有來頭',
-        'img2': 'https://beauty.ulifestyle.com.hk/cms/images/upload/news/thumbnail/20200416162611__9ba60110a79024b3c14cfd722cf047b1.jpg',
-        'title2': '《夫妻的世界》金喜愛、韓素希手袋一覽！襯出知性優雅氣質！原來「這款」大有來頭！ ',
-
-        'link3': 'https://beauty.ulifestyle.com.hk/girlstalk/celebrity/18409/g-dragon-花開了-我回來了-退役後低調拍攝廣告-以天價成為飲料品牌代言人',
-        'img3': 'https://beauty.ulifestyle.com.hk/cms/images/upload/news/thumbnail/20200416152134__05c0472b2bc8e7d110020d4ac73f0e20.jpg',
-        'title3': 'G-DRAGON：花開了，我回來了！退役後低調拍攝廣告！以天價成為飲料品牌代言人！',
     }
     rank01 = {
         'link1': 'https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50',
         'title1': '【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50',
-
-        'link2': 'https://beauty.ulifestyle.com.hk/trend/bags/18412/夫妻的世界-金喜愛-韓素希手袋一覽-襯出知性優雅氣質-原來-這款-大有來頭',
-        'title2': '《夫妻的世界》金喜愛、韓素希手袋一覽！襯出知性優雅氣質！原來「這款」大有來頭！ ',
-
-        'link3': 'https://beauty.ulifestyle.com.hk/trend/bags/18412/夫妻的世界-金喜愛-韓素希手袋一覽-襯出知性優雅氣質-原來-這款-大有來頭',
-        'title3': '《夫妻的世界》金喜愛、韓素希手袋一覽！襯出知性優雅氣質！原來「這款」大有來頭！ ',
-
-        'link4': 'https://beauty.ulifestyle.com.hk/trend/bags/18412/夫妻的世界-金喜愛-韓素希手袋一覽-襯出知性優雅氣質-原來-這款-大有來頭',
-        'title4': '《夫妻的世界》金喜愛、韓素希手袋一覽！襯出知性優雅氣質！原來「這款」大有來頭！ ',
-
-        'link5': 'https://beauty.ulifestyle.com.hk/trend/bags/18412/夫妻的世界-金喜愛-韓素希手袋一覽-襯出知性優雅氣質-原來-這款-大有來頭',
-        'title5': '《夫妻的世界》金喜愛、韓素希手袋一覽！襯出知性優雅氣質！原來「這款」大有來頭！ ',
     }
     rank02 = {
         'link1': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
         'title1': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客',
-
-        'link2': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
-        'title2': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客',
-
-        'link3': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
-        'title3': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客',
-
-        'link4': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
-        'title4': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客',
-
-        'link5': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
-        'title5': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客',
     }
     rank03 = {
         'link1': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
         'title1': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事',
-
-        'link2': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
-        'title2': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事',
-
-        'link3': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
-        'title3': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事',
-
-        'link4': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
-        'title4': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事',
-
-        'link5': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
-        'title5': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事',
     }
     rank04 = {
         'link1': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
         'title1': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！',
-
-        'link2': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
-        'title2': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！',
-
-        'link3': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
-        'title3': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！',
-
-        'link4': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
-        'title4': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！',
-
-        'link5': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
-        'title5': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！',
     }
     ublog1 = {
         'index1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
         'icon1': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
         'link1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
         'title1': '【中部北陸】從名古屋出發玩日本中部 利用',
-
-        'index2': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
-        'icon2': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link2': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title2': '【中部北陸】從名古屋出發玩日本中部 利用',
-        'name2': '沙米旅行手帖 Somewhere Journ',
-
-        'index3': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
-        'icon3': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link3': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title3': '【中部北陸】從名古屋出發玩日本中部 利用',
-        'name3': '沙米旅行手帖 Somewhere Journ',
-
-        'index4': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
-        'icon4': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link4': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title4': '【中部北陸】從名古屋出發玩日本中部 利用',
-        'name4': '沙米旅行手帖 Somewhere Journ',
-
-        'index5': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
-        'icon5': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link5': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title5': '【中部北陸】從名古屋出發玩日本中部 利用',
-        'name5': '沙米旅行手帖 Somewhere Journ',
+        'name1': '沙米旅行手帖 Somewhere Journ',
     }
     ublog2 = {
         'index1': 'https://blog.ulifestyle.com.hk/blogger/sang0728/',
@@ -205,51 +102,11 @@ def index():
         'link1': 'https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147',
         'title1': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
         'name1': '林公子生活遊記',
-
-        'index2': 'https://blog.ulifestyle.com.hk/blogger/sang0728/',
-        'icon12': 'https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg',
-        'link12': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title12': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
-        'name2': '林公子生活遊記',
-
-        'index3': 'https://blog.ulifestyle.com.hk/blogger/sang0728/',
-        'icon13': 'https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg',
-        'link13': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title13': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
-        'name3': '林公子生活遊記n',
-
-        'index4': 'https://blog.ulifestyle.com.hk/blogger/sang0728//',
-        'icon14': 'https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg',
-        'link14': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'titlel4': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
-        'name4': '林公子生活遊記',
-
-        'index5': 'https://blog.ulifestyle.com.hk/blogger/sang0728/',
-        'icon15': 'https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg',
-        'link15': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title15': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
-        'name5': '林公子生活遊記',
     }
     ublog3 = {
         'icon1': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
         'link1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
         'comment1': 'S O L D 。 O U T',
-
-        'icon2': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link2': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'comment2': 'S O L D 。 O U T',
-
-        'icon3': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link31': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'comment3': 'S O L D 。 O U T',
-
-        'icon4': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link4': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'comment4': 'S O L D 。 O U T',
-
-        'icon51': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link5': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'comment5': 'S O L D 。 O U T',
     }
     return render_template('index.html', title="首頁", slides=slides, videos=videos, hk=hk, travel=travel, food=food, beauty=beauty, rank01=rank01, rank02=rank02, rank03=rank03, rank04=rank04, ublog1=ublog1, ublog2=ublog2, ublog3=ublog3)
 

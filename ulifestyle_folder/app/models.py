@@ -54,23 +54,24 @@ def load_user(id):
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50))
-    author = db.Column(db.String, db.ForeignKey('author.username'))
-    body1 = db.Column(db.Text)
-    body2 = db.Column(db.Text)
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.String(30), db.ForeignKey('author.username'))
+    body1 = db.Column(db.Text, nullable=False)
+    body2 = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
     theme = db.Column(db.String(10), nullable=False)
     tag = db.Column(db.String(10), nullable=False)
-    type = db.Column(db.String, nullable=False)
+    type = db.Column(db.String(10), nullable=False)
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
-
-class author(db.Model):
+class Author(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(30), index=True, unique=True)
-    usergroup = db.Column(db.String(30), default='author')
+    username = db.Column(db.String(30), index=True, unique=True, nullable=False)
+    usergroup = db.Column(db.String(30), default='author', nullable=False)
 
     def __repr__(self):
         return '<author {}>'.format(self.body)
+
+db.creat_all()
