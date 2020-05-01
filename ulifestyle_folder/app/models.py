@@ -50,3 +50,27 @@ class User(UserMixin, db.Model):
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50))
+    author = db.Column(db.String, db.ForeignKey('author.username'))
+    body1 = db.Column(db.Text)
+    body2 = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    theme = db.Column(db.String(10), nullable=False)
+    tag = db.Column(db.String(10), nullable=False)
+    type = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return '<Post {}>'.format(self.body)
+
+
+class author(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(30), index=True, unique=True)
+    usergroup = db.Column(db.String(30), default='author')
+
+    def __repr__(self):
+        return '<author {}>'.format(self.body)

@@ -1,0 +1,63 @@
+<footer>
+    <div class="container">
+            <div class="row">
+                <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="16%"><a href="{{ url_for('travel') }}"><img src="https://member.ulifestyle.com.hk/images/global/ut-o.jpg" width="100%"></a></td>
+                            <td width="16%"><a href="{{ url_for('hk') }}"><img src="https://member.ulifestyle.com.hk/images/global/uhk-o.jpg" width="100%"></a></td>
+                            <td width="16%"><a href="{{ url_for('beauty') }}"><img src="https://member.ulifestyle.com.hk/images/global/ub-o.jpg" width="100%"></a></td>
+                            <td width="16%"><a href="{{ url_for('food') }}"><img src="https://member.ulifestyle.com.hk/images/global/uf-o.jpg" width="100%"></a></td>
+                            <td width="16%"><a href="{{ url_for('blog') }}"><img src="https://member.ulifestyle.com.hk/images/global/ubl-o.jpg" width="100%"></a></td>
+                            <td width="16%"><a href="{{ url_for('blog') }}"><img src="https://member.ulifestyle.com.hk/images/global/mk-o.jpg" width="100%"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="footer-ul-login">
+                    <ul>
+                        <li class="navbar-text"><a href="#">關於我們</a></li>
+                        <li class="navbar-text"><a href="#">聯絡我們</a></li>
+                        <li class="navbar-text"><a href="#">免責聲明</a></li>
+                        <li class="navbar-text"><a href="#">使用條款</a></li>
+                        <li class="navbar-text"><a href="#">私隱政策</a></li>
+                        <li class="pull-right copyright">香港經濟日報 版權所有 © 2020</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+        }
+        .footer-ul-login{
+                width: 100%;
+                overflow: hidden;
+                padding: 5px;
+            }
+            .navbar-text{
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            @media (min-width:768px) {
+                .navbar-text{
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            }
+            .copyright{
+                padding-top: 15px;
+                color: #999;
+            }
+            .pull-right{
+                float: right!important;
+            }
+    </style>
