@@ -371,6 +371,11 @@ def sky_post():
     return render_template('sky_post.html', title="晴報SkyPost")
 
 
+@app.route('/add_post')
+def add_post():
+    return render_template('add_post.html', title="新增貼文")
+
+
 @app.route('/profile')
 def profile():
     return render_template('profile.html', title="個人檔案")
