@@ -218,8 +218,8 @@ class ResetPasswordForm(FlaskForm):
 
 
 class EditProfileForm(FlaskForm):
-    username = StringField('用戶名：', validators=[DataRequired()])
-    submit = SubmitField('完成')
+    username = StringField('更改名稱：', validators=[DataRequired()])
+    submit = SubmitField('提交')
 
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)

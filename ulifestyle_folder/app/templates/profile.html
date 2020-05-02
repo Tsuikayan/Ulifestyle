@@ -2,13 +2,28 @@
 
 {% block content %}
     <body class="container col-md-6 col-sm-12 bg-light" style="margin-top: 100px;">
+    {% for message in get_flashed_messages() %}
+        <p class="alert alert-primary">{{ message }}</p>
+    {% endfor %}
         <table class="table table-striped border border-secondary">
             <tbody class="text-center">
                 <tr>
                     <td><div class="border-0 rounded-circle mx-auto d-block" style="width: 200px;"><img src="https://www.ulifestyle.com.hk/res/images/v2/ul_upload_profilepic.png"></div></td>
                 </tr>
                 <tr>
-                    <td><h3>會員名稱：{{ current_user.username }}</h3></td>
+                    <td>
+                        <h3>會員名稱：{{ current_user.username }}</h3>
+                    <form action="" enctype='multipart/form-data' method="post">
+                        {{ form.hidden_tag() }}
+                        <p>
+                            {{ form.username.label }}
+                            {{ form.username(size=32) }}
+                            {% for error in form.username.errors %}
+                                <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+                            {{ form.submit(class="btn btn-dark") }}
+                        </p>
+                    </form></td>
                 </tr>
                 <tr>
                     <td><h3>電郵地址：{{ current_user.email }}</h3></td>

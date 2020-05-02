@@ -11,75 +11,78 @@ bootstrap = Bootstrap()
 UPLOAD_FOLDER = 'img'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
-
+#Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
 
 @app.route('/')
 @app.route('/index')
 def index():
+    title = "【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50"
+    img = "https://www.ulifestyle.com.hk/store/content/video_form/thumbnail/small/202004/9d2538357fe708d454a2c83abc889073.jpg"
+    icon = "https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"
     slides = {
-        'link1': 'https://hk.ulifestyle.com.hk/activity/detail/117043/',
-        'img1': 'https://hk.ulifestyle.com.hk/cms/images/slider_photo/1220x686/202004/20200427113052-2-20200424164238-0-20200324190230-0-whatsapp-image-2020-03-24-at-18-50-10.jpeg',
-        'title1': '【減價優惠】Sanrio全線分店推出春季限時大減價！卡通精品/文具/家品低至半價'
+        'link1': '#',
+        'img1': img,
+        'title1': title
     }
     videos = {
-        'link1': 'https://www.ulifestyle.com.hk/video/1009',
-        'img1': 'https://www.ulifestyle.com.hk/store/content/video_form/thumbnail/small/202004/9d2538357fe708d454a2c83abc889073.jpg',
-        'title1': '【星級髮型師解答】潮濕天氣下頭髮容易出油/扁塌？ 告別油頭從5個日常習慣做起',
+        'link1': '#',
+        'img1': img,
+        'title1': title,
         'time1': '03:32'
     }
     hk = {
-        'link1': 'https://hk.ulifestyle.com.hk/activity/detail/116891/買口罩-oxyair-mask-hk口罩4月15日起開賣-手機app每日2次抽籤發售-附教學',
-        'img1': 'https://hk.ulifestyle.com.hk/cms/images/event/300x200/202004/20200401142415_0_90924817-126544275614156-8982620320842121216-n.jpg',
-        'title1': '【買口罩】Oxyair Mask HK口罩4月15日起開賣 手機App每日2次抽籤發售(附教學)'
+        'link1': '#',
+        'img1': img,
+        'title1': title
     }
     travel = {
-        'link1': 'https://travel.ulifestyle.com.hk/news/detail/31706/日本派每人10萬日圓補助金',
-        'img1': 'https://travel.ulifestyle.com.hk/cms/news_photo/300x200/20200430150725__340503_s.jpg',
-        'title1': '日本派每人10萬日圓補助金　黑幫霸氣拒領：平時已為社會添麻煩'
+        'link1': '#',
+        'img1': img,
+        'title1': title
     }
     food = {
-        'link1': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2619728/kfc優惠4月2020-KFC全新推出椒麻脆辣雞-著數折扣券-外賣速遞優惠碼-手機app限定coupon一覽',
-        'img1': 'https://resource01-proxy.ulifestyle.com.hk/res/v3/image/content/2615000/2619728/s2_300.jpg',
-        'title1': '【kfc優惠4月2020】KFC全新推出椒麻脆辣雞！著數折扣券／外賣速遞優惠碼／手機app限定coupon一覽'
+        'link1': '#',
+        'img1': img,
+        'title1': title
     }
     beauty = {
-        'link': 'https://beauty.ulifestyle.com.hk/shopping/sale/18418/名牌網購-farfetch低至半價-精選20款百搭手袋-全部港幣-4000以下',
-        'img': 'https://beauty.ulifestyle.com.hk/cms/images/upload/news/thumbnail/20200416190036__8fa14cdd754f91cc6554c9e71929cce7.jpg',
-        'title': '【名牌網購】FARFETCH低至半價！精選20款百搭手袋！全部港幣$4000以下！'
+        'link1': '#',
+        'img1': img,
+        'title1': title
     }
     rank01 = {
-        'link1': 'https://hk.ulifestyle.com.hk/topic/detail/210635/家師父一體-3組簡單動作測試身體年齡-手肘並攏抬不高過下巴反映體齡超過50',
-        'title1': '【家師父一體】3組簡單動作測試身體年齡 手肘並攏抬不高過下巴反映體齡超過50'
+        'link1': '#',
+        'title1': title
     }
     rank02 = {
-        'link1': 'https://travel.ulifestyle.com.hk/news/detail/31572/馬爾代夫受恐怖襲擊-港口爆炸燒船-隨機刺傷遊客',
-        'title1': '馬爾代夫受恐怖襲擊 港口爆炸燒船、隨機刺傷遊客'
+        'link1': '#',
+        'title1': title
     }
     rank03 = {
-        'link1': 'https://food.ulifestyle.com.hk/restaurant/news/detail/2622516/羅宋湯起源-羅宋湯由來原來是與一場-紅白大戰-有關-細數羅宋湯鮮為人知的二三事',
-        'title1': '【羅宋湯起源】羅宋湯由來原來是與一場「紅白大戰」有關？細數羅宋湯鮮為人知的二三事'
+        'link1': '#',
+        'title1': title
     }
     rank04 = {
-        'link1': 'https://beauty.ulifestyle.com.hk/beauty/skincare/18438/防曬2020-紫外線對策-春夏人氣開架防曬15選-清爽凝膠-乳霜質地',
-        'title1': '【防曬2020】紫外線對策！春夏人氣開架防曬15選！清爽凝膠、乳霜質地！'
+        'link1': '#',
+        'title1': title
     }
     ublog1 = {
-        'index1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/',
-        'icon1': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
-        'title1': '【中部北陸】從名古屋出發玩日本中部 利用',
+        'index1': '#',
+        'icon1': icon,
+        'link1': '#',
+        'title1': title,
         'name1': '沙米旅行手帖 Somewhere Journ'
     }
     ublog2 = {
-        'index1': 'https://blog.ulifestyle.com.hk/blogger/sang0728/',
-        'icon1': 'https://blog.ulifestyle.com.hk/blogger/wp-content/uploads/avatars/5/110342/1411421009-bpfull.jpg',
-        'link1': 'https://blog.ulifestyle.com.hk/blogger/sang0728/?p=3976147',
-        'title1': '日本北海道遊記 攻略 輕旅遊 小樽 三角',
+        'index1': '#',
+        'icon1': icon,
+        'link1': '#',
+        'title1': title,
         'name1': '林公子生活遊記'
     }
     ublog3 = {
-        'icon1': 'https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg',
-        'link1': 'http://blog.ulifestyle.com.hk/travel_blogger/sammie/?p=7128',
+        'icon1': icon,
+        'link1': '#',
         'comment1': 'S O L D 。 O U T'
     }
     return render_template('index.html', title="首頁", slides=slides, videos=videos, hk=hk, travel=travel, food=food, beauty=beauty, rank01=rank01, rank02=rank02, rank03=rank03, rank04=rank04, ublog1=ublog1, ublog2=ublog2, ublog3=ublog3)
@@ -105,7 +108,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         return redirect(url_for('login'))
-    return render_template('register.html', title="會員登記", form=form)
+    return render_template('auth/register.html', title="會員登記", form=form)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -122,7 +125,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
             return redirect(next_page)
-    return render_template('login.html', title="會員登入", form=form)
+    return render_template('auth/login.html', title="會員登入", form=form)
 
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
@@ -136,9 +139,8 @@ def reset_password(token):
     if form.validate_on_submit():
         user.set_password(form.password.data)
         db.session.commit()
-        flash('Your password has been reset.')
         return redirect(url_for('login'))
-    return render_template('reset_password.html', title="重設密碼", form=form)
+    return render_template('auth/reset_password.html', title="重設密碼", form=form)
 
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
@@ -150,9 +152,8 @@ def reset_password_request():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
             send_password_reset_email(user)
-        flash('Check your email for the instructions to reset your password')
         return redirect(url_for('login'))
-    return render_template('reset_password_request.html',
+    return render_template('auth/reset_password_request.html',
                            title='忘記密碼', form=form)
 
 
@@ -212,10 +213,18 @@ def edit_carousel():
     return render_template('edit_carousel.html', title="編輯封面")
 
 
-@app.route('/profile')
+@app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
-    return render_template('profile.html', title="個人檔案")
+    form = EditProfileForm(current_user.username)
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+    return render_template('profile.html', title="個人檔案", form=form)
 
 
 if __name__ == '__main__':
