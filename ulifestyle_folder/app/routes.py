@@ -2,6 +2,7 @@ from flask import flash, render_template, redirect, url_for, request
 from flask_login import login_user, logout_user, current_user, login_required
 from app.email import send_password_reset_email
 from werkzeug.urls import url_parse
+from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
 from app.forms import *
 from app import app, db
@@ -262,9 +263,12 @@ def add_post():
               site=form.site.data,
               type=form.type.data)
         else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
           post = Post(
               author=current_user.username,
               title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
               body2=form.body2.data,
               site=form.site.data,
               type=form.type.data)
