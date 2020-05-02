@@ -232,14 +232,16 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError('Please use a different username.')
 
 
-class Post(FlaskForm):
+class PostForm(FlaskForm):
     title = StringField('標題')
     author = StringField('作者')
-    body1 = TextAreaField('內容1')
+    body1 = StringField('內容1')
     body2 = TextAreaField('內容2')
     theme = StringField('主題')
     tag = StringField('標籤')
-    type = SelectField(choices=['video', '影片'] or ['article', '文章'])
+    type = SelectField(choices=[('video', 'video影片'), ('article', 'article文章')])
+    site = SelectField(choices=[('HK', 'HK港生活'), ('Travel', 'Travel旅行'), ('Food', 'Food美食'), ('Beauty', 'Beauty美容'), ('Blog', 'Blog博客')])
+    submit = SubmitField('發佈')
 
 
 class author(FlaskForm):
