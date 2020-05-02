@@ -101,114 +101,118 @@
       <DataType>VARCHAR(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="28" parent="8" name="ix_post_timestamp">
+    <column id="28" parent="8" name="site">
+      <Position>10</Position>
+      <DataType>VARCHAR(30)|0s</DataType>
+    </column>
+    <index id="29" parent="8" name="ix_post_timestamp">
       <ColNames>timestamp</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="29" parent="8">
+    <key id="30" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="30" parent="8">
+    <foreign-key id="31" parent="8">
       <ColNames>author</ColNames>
       <RefTableName>author</RefTableName>
       <RefColNames>username</RefColNames>
     </foreign-key>
-    <column id="31" parent="9" name="type">
+    <column id="32" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="32" parent="9" name="name">
+    <column id="33" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="33" parent="9" name="tbl_name">
+    <column id="34" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="34" parent="9" name="rootpage">
+    <column id="35" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="35" parent="9" name="sql">
+    <column id="36" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="36" parent="10" name="id">
+    <column id="37" parent="10" name="id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="10" name="username">
+    <column id="38" parent="10" name="username">
       <Position>2</Position>
       <DataType>VARCHAR(30)|0s</DataType>
     </column>
-    <column id="38" parent="10" name="email">
+    <column id="39" parent="10" name="email">
       <Position>3</Position>
       <DataType>VARCHAR(120)|0s</DataType>
     </column>
-    <column id="39" parent="10" name="gender">
+    <column id="40" parent="10" name="gender">
       <Position>4</Position>
       <DataType>VARCHAR(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="10" name="phoneNumber">
+    <column id="41" parent="10" name="phoneNumber">
       <Position>5</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="41" parent="10" name="year">
+    <column id="42" parent="10" name="year">
       <Position>6</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="10" name="month">
+    <column id="43" parent="10" name="month">
       <Position>7</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="10" name="day">
+    <column id="44" parent="10" name="day">
       <Position>8</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="10" name="educationLevel">
+    <column id="45" parent="10" name="educationLevel">
       <Position>9</Position>
       <DataType>VARCHAR(30)|0s</DataType>
     </column>
-    <column id="45" parent="10" name="income">
+    <column id="46" parent="10" name="income">
       <Position>10</Position>
       <DataType>VARCHAR(30)|0s</DataType>
     </column>
-    <column id="46" parent="10" name="usergroup">
+    <column id="47" parent="10" name="usergroup">
       <Position>11</Position>
       <DataType>VARCHAR(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="10" name="password_hash">
+    <column id="48" parent="10" name="password_hash">
       <Position>12</Position>
       <DataType>VARCHAR(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="10" name="getinfo">
+    <column id="49" parent="10" name="getinfo">
       <Position>13</Position>
       <DataType>BOOLEAN|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="49" parent="10" name="ix_user_username">
+    <index id="50" parent="10" name="ix_user_username">
       <ColNames>username</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="50" parent="10" name="ix_user_email">
+    <index id="51" parent="10" name="ix_user_email">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="51" parent="10">
+    <key id="52" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <check id="52" parent="10">
+    <check id="53" parent="10">
       <Predicate>getinfo IN (0, 1)</Predicate>
     </check>
   </database-model>
