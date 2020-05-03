@@ -252,3 +252,4 @@ class author(FlaskForm):
 class TagForm(FlaskForm):
     tag = StringField('Add tag：', validators=[DataRequired()])
     submit = SubmitField('完成')
+
