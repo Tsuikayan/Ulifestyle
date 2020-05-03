@@ -16,11 +16,18 @@
                     <form action="" enctype='multipart/form-data' method="post">
                         {{ form.hidden_tag() }}
                         <p>
-                            {{ form.username.label }}
-                            {{ form.username(size=32) }}
-                            {% for error in form.username.errors %}
+                            {{ form.password.label(class="font-weight-bold") }}<br>
+                            {{ form.password(size=32, class="form-control") }}<br>
+                            {% for error in form.password.errors %}
                                 <span style="color: red;">[{{ error }}]</span>
                             {% endfor %}
+                            <br>
+                            {{ form.password2.label(class="font-weight-bold") }}<br>
+                            {{ form.password2(size=32, class="form-control") }}<br>
+                            {% for error in form.password2.errors %}
+                                <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+
                             {{ form.submit(class="btn btn-dark") }}
                         </p>
                     </form></td>

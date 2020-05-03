@@ -212,24 +212,24 @@ class ResetPasswordRequestForm(FlaskForm):
 
 class ResetPasswordForm(FlaskForm):
     password = PasswordField('密碼：', validators=[DataRequired()])
-    password2 = PasswordField('再輸入密碼：', validators=[DataRequired(),
-                                           EqualTo('password')])
+    password2 = PasswordField('再輸入密碼*：', validators=[DataRequired(), EqualTo('password', message='確認密碼不一致')])
     submit = SubmitField('重設密碼')
 
 
 class EditProfileForm(FlaskForm):
-    username = StringField('更改名稱：', validators=[DataRequired()])
+    password = PasswordField('更改密碼：', validators=[DataRequired()])
+    password2 = PasswordField('再輸入密碼*：', validators=[DataRequired(), EqualTo('password', message='確認密碼不一致')])
     submit = SubmitField('提交')
 
-    def __init__(self, original_username, *args, **kwargs):
+    def __init__(self, original_password_hash, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
-        self.original_username = original_username
+        self.original_password = original_password_hash
 
-    def validate_username(self, username):
-        if username.data != self.original_username:
-            user = User.query.filter_by(username=self.username.data).first()
-            if user is not None:
-                raise ValidationError('Please use a different username.')
+    def validate_password(self, password_hash):
+        if password_hash.data != self.original_password:
+            pw = User.query.filter_by(password_hash=self.password.data).first()
+            if pw is not None:
+                raise ValidationError('Please use a different password.')
 
 
 class PostForm(FlaskForm):

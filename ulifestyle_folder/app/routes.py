@@ -233,12 +233,10 @@ def sky_post():
 def profile():
     form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
-        current_user.username = form.username.data
+        current_user.set_password(form.password.data)
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('profile'))
-    elif request.method == 'GET':
-        form.username.data = current_user.username
     return render_template('profile.html', title="個人檔案", form=form)
 
 
