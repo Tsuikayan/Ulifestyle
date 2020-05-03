@@ -104,7 +104,12 @@
                 <div class="title-tag">
                     <a><img src="https://www.ulifestyle.com.hk/res/images/v2/section-icon-05.png" title="熱門標籤">
                     </a><span>熱門標籤</span><div class ="tagline"></div>
-                    <a href="{{ url_for('add_tag') }}"><h6>add tag</h6></a>
+
+                    {% if current_user.usergroup == "admin" %}
+                        <a href="{{ url_for('add_tag') }}"><h6>add tag</h6></a>
+                    {% else %}
+                    {% endif %}
+
                 </div>
             </div>
             <div class="TAG">

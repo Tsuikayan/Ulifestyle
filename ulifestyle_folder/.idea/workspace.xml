@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6985504d-cec2-4a85-bbe0-b2d08fd028a7" name="Default Changelist" comment="" />
+    <list default="true" id="6985504d-cec2-4a85-bbe0-b2d08fd028a7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/templates/home_page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home_page/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ulifestyle_folder$ulifestyle_folder.coverage" NAME="ulifestyle_folder Coverage Results" MODIFIED="1588503680942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ulifestyle_folder$ulifestyle_folder.coverage" NAME="ulifestyle_folder Coverage Results" MODIFIED="1588506176946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ulifestyle_folder$d30fb1d079be_user_table.coverage" NAME="d30fb1d079be_user_table Coverage Results" MODIFIED="1588104063695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/migrations/versions" />
   </component>
   <component name="DatabaseView">
@@ -69,7 +71,7 @@
           <entry key="1" value="1" />
           <entry key="author" value="2" />
           <entry key="css" value="1" />
-          <entry key="html" value="264" />
+          <entry key="html" value="265" />
           <entry key="log" value="2" />
           <entry key="png" value="2" />
           <entry key="post" value="11" />
@@ -84,7 +86,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="51" />
-          <entry key="HTML" value="264" />
+          <entry key="HTML" value="265" />
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Python" value="116" />
@@ -96,7 +98,7 @@
           <entry key="cell" value="33" />
           <entry key="css" value="226" />
           <entry key="dummy" value="33" />
-          <entry key="html" value="8591" />
+          <entry key="html" value="8649" />
           <entry key="py" value="4769" />
           <entry key="txt" value="10" />
         </counts>
@@ -104,7 +106,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="226" />
-          <entry key="HTML" value="8591" />
+          <entry key="HTML" value="8649" />
           <entry key="PLAIN_TEXT" value="43" />
           <entry key="Python" value="4769" />
           <entry key="Scratch" value="33" />
@@ -114,10 +116,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
+            <state relative-caret-position="289">
               <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
@@ -130,13 +132,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/home_page/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="106" column="71" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
+            <state relative-caret-position="-34">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/base/base1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index_tag.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -220,9 +231,9 @@
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/forms.py" />
         <option value="$PROJECT_DIR$/app/templates/add_tag.html" />
-        <option value="$PROJECT_DIR$/app/templates/home_page/index.html" />
         <option value="$PROJECT_DIR$/app/routes.py" />
         <option value="$PROJECT_DIR$/app/templates/index_tag.html" />
+        <option value="$PROJECT_DIR$/app/templates/home_page/index.html" />
       </list>
     </option>
   </component>
@@ -276,6 +287,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ulifestyle_folder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ulifestyle_folder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ulifestyle_folder" type="b2602c69:ProjectViewProjectNode" />
@@ -414,6 +432,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="743" y="1" width="766" height="970" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49921012" weight="0.5439094" />
       <window_info id="Structure" order="1" sideWeight="0.5007899" side_tool="true" weight="0.13159698" />
@@ -556,13 +575,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home_page/edit_carousel.html" />
-    <entry file="file://$PROJECT_DIR$/app/templates/base/base1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -698,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://45fb64b5-c2ca-4ea2-aca1-034633606829/schema/main/table/tag">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -712,21 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-            <marker date="1588503670914" expanded="true" signature="2973:3265" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home_page/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="106" column="71" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
+        <state relative-caret-position="85">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -734,6 +728,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base/base1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home_page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+            <marker date="1588503670914" expanded="true" signature="2973:3265" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
