@@ -127,6 +127,21 @@ def add_tag():
     return render_template('admin/add_tag.html', title="Add Tag", form=form)
 
 
+@app.route('/edit_carousel', methods=['GET', 'POST'])
+def edit_carousel():
+    form = CarouselForm()
+    if form.validate_on_submit():
+        carousel =(
+            title=form.title.data,
+            img=form.img.data,
+            link=form.link.data
+        )
+        db.session.add(carousel)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('edit_carousel.html', title="Edit Carousel", form=form)
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()

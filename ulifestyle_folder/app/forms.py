@@ -252,3 +252,10 @@ class author(FlaskForm):
 class TagForm(FlaskForm):
     tag = StringField('Add tag：', validators=[DataRequired()])
     submit = SubmitField('完成')
+
+
+class CarouselForm(FlaskForm):
+    title = StringField('Title：', validators=[DataRequired()])
+    img = StringField('Cover：', validators=[DataRequired()])
+    link = StringField('Link：', validators=[DataRequired()])
+    submit = SubmitField('完成')

@@ -83,3 +83,6 @@ class Tag(db.Model):
 
     def __repr__(self):
         return '<tag {}>'.format(self.tag)
+
+
+

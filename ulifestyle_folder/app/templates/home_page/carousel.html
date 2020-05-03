@@ -28,15 +28,15 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="{{slides3.link1}}"><img src="{{slides3.img1}}" class="d-block w-100"></a>
+                <a href="{{slides4.link1}}"><img src="{{slides4.img1}}" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(221, 0, 119, 0.85);">{{slides3.title1}}</h5>
+                    <h5 style="background: rgba(221, 0, 119, 0.85);">{{slides4.title1}}</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="{{slides4.link1}}"><img src="{{slides4.img1}}" class="d-block w-100"></a>
+                <a href="{{slides5.link1}}"><img src="{{slides5.img1}}" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(218, 139, 98, 0.85);">{{slides4.title1}}</h5>
+                    <h5 style="background: rgba(218, 139, 98, 0.85);">{{slides5.title1}}</h5>
                 </div>
             </div>
             </div>
@@ -51,3 +51,7 @@
             </div>
         </div>
     </div>
+{% if current_user.usergroup == "admin" %}
+    <a href="{{ url_for('edit_carousel') }}"><h6>edit carousel</h6></a>
+{% else %}
+{% endif %}
