@@ -85,4 +85,11 @@ class Tag(db.Model):
         return '<tag {}>'.format(self.tag)
 
 
+class Carousel(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), index=True)
+    img = db.Column(db.String(200), index=True)
+    link = db.Column(db.String(200), index=True)
 
+    def _repr_(self):
+        return '< Carousel{}>'.format(self.title)

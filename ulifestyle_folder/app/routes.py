@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
 from app.forms import *
 from app import app, db
-from app.models import User, Post, Tag
+from app.models import User, Post, Tag, Carousel
 
 
 bootstrap = Bootstrap()
@@ -19,34 +19,10 @@ ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
 @app.route('/index')
 def index():
     tags = Tag.query.order_by(Tag.tag).all()
+    slides = Carousel.query.order_by(Carousel.id.desc()).all()
     title1 = "title"
     img = "https://www.ulifestyle.com.hk/store/content/video_form/thumbnail/small/202004/9d2538357fe708d454a2c83abc889073.jpg"
     icon = "https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"
-    slides1 = {
-        'link1': '#',
-        'img1': img,
-        'title1': title1
-    }
-    slides2 = {
-        'link1': '#',
-        'img1': img,
-        'title1': title1
-    }
-    slides3 = {
-        'link1': '#',
-        'img1': img,
-        'title1': title1
-    }
-    slides4 = {
-        'link1': '#',
-        'img1': img,
-        'title1': title1
-    }
-    slides5 = {
-        'link1': '#',
-        'img1': img,
-        'title1': title1
-    }
     videos = {
         'link1': '#',
         'img1': img,
@@ -108,10 +84,9 @@ def index():
         'link1': '#',
         'comment1': 'S O L D 。 O U T'
     }
-    return render_template('home_page/index.html', title="首頁", slides1=slides1, slides2=slides2, slides3=slides3,
-                           slides4=slides4, slides5=slides5,
+    return render_template('home_page/index.html', title="首頁",
                            hk=hk, travel=travel, food=food, beauty=beauty, rank01=rank01, rank02=rank02, rank03=rank03, rank04=rank04, ublog1=ublog1, ublog2=ublog2, ublog3=ublog3,
-                           videos=videos, tags=tags)
+                           videos=videos, tags=tags, slides=slides)
 
 
 @app.route('/add_tag', methods=['GET', 'POST'])
@@ -131,7 +106,7 @@ def add_tag():
 def edit_carousel():
     form = CarouselForm()
     if form.validate_on_submit():
-        carousel =(
+        carousel = Carousel(
             title=form.title.data,
             img=form.img.data,
             link=form.link.data

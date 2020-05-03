@@ -259,3 +259,4 @@ class CarouselForm(FlaskForm):
     img = StringField('Cover：', validators=[DataRequired()])
     link = StringField('Link：', validators=[DataRequired()])
     submit = SubmitField('完成')
+
