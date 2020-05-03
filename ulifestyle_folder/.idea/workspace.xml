@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6985504d-cec2-4a85-bbe0-b2d08fd028a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/admin/add_tag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/index_tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45fb64b5-c2ca-4ea2-aca1-034633606829.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/45fb64b5-c2ca-4ea2-aca1-034633606829.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/home_page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home_page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/microblog.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/microblog.log" afterDir="false" />
-    </list>
+    <list default="true" id="6985504d-cec2-4a85-bbe0-b2d08fd028a7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ulifestyle_folder$ulifestyle_folder.coverage" NAME="ulifestyle_folder Coverage Results" MODIFIED="1588503474693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ulifestyle_folder$ulifestyle_folder.coverage" NAME="ulifestyle_folder Coverage Results" MODIFIED="1588503680942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ulifestyle_folder$d30fb1d079be_user_table.coverage" NAME="d30fb1d079be_user_table Coverage Results" MODIFIED="1588104063695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/migrations/versions" />
   </component>
   <component name="DatabaseView">
@@ -132,7 +121,7 @@
               <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
-                <marker date="1588503200090" expanded="true" signature="2973:3265" ph="..." />
+                <marker date="1588503670914" expanded="true" signature="2973:3265" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/app/templates/index_tag.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -425,7 +414,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="743" y="1" width="766" height="970" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49921012" weight="0.5439094" />
       <window_info id="Structure" order="1" sideWeight="0.5007899" side_tool="true" weight="0.13159698" />
@@ -730,7 +718,7 @@
           <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
-            <marker date="1588503200090" expanded="true" signature="2973:3265" ph="..." />
+            <marker date="1588503670914" expanded="true" signature="2973:3265" ph="..." />
           </folding>
         </state>
       </provider>
@@ -745,7 +733,7 @@
     <entry file="file://$PROJECT_DIR$/app/templates/index_tag.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
