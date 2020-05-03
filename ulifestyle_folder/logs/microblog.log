@@ -88,3 +88,5 @@ Traceback (most recent call last):
   File "C:\Users\fungz\ulifestyle_folder\lib\site-packages\sqlalchemy\orm\base.py", line 383, in _entity_descriptor
     (description, key)
 sqlalchemy.exc.InvalidRequestError: Entity '<class 'app.models.User'>' has no property 'password'
+2020-05-03 18:24:23,855 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-05-03 18:24:33,174 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]

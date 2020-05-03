@@ -248,3 +248,7 @@ class author(FlaskForm):
     username = StringField('name')
     usergroup = SelectField('usergroup', choice=[('author')])
 
+
+class TagForm(FlaskForm):
+    tag = StringField('Add tag：', validators=[DataRequired()])
+    submit = SubmitField('完成')

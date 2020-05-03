@@ -1,0 +1,41 @@
+{% extends "base/base1.html" %}
+
+{% block content %}
+    <body style="background-image: url('https://member.ulifestyle.com.hk/images/v2/background.jpg');
+        background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+
+        <section>
+            <div class="container st">
+                <div class="shadow p-4 bg-white rounded border bg-white">
+                    <div class="text-center text-muted">
+                        <h4><strong>Add Tag</strong></h4>
+                        <hr>
+                    </div>
+                    <form enctype='multipart/form-data' action="" method="post">
+
+                        {{ form.hidden_tag() }}
+                        <p>
+                            {{ form.tag.label(class="font-weight-bold") }}<br>
+                            {{ form.tag(size=32, class="form-control") }}
+                            {% for error in form.tag.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>{{ form.submit(class="btn btn-block btn-dark") }}</p>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+        <style>
+            .st{
+                max-width: 100%;
+                margin:70px 10px 0 auto;
+            }
+            @media (min-width: 768px) {
+                .st{
+                    max-width:500px;
+                    margin:120px auto 50px auto;}
+            }
+        </style>
+{% endblock %}

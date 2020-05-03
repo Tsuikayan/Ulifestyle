@@ -100,73 +100,22 @@
 
 
         <div class="page-right">
-
-                                <div class="section tag">
-                            <div class="title-tag">
-                                    <a><img src="https://www.ulifestyle.com.hk/res/images/v2/section-icon-05.png" title="熱門標籤">
-                                    </a><span>熱門標籤</span><div class ="tagline"></div>
-                            </div>
-                        </div>
-
-                <div class="TAG">
-                                <div class="tag-list">
-                                    <ul>
-                                            <li>
-                                                <a href="#">
-                                                    #ULifestyle應用程式
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    #UFLIP2020日本食買玩攻略
-                                                </a>
-                                            </li>
-                                            <li>
-                                    <a href="#">
-                                        日本                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        韓國                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        優惠                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        情侶                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        親子                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        熱話                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        台灣                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        寵物                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        電影                    </a>
-                                </li>
-                                            <li>
-                                    <a href="#">
-                                        科技                    </a>
-                                </li>
-                                    </ul>
-                                </div>
+            <div class="section tag">
+                <div class="title-tag">
+                    <a><img src="https://www.ulifestyle.com.hk/res/images/v2/section-icon-05.png" title="熱門標籤">
+                    </a><span>熱門標籤</span><div class ="tagline"></div>
+                    <a href="{{ url_for('add_tag') }}"><h6>add tag</h6></a>
                 </div>
-
-
-
+            </div>
+            <div class="TAG">
+                <div class="tag-list">
+                    <ul>
+                        {% for tag in tags %}
+                            {% include "index_tag.html" %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
 
                                 <div class="section rank">
                             <div class="title-rank">

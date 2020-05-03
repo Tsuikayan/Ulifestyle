@@ -76,3 +76,10 @@ class Author(db.Model):
     def __repr__(self):
         return '<author {}>'.format(self.body)
 
+
+class Tag(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    tag = db.Column(db.String(20), index=True)
+
+    def __repr__(self):
+        return '<tag {}>'.format(self.tag)
