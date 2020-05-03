@@ -1,8 +1,8 @@
-"""rebuild post author
+"""restore
 
-Revision ID: cf09525c0ee2
+Revision ID: 0b7f39331dd0
 Revises: 
-Create Date: 2020-05-01 19:55:35.060415
+Create Date: 2020-05-03 06:19:09.477176
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cf09525c0ee2'
+revision = '0b7f39331dd0'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -46,14 +46,15 @@ def upgrade():
     op.create_table('post',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=False),
-    sa.Column('author', sa.String(length=30), nullable=True),
-    sa.Column('body1', sa.Text(), nullable=False),
+    sa.Column('author', sa.Integer(), nullable=True),
+    sa.Column('body1', sa.String(length=100), nullable=True),
     sa.Column('body2', sa.Text(), nullable=False),
     sa.Column('timestamp', sa.DateTime(), nullable=True),
-    sa.Column('theme', sa.String(length=10), nullable=False),
-    sa.Column('tag', sa.String(length=10), nullable=False),
+    sa.Column('theme', sa.String(length=10), nullable=True),
+    sa.Column('tag', sa.String(length=10), nullable=True),
     sa.Column('type', sa.String(length=10), nullable=False),
-    sa.ForeignKeyConstraint(['author'], ['author.username'], ),
+    sa.Column('site', sa.String(length=30), nullable=True),
+    sa.ForeignKeyConstraint(['author'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_post_timestamp'), 'post', ['timestamp'], unique=False)

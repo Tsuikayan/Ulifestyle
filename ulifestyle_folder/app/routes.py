@@ -18,88 +18,88 @@ ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
 @app.route('/')
 @app.route('/index')
 def index():
-    title = Post.query.order_by(Post.timestamp.desc(), False)
+    title1 = "title"
     img = "https://www.ulifestyle.com.hk/store/content/video_form/thumbnail/small/202004/9d2538357fe708d454a2c83abc889073.jpg"
     icon = "https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"
     slides1 = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     slides2 = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     slides3 = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     slides4 = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     slides5 = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     videos = {
         'link1': '#',
         'img1': img,
-        'title1': title,
+        'title1': title1,
         'time1': '03:32'
     }
     hk = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     travel = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     food = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     beauty = {
         'link1': '#',
         'img1': img,
-        'title1': title
+        'title1': title1
     }
     rank01 = {
         'link1': '#',
-        'title1': title
+        'title1': title1
     }
     rank02 = {
         'link1': '#',
-        'title1': title
+        'title1': title1
     }
     rank03 = {
         'link1': '#',
-        'title1': title
+        'title1': title1
     }
     rank04 = {
         'link1': '#',
-        'title1': title
+        'title1': title1
     }
     ublog1 = {
         'index1': '#',
         'icon1': icon,
         'link1': '#',
-        'title1': title,
+        'title1': title1,
         'name1': '沙米旅行手帖 Somewhere Journ'
     }
     ublog2 = {
         'index1': '#',
         'icon1': icon,
         'link1': '#',
-        'title1': title,
+        'title1': title1,
         'name1': '林公子生活遊記'
     }
     ublog3 = {
@@ -107,11 +107,10 @@ def index():
         'link1': '#',
         'comment1': 'S O L D 。 O U T'
     }
-
-    return render_template('index.html', title="首頁", slides1=slides1, slides2=slides2, slides3=slides3,
+    return render_template('home_page/index.html', title="首頁", slides1=slides1, slides2=slides2, slides3=slides3,
                            slides4=slides4, slides5=slides5,
-                           videos=videos, hk=hk, travel=travel, food=food, beauty=beauty,
-                           rank01=rank01, rank02=rank02, rank03=rank03, rank04=rank04, ublog1=ublog1, ublog2=ublog2, ublog3=ublog3)
+                           hk=hk, travel=travel, food=food, beauty=beauty, rank01=rank01, rank02=rank02, rank03=rank03, rank04=rank04, ublog1=ublog1, ublog2=ublog2, ublog3=ublog3,
+                           videos=videos)
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -229,11 +228,6 @@ def sky_post():
     return render_template('sky_post.html', title="晴報SkyPost")
 
 
-@app.route('/edit_carousel')
-def edit_carousel():
-    return render_template('edit_carousel.html', title="編輯封面")
-
-
 @app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
@@ -275,7 +269,7 @@ def add_post():
         db.session.add(post)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('add_post.html', title="新增貼文", form=form)
+    return render_template('admin/add_post.html', title="新增貼文", form=form)
 
 
 if __name__ == '__main__':

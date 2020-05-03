@@ -1,344 +1,101 @@
-{% extends "base1.html" %}
+{% extends "base/base1.html" %}
 
 {% block content %}
 
 <html>
 <body>
-    <div class="container">
-        <div id="slide" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox" style="margin-top: auto;">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
-                </ol>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                {# it should be a function (for admin) 一陣先搞:3 #}
-                <a href="{{slides1.link1}}"><img src="{{slides1.img1}}" class="d-block w-100"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(25, 124, 188, 0.85);">{{slides1.title1}}</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="{{slides2.link1}}"><img src="{{slides2.img1}}" class="d-block w-100"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(94, 175, 49, 0.85);">{{slides2.title1}}</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="{{slides3.link1}}"><img src="{{slides3.img1}}" class="d-block w-100"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(234, 100, 43, 0.85);">{{slides3.title1}}</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="{{slides3.link1}}"><img src="{{slides3.img1}}" class="d-block w-100"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(221, 0, 119, 0.85);">{{slides3.title1}}</h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="{{slides4.link1}}"><img src="{{slides4.img1}}" class="d-block w-100"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 style="background: rgba(218, 139, 98, 0.85);">{{slides4.title1}}</h5>
-                </div>
-            </div>
-            </div>
-                <a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#slide" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
+
+    {% include "home_page/carousel.html" %}
 
 <div class = "container">
     <div class= "row">
         <div class="page-left">
 
-
-                            <div class="section video">
-                        <div class="title-video">
-                                <a href="{{url_for('video')}}" target="_blank">
-                                    <img src="https://www.ulifestyle.com.hk/res/images/v2/UL-video-title.svg" title="影片頻道">
-                                </a>
-                                <a class="more" href="{{url_for('video')}}" target="_blank">更多 &gt;</a>
-                        </div>
-                    </div>
-                        <div class ="vline"></div>
+            <div class="section video">
+                <div class="title-video">
+                    <a href="{{url_for('video')}}" target="_blank">
+                        <img src="https://www.ulifestyle.com.hk/res/images/v2/UL-video-title.svg" title="影片頻道">
+                    </a>
+                    <a class="more" href="{{url_for('video')}}" target="_blank">更多 &gt;</a>
+                </div>
+            </div>
+            <div class ="vline"></div>
             <div class="VIDEO">
                 <div class="content row">
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a class="thumb" href="{{videos.link1}}" title="{{videos.title1}}">
-                                <div class="duration"><span>{{videos.time1}}</span></div>
-                                <img src="{{videos.img1}}" width="100%" alt="{{videos.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{videos.link1}}">
-                                    <h style="color:#555555; height: 40px; overflow: hidden;">{{videos.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a class="thumb" href="{{videos.link1}}" title="{{videos.title1}}">
-                                <div class="duration"><span>{{videos.time2}}</span></div>
-                                <img src="{{videos.img1}}" width="100%" alt="{{videos.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{videos.link1}}">
-                                    <h style="color:#555555">{{videos.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a class="thumb" href="{{videos.link1}}" title="{{videos.title1}}">
-                                <div class="duration"><span>{{videos.time1}}</span></div>
-                                <img src="{{videos.img1}}" width="100%" alt="{{videos.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{videos.link1}}">
-                                    <h style="color:#555555">{{videos.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
+                        {% include "home_page/index_video.html" %}
 
                 </div>
             </div>
 
-
-
-                            <div class="section hk">
-                        <div class="title-hk">
-                                <a href="{{url_for('hk')}}" target="_blank">
-                                    <img src="https://www.ulifestyle.com.hk/res/images/v2/uhk_logo_2.png" title="HK港生活">
-                                </a>
-                                <a class="more" href="{{url_for('hk')}}" target="_blank">更多 &gt;</a>
-                        </div>
-                    </div>
-                        <div class ="hline"></div>
+            <div class="section hk">
+                <div class="title-hk">
+                    <a href="{{url_for('hk')}}" target="_blank">
+                        <img src="https://www.ulifestyle.com.hk/res/images/v2/uhk_logo_2.png" title="HK港生活">
+                    </a>
+                    <a class="more" href="{{url_for('hk')}}" target="_blank">更多 &gt;</a>
+                </div>
+            </div>
+            <div class ="hline"></div>
             <div class="HK">
                 <div class="content row">
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{hk.link1}}" title="{{hk.title1}}">
-                                <img src="{{hk.img1}}" width="100%" alt="{{hk.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{hk.link1}}">
-                                    <h style="color:#555555">{{hk.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        {% include "home_page/index_hk.html" %}
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{hk.link1}}" title="{{hk.title1}}">
-                                <img src="{{hk.img1}}" width="100%" alt="{{hk.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{hk.link1}}">
-                                    <h style="color:#555555">{{hk.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{hk.link1}}" title="{{hk.title1}}">
-                                <img src="{{hk.img1}}" width="100%" alt="{{hk.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{hk.link1}}">
-                                    <h style="color:#555555">{{hk.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-
-
-                            <div class="section travel">
-                        <div class="title-travel">
-                                <a href="{{url_for('travel')}}" target="_blank">
-                                    <img src="https://www.ulifestyle.com.hk/res/images/v2/ut_logo.png" title="Travel旅遊">
-                                </a>
-                                <a class="more" href="{{url_for('travel')}}" target="_blank">更多 ></a>
-                                <a class="aboutus" href="http://travel.ulifestyle.com.hk/AboutUs.php" target="_blank">全港瀏覽人數No.1旅遊資訊內容網站</a>
-                        </div>
-                    </div>
-                        <div class ="tline"></div>
+            <div class="section travel">
+                <div class="title-travel">
+                    <a href="{{url_for('travel')}}" target="_blank">
+                        <img src="https://www.ulifestyle.com.hk/res/images/v2/ut_logo.png" title="Travel旅遊">
+                    </a>
+                    <a class="more" href="{{url_for('travel')}}" target="_blank">更多 ></a>
+                    <a class="aboutus" href="http://travel.ulifestyle.com.hk/AboutUs.php" target="_blank">全港瀏覽人數No.1旅遊資訊內容網站</a>
+                </div>
+            </div>
+            <div class ="tline"></div>
             <div class="TRAVEL">
                 <div class="content row">
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{travel.link1}}" title="{{travel.title1}}">
-                                <img src="{{travel.img1}}" width="100%" alt="{{travel.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{travel.link1}}">
-                                    <h style="color:#555555">{{travel.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        {% include "home_page/index_travel.html" %}
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{travel.link1}}" title="{{travel.title1}}">
-                                <img src="{{travel.img1}}" width="100%" alt="{{travel.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{travel.link1}}">
-                                    <h style="color:#555555">{{travel.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{travel.link1}}" title="{{travel.title1}}">
-                                <img src="{{travel.img1}}" width="100%" alt="{{travel.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{travel.link1}}">
-                                    <h style="color:#555555">{{travel.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-
-
-                            <div class="section food">
-                        <div class="title-food">
-                                <a href="{{url_for('food')}}" target="_blank">
-                                    <img src="https://www.ulifestyle.com.hk/res/images/v2/uf_logo.png" title="Food美食">
-                                </a>
-                                <a class="more" href="{{url_for('food')}}" target="_blank">更多 &gt;</a>
-                        </div>
-                    </div>
-                        <div class ="fline"></div>
+            <div class="section food">
+                <div class="title-food">
+                    <a href="{{url_for('food')}}" target="_blank">
+                        <img src="https://www.ulifestyle.com.hk/res/images/v2/uf_logo.png" title="Food美食">
+                    </a>
+                    <a class="more" href="{{url_for('food')}}" target="_blank">更多 &gt;</a>
+                </div>
+            </div>
+            <div class ="fline"></div>
             <div class="FOOD">
                 <div class="content row">
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{food.link1}}" title="{{food.title1}}">
-                                <img src="{{food.img1}}" width="100%" alt="{{food.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{food.link1}}">
-                                    <h style="color:#555555">{{food.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        {% include "home_page/index_food.html" %}
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{food.link1}}" title="{{food.title1}}">
-                                <img src="{{food.img1}}" width="100%" alt="{{food.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{food.link1}}">
-                                    <h style="color:#555555"> {{food.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{food.link1}}" title="{{food.title1}}">
-                                <img src="{{food.img1}}" width="100%" alt="{{food.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{food.link1}}">
-                                    <h style="color:#555555">{{food.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-
-
-                            <div class="section beauty">
-                        <div class="title-beauty">
-                                <a href="{{url_for('beauty')}}" target="_blank">
-                                    <img src="https://www.ulifestyle.com.hk/res/images/v2/ub_logo.png" title="Beauty美容">
-                                </a>
-                                <a class="more" href="{{url_for('beauty')}}" target="_blank">更多 &gt;</a>
-                        </div>
-                    </div>
-                        <div class ="bline"></div>
+            <div class="section beauty">
+                <div class="title-beauty">
+                    <a href="{{url_for('beauty')}}" target="_blank">
+                        <img src="https://www.ulifestyle.com.hk/res/images/v2/ub_logo.png" title="Beauty美容">
+                    </a>
+                    <a class="more" href="{{url_for('beauty')}}" target="_blank">更多 &gt;</a>
+                </div>
+            </div>
+            <div class ="bline"></div>
             <div class="BEAUTY">
                 <div class="content row">
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{beauty.link1}}" title="{{beauty.title1}}">
-                                <img src="{{beauty.img1}}" width="100%" alt="{{beauty.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{beauty.link1}}">
-                                    <h style="color:#555555">{{beauty.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                        {% include "home_page/index_beauty.html" %}
 
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{beauty.link1}}" title=" {{beauty.title1}}">
-                                <img src="{{beauty.img1}}" width="100%" alt="{{beauty.title1}} ">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{beauty.link1}}">
-                                    <h style="color:#555555">{{beauty.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-xs-12 col-sm-4 col-md-4">
-                        <div class="card">
-                            <a href="{{beauty.link1}}" title="{{beauty.title1}}">
-                                <img src="{{beauty.img1}}" width="100%" alt="{{beauty.title1}}">
-                            </a>
-                            <div class="card-header">
-                                <a href="{{beauty.link1}}">
-                                    <h style="color:#555555">{{beauty.title1}}</h>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
         </div>
 
 
@@ -801,8 +558,6 @@
                     </div>
                     <div class="copyright_index">香港經濟日報版權所有@2020</div>
                 </div>
-
-
 
         </div>
     </div>
