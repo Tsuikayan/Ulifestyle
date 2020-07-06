@@ -3,7 +3,7 @@ services:
         web:
                 build: .
                 ports:
-		        - "80:5000"
-			- "8025:8025"
+                        - "80:5000"
+                        - "8025:8025"
                 volumes:
-		        - /home/ubuntu/Ulifestyle/ulifestyle_folder:/root
+                        - /home/ubuntu/Ulifestyle/ulifestyle_folder:/root
