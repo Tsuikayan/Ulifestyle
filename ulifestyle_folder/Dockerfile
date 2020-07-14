@@ -1,13 +1,9 @@
-From python:3
+FROM python:3.7.2-stretch
 
-COPY requirements.txt /root/
+WORKDIR /app
 
-RUN cd /root && pip install -r requirements.txt
+ADD . /app
 
-WORKDIR /root
+RUN pip install -r requirements.txt
 
-EXPOSE 80:5000
-
-EXPOSE 8025:8025
-
-CMD ["python", "run.py"]
+CMD python run.py
