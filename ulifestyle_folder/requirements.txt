@@ -10,7 +10,7 @@ Flask-Login
 Flask-Mail
 Flask-Migrate
 Flask-Moment
-Flask-SQLAlchemy
+Flask-SQLAlchemy==2.4.1
 Flask-WTF
 itsdangerous
 Jinja2
@@ -21,7 +21,7 @@ python-dateutil
 python-editor
 pytz
 six
-SQLAlchemy
+SQLAlchemy==1.3.16
 visitor
 Werkzeug
 WTForms
