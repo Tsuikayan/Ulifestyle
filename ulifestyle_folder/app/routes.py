@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
 from app.forms import *
 from app import app, db
-from app.models import User, Post, Tag, Carousel
+from app.models import User, Post, Tag, Carousel, Author
 
 
 bootstrap = Bootstrap()
@@ -100,6 +100,19 @@ def add_tag():
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('admin/add_tag.html', title="Add Tag", form=form)
+
+
+@app.route('/add_author', methods=['GET', 'POST'])
+def add_author():
+    form = AuthorForm()
+    if form.validate_on_submit():
+        author = Author(
+            username=form.username.data
+        )
+        db.session.add(author)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('admin/add_author.html', title="Add Author", form=form)
 
 
 @app.route('/edit_carousel', methods=['GET', 'POST'])

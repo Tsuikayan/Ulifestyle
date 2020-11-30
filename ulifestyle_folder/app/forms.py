@@ -244,9 +244,10 @@ class PostForm(FlaskForm):
     submit = SubmitField('發佈')
 
 
-class author(FlaskForm):
-    username = StringField('name')
-    usergroup = SelectField('usergroup', choice=[('author')])
+class AuthorForm(FlaskForm):
+    username = StringField('Author Name')
+    usergroup = SelectField('usergroup', choices=[('author', 'Author')])
+    submit = SubmitField('Submit')
 
 
 class TagForm(FlaskForm):

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% block title %}
-    <title>{{ title }} | U Lifestyle</title>
+    <!--suppress ALL -->
+<title>{{ title }} | U Lifestyle</title>
 
     <link rel="icon" href="https://login.ulifestyle.com.hk/cas/images/ul_login_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -45,6 +46,12 @@
           <a class="nav-link" href="{{url_for('add_post')}}">
               <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
               <span id="download-app">新增貼文</span>
+          </a>
+      {% endif %}
+      {% if current_user.usergroup == "admin" %}
+          <a class="nav-link" href="{{url_for('add_author')}}">
+              <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
+              <span id="download-app">新增作者</span>
           </a>
       {% endif %}
 

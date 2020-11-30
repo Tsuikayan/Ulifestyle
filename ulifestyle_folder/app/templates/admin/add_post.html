@@ -36,6 +36,15 @@
                   </div>
                   <div class="card-body">
                     <div class="media-body" style="margin: 20px auto 20px;">
+                        <p>
+                          {{ form.author.label(class="font-weight-bold") }}<br>
+                          {{ form.author(size=32, class="form-control", placeholder="author....") }}
+                          {% for error in form.author.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                    </div>
+                    <div class="media-body" style="margin: 20px auto 20px;">
                       <div class="float-right">
                         <label class="font-weight-light small">(只限50中文字以內)</label>
                       </div>
