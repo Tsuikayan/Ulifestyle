@@ -305,17 +305,17 @@ def hk():
 
 @app.route('/travel', methods=['GET', 'POST'])
 def travel():
-    return render_template('travel.html', title="Travel旅遊")
+    return render_template('travel/travel.html', title="Travel旅遊")
 
 
 @app.route('/food', methods=['GET', 'POST'])
 def food():
-    return render_template('food.html', title="Food美食")
+    return render_template('food/food.html', title="Food美食")
 
 
 @app.route('/beauty', methods=['GET', 'POST'])
 def beauty():
-    return render_template('beauty.html', title="Beauty美容")
+    return render_template('beauty/beauty.html', title="Beauty美容")
 
 
 @app.route('/download', methods=['GET', 'POST'])
