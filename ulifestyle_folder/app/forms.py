@@ -1,8 +1,11 @@
 from flask_wtf import FlaskForm
 from wtforms import *
 from wtforms.fields import html5
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
+from wtforms.ext.sqlalchemy.fields import QuerySelectField
+
+from .models import User, getUser
 
 
 class RegistrationForm(FlaskForm):
@@ -234,7 +237,7 @@ class EditProfileForm(FlaskForm):
 
 class PostForm(FlaskForm):
     title = StringField('標題')
-    author = StringField('作者')
+    author = QuerySelectField(u'作者', query_factory=getUser, get_label='username')
     body1 = StringField('內容1')
     body2 = TextAreaField('內容2')
     theme = StringField('主題')

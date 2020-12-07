@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% block title %}
     <!--suppress ALL -->
-<title>{{ title }} | U Lifestyle</title>
+<title>{{ title }} - 尋找香港好去處</title>
 
     <link rel="icon" href="https://login.ulifestyle.com.hk/cas/images/ul_login_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -42,20 +42,7 @@
         </ul>
       </div>
 
-      {% if current_user.usergroup == "admin" or current_user.usergroup == "author" %}
-          <a class="nav-link" href="{{url_for('add_post')}}">
-              <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
-              <span id="download-app">新增貼文</span>
-          </a>
-      {% endif %}
-      {% if current_user.usergroup == "admin" %}
-          <a class="nav-link" href="{{url_for('add_author')}}">
-              <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
-              <span id="download-app">新增作者</span>
-          </a>
-      {% endif %}
-
-      <div class="form-inline my-2 my-lg-0">
+      <div class="form-inline my-2 my-sm-0">
         <a class="nav-link" href="{{url_for('download')}}">
           <i id="download-icon"></i>
           <span id="download-app">立即下載App</span>
@@ -63,35 +50,18 @@
         <button type="button" data-container="body" data-toggle="popover" data-placement="bottom" style="border: aliceblue; background-color: transparent;">
           <img src="https://www.ulifestyle.com.hk/res/images/v2/user.png" />
         </button>
-
-          <div class="popover-content">
-              <div class="popover-head" style="text-align: center">
-                  U Lifestyle 會員
-              </div>
-              <div class="popover-body">
-
-                  {% if current_user.is_anonymous %}
-                      <div>
-                          <img class="img-circle" alt="" src="https://www.ulifestyle.com.hk/res/images/v2/ul_upload_profilepic.png" width="65" height="65" style="position: relative; right: 10px;">
-                          <a href="{{url_for('register')}}" style="color: #0076B7;">新登記</a>
-                          &nbsp;|&nbsp;
-                          <a href="{{url_for('login')}}" style="color: #0076B7;">會員登入</a>
-                      </div>
-                      <span style="font-size:12px; color: #757575">立即登記成為 U Lifestyle 會員，<p>盡享獨家優惠及活動！</p></span>
-                      <span style="font-size:9px; color: #757575">一經登記或登入，即表示閣下已詳細閱讀並且同意 U Lifestyle 網站
-                          <a href="https://www.ulifestyle.com.hk/aboutus" target="_blank">私隱政策與使用條款。</a>
-                      </span>
-                  {% else %}
-                      <div>
-                          <img class="img-circle" alt="" src="https://www.ulifestyle.com.hk/res/images/v2/ul_upload_profilepic.png" width="65" height="65"><br>
-                          <a href="{{ url_for('profile') }}">{{ current_user.username }}</a><br>
-                          <a href="{{ url_for('logout') }}">登出</a>
-                      </div>
-                  {% endif %}
-              </div>
-          </div>
       </div>
 
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <button id="navbar-logo" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="{{url_for('hk')}}">
+                <div class="text-white"><b>港生活</b></div>
+            </a>
+          </button>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          {% include "hk/hk_menu.html" %}
     </nav>
 
     <style>
@@ -144,7 +114,7 @@
         display: none;
       }
       .popover-header{
-        background-color: #757575;
+        background-color: #ffffff;
         color: #fff;
       }
       .popover-header::before{
@@ -154,7 +124,7 @@
         border-bottom-color: #757575;
       }
       .popover-body{
-        text-align: center;
+        text-align: left;
       }
     </style>
   </body>

@@ -127,7 +127,7 @@ def edit_carousel():
         db.session.add(carousel)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('edit_carousel.html', title="Edit Carousel", form=form)
+    return render_template('admin/edit_carousel.html', title="Edit Carousel", form=form)
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -300,7 +300,7 @@ def blog():
 
 @app.route('/hk', methods=['GET', 'POST'])
 def hk():
-    return render_template('hk.html', title="HK港生活")
+    return render_template('hk/hk.html', title="港生活")
 
 
 @app.route('/travel', methods=['GET', 'POST'])
@@ -351,7 +351,7 @@ def add_post():
     if form.validate_on_submit():
         if(form.type.data == "article"):
           post = Post(
-              author=current_user.username,
+              author=form.author.data,
               theme=form.theme.data,
               title=form.title.data,
               body1=form.body1.data,
@@ -363,7 +363,7 @@ def add_post():
           videoFile = request.files['video']
           videoFile.save("uploads/" + secure_filename(videoFile.filename))
           post = Post(
-              author=current_user.username,
+              author=form.author.data,
               title=form.title.data,
               body1="uploads/" + secure_filename(videoFile.filename),
               body2=form.body2.data,

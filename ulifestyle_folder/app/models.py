@@ -1,11 +1,14 @@
 from datetime import datetime
-from hashlib import md5
 from time import time
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+
 import jwt
 from app import app, db, login
+
+
+db = SQLAlchemy(app)
 
 
 class User(UserMixin, db.Model):
@@ -55,7 +58,7 @@ def load_user(id):
 class Post(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
-    author = db.Column(db.Integer, db.ForeignKey('user.id'))
+    author = db.Column(db.Integer, db.ForeignKey('Author.id'))
     body1 = db.Column(db.String(100), nullable=True)
     body2 = db.Column(db.Text, nullable=False)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
@@ -75,6 +78,11 @@ class Author(db.Model):
 
     def __repr__(self):
         return '<author {}>'.format(self.body)
+
+
+def getUser():
+    u = Author.query
+    return u
 
 
 class Tag(db.Model):
