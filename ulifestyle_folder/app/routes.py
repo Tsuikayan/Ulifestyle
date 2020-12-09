@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
 from app.forms import *
 from app import app, db
-from app.models import user, post, tag, carousel, author
+from app.models import *
 
 
 bootstrap = Bootstrap()
@@ -346,8 +346,8 @@ def profile():
     return render_template('profile.html', title="個人檔案", form=form)
 
 
-@app.route('/add_post', methods=['GET', 'POST'])
-def add_post():
+@app.route('/add_hkpost', methods=['GET', 'POST'])
+def add_hkpost():
     form = PostForm()
     if form.validate_on_submit():
         if(form.type.data == "article"):
@@ -363,7 +363,7 @@ def add_post():
         else:
           videoFile = request.files['video']
           videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = Post(
+          posts = post(
               author=form.author.query,
               title=form.title.data,
               body1="uploads/" + secure_filename(videoFile.filename),
@@ -373,7 +373,7 @@ def add_post():
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('admin/add_post.html', title="新增貼文", form=form)
+    return render_template('admin/add_hkpost.html', title="新增貼文", form=form)
 
 
 if __name__ == '__main__':
