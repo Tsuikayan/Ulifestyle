@@ -22,28 +22,7 @@
                   <div class="card-header">
                     建立貼文
                   </div>
-                  <div style="margin-top: 20px;">
-                      <div class="float-right" >
-                          <label class="font-weight-light small">(只限10中文字以內)</label>
-                      </div>
-                    <p>
-                      {{ form.theme.label(class="font-weight-bold") }}<br>
-                      {{ form.theme(size=32, class="form-control", placeholder="theme....") }}
-                      {% for error in form.theme.errors %}
-                          <span style="color: red;">{{ error }}</span>
-                      {% endfor %}
-                    </p>
-                  </div>
                   <div class="card-body">
-                    <div class="media-body" style="margin: 20px auto 20px;">
-                        <p>
-                          {{ form.author.label(class="font-weight-bold") }}<br>
-                          {{ form.author(size=32, class="form-control", placeholder="author....") }}
-                          {% for error in form.author.errors %}
-                              <span style="color: red;">{{ error }}</span>
-                          {% endfor %}
-                        </p>
-                    </div>
                     <div class="media-body" style="margin: 20px auto 20px;">
                       <div class="float-right">
                         <label class="font-weight-light small">(只限50中文字以內)</label>
@@ -56,6 +35,15 @@
                         {% endfor %}
                       </p>
                     </div>
+                      <div class="media-body" style="margin: 20px auto 20px;">
+                        <p>
+                          {{ form.author.label(class="font-weight-bold") }}<br>
+                          {{ form.author(class="form-control") }}
+                          {% for error in form.author.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                      </div>
                     <div class="media-body" style="margin: 20px auto 20px;">
                       <div class="float-right">
                         <label class="font-weight-light small">(只限100中文字以內)</label>
@@ -77,25 +65,37 @@
                         {% endfor %}
                       </p>
                     </div>
+                    <div style="margin-top: 20px;">
+                        <div class="float-right" >
+                          <label class="font-weight-light small">(只限10中文字以內)</label>
+                        </div>
+                        <p>
+                          {{ form.theme.label(class="font-weight-bold") }}<br>
+                          {{ form.theme(size=32, class="form-control", placeholder="theme....") }}
+                          {% for error in form.theme.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                    </div>
+                      <div class="float-right">
+                        <label class="font-weight-light small">(只限10中文字以內)</label>
+                      </div>
+                      <p>
+                        {{ form.tag.label(class="font-weight-bold") }}<br>
+                        {{ form.tag(size=32, class="form-control", placeholder="#....") }}
+                        {% for error in form.tag.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </p>
+                      <p>
+                        {{ form.site.label(class="font-weight-bold") }}<br>
+                        {{ form.site(class="form-control",style="text-align:center;text-align-last:center;") }}
+                      </p>
+                      <div class="card-footer text-muted">
+                        <p>{{ form.submit(class="btn btn-primary float-right") }}</p>
+                      </div>
+                      <input type="hidden" name="type" value="article" />
                   </div>
-                  <div class="float-right">
-                    <label class="font-weight-light small">(只限10中文字以內)</label>
-                  </div>
-                  <p>
-                    {{ form.tag.label(class="font-weight-bold") }}<br>
-                    {{ form.tag(size=32, class="form-control", placeholder="#....") }}
-                    {% for error in form.tag.errors %}
-                        <span style="color: red;">{{ error }}</span>
-                    {% endfor %}
-                  </p>
-                  <p>
-                    {{ form.site.label(class="font-weight-bold") }}<br>
-                    {{ form.site(class="form-control",style="text-align:center;text-align-last:center;") }}
-                  </p>
-                  <div class="card-footer text-muted">
-                    <p>{{ form.submit(class="btn btn-primary float-right") }}</p>
-                  </div>
-                  <input type="hidden" name="type" value="article" />
                 </div>
               </form>
             </div>
@@ -108,6 +108,7 @@
                   <div class="card-header">
                     建立影片
                   </div>
+                    <div class="card-body">
                   <div style="margin-top: 20px;">
                     <div class="float-right">
                       <label class="font-weight-light small">(只限50中文字以內)</label>
@@ -120,7 +121,15 @@
                       {% endfor %}
                     </p>
                   </div>
-
+                  <div class="media-body" style="margin: 20px auto 20px;">
+                        <p>
+                          {{ form.author.label(class="font-weight-bold") }}<br>
+                          {{ form.author(class="form-control") }}
+                          {% for error in form.author.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                  </div>
                   <div class="input-group mb-3" style="margin-top: 20px;">
                     <div class="custom-file">
                       <input type="file" class="custom-file-input" id="inputGroupFile02" name="video" onchange="fileChange(event)">
@@ -128,7 +137,7 @@
                     </div>
 
                   </div>
-                  <div class="card-body">
+
                       <div class="media-body">
                         <p>
                           {{ form.body2.label(class="font-weight-bold") }}<br>
@@ -138,11 +147,12 @@
                           {% endfor %}
                         </p>
                       </div>
-                  </div>
+
                   <p>
                       {{ form.site.label(class="font-weight-bold") }}<br>
                       {{ form.site(class="form-control",style="text-align:center;text-align-last:center;") }}
                   </p>
+                    </div>
 
                   <div class="card-footer text-muted">
                     <p>{{ form.submit(class="btn btn-primary float-right") }}</p>

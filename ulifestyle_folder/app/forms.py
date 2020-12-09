@@ -2,10 +2,10 @@ from flask_wtf import FlaskForm
 from wtforms import *
 from wtforms.fields import html5
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
-from app.models import User
+from app.models import user
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 
-from .models import User, getUser
+from .models import user, author_query
 
 
 class RegistrationForm(FlaskForm):
@@ -191,13 +191,13 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('註冊')
 
     def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first()
-        if user is not None:
+        users = user.query.filter_by(username=username.data).first()
+        if users is not None:
             raise ValidationError('用戶名稱已被使用')
 
     def validate_email(self, email):
-        user = User.query.filter_by(email=email.data).first()
-        if user is not None:
+        users = user.query.filter_by(email=email.data).first()
+        if users is not None:
             raise ValidationError('電郵地址已被註冊')
 
 
@@ -230,16 +230,16 @@ class EditProfileForm(FlaskForm):
 
     def validate_password(self, password_hash):
         if password_hash.data != self.original_password:
-            pw = User.query.filter_by(password_hash=self.password.data).first()
+            pw = user.query.filter_by(password_hash=self.password.data).first()
             if pw is not None:
                 raise ValidationError('Please use a different password.')
 
 
 class PostForm(FlaskForm):
     title = StringField('標題')
-    author = QuerySelectField(u'作者', query_factory=getUser, get_label='username')
-    body1 = StringField('內容1')
-    body2 = TextAreaField('內容2')
+    author = QuerySelectField('作者', query_factory=author_query, allow_blank=True, get_label="username")
+    body1 = StringField('主旨')
+    body2 = TextAreaField('內文')
     theme = StringField('主題')
     tag = StringField('標籤')
     type = SelectField(choices=[('video', 'video影片'), ('article', 'article文章')])
