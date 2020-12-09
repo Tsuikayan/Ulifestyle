@@ -1,0 +1,187 @@
+{% extends "travel/travel_base.html" %}
+
+{% block content %}
+
+<html>
+<body>
+
+
+<div class = "container">
+    <div class= "row">
+        <div class="page-left">
+
+            <div class="section travel">
+                <div class="title-travel">
+
+                        <div class="text-success">最新文章
+
+                    <a class="more" href="{{url_for('travel')}}" target="_blank">更多 &gt;</a>
+                </div>
+            </div>
+            <div class ="tline"></div>
+            <div class="TRAVEL">
+                <div class="content row">
+
+                        so many post here
+
+                </div>
+            </div>
+        </div>
+
+<style>
+    .slide h5{
+        padding: 10px 15px;
+        color: #fff;
+        display: inline-block;
+    }
+    .page-left{
+        float: left;
+        width: calc(100% - 315px);
+    }
+    .title-video img{
+        width: 178px;
+        height: 31px;
+    }
+    .title-video .more{
+        float:right;
+        color: #0076B7;
+    }
+    .duration span{
+        background: rgba(17, 17, 17, 0.8);
+        padding: 5px 7px;
+        color: #fff;
+    }
+    .VIDEO .card-header{
+        background-color: white;
+        border-bottom: 0px;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px auto 0px;
+    }
+    .title-hk .more{
+        float:right;
+        color: #0076B7;
+    }
+    .title-hk{
+        margin: 3em auto 0.5em;
+    }
+    .HK .card-header{
+        border-top: 4px solid #0076B7;
+        background-color: white;
+        border-bottom: 0px;
+        height: 55px;
+        overflow: hidden;
+    }
+    .tline{
+        border-bottom: 4px solid #5EAF31;
+        margin: 0.5em auto 0.5em;
+    }
+    .HK .card-header h{
+
+    }
+    .title-travel .more{
+        float:right;
+        color: #5EAF31;
+    }
+    .title-travel{
+        margin: 3em auto 0.5em;
+    }
+    .TRAVEL .card-header{
+        border-top: 4px solid #5EAF31;
+        background-color: white;
+        border-bottom: 0px;
+        height: 55px;
+        overflow: hidden;
+    }
+    .title-food .more{
+        float:right;
+        color: #EA642B;
+    }
+    .FOOD .card-header{
+        border-top: 4px solid #EA642B;
+        background-color: white;
+        border-bottom: 0px;
+        height: 55px;
+        overflow: hidden;
+    }
+    .title-beauty .more{
+        float:right;
+        color: #DD0077;
+    }
+    .BEAUTY .card-header{
+        border-top: 4px solid #DD0077;
+        background-color: white;
+        border-bottom: 0px;
+        height: 55px;
+        overflow: hidden;
+    }
+    .tag-list li a{
+        color: #757575;
+    }
+    .tag-list li{
+        float: left;
+        border: 1px solid #f2f2f2;
+        height: 28px;
+        line-height: 28px;
+        margin: 5px 3px;
+        overflow: hidden;
+        padding: 0 10px;
+        text-align: center;
+        width: auto;
+        border-radius: 3px;
+    }
+    .tag-list ul{
+        margin: 0;
+        padding: 0;
+    }
+    .ranking_tab .nav >li > a{
+        padding-top: 10px;
+        padding-bottom: 2px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .ranking_title > a{
+        color: #757575;
+    }
+    .nav-tabs2 >li {
+        float: left;
+        width: 33%;
+        margin-bottom: 1px;
+        position: relative;
+        left: 20px;
+    }
+    .ublog_tab .nav >li > a{
+        padding-top: 10px;
+        padding-bottom: 2px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .ublog_icon >a>img{
+        display: inline-block;
+        border-radius: 50%;
+        width: 50px;
+        max-width: inherit;
+        height: 50px;
+    }
+    .blog_title>a{
+        color: #757575;
+    }
+    .comment>a{
+        font-size: 12px;
+        color: #757575;
+    }
+    .copyright_link a{
+        color: #999999;
+    }
+</style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+{% endblock %}
