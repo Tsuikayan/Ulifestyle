@@ -117,7 +117,7 @@ def add_hkmenu():
         db.session.add(menus)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('admin/add_hkmenu.html', title="Add Menu", form=form)
+    return render_template('admin/add_menu/add_hkmenu.html', title="Add Menu", form=form)
 
 
 @app.route('/add_travelmenu', methods=['GET', 'POST'])
@@ -130,7 +130,7 @@ def add_travelmenu():
         db.session.add(menus)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('admin/add_travelmenu.html', title="Add Menu", form=form)
+    return render_template('admin/add_menu/add_travelmenu.html', title="Add Menu", form=form)
 
 
 @app.route('/add_foodmenu', methods=['GET', 'POST'])
@@ -143,7 +143,7 @@ def add_foodmenu():
         db.session.add(menus)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('admin/add_foodmenu.html', title="Add Menu", form=form)
+    return render_template('admin/add_menu/add_foodmenu.html', title="Add Menu", form=form)
 
 
 @app.route('/add_beautymenu', methods=['GET', 'POST'])
@@ -156,7 +156,7 @@ def add_beautymenu():
         db.session.add(menus)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('admin/add_beautymenu.html', title="Add Menu", form=form)
+    return render_template('admin/add_menu/add_beautymenu.html', title="Add Menu", form=form)
 
 
 @app.route('/add_author', methods=['GET', 'POST'])
