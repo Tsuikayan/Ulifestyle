@@ -243,7 +243,6 @@ class PostForm(FlaskForm):
     theme = StringField('主題')
     tag = StringField('標籤')
     type = SelectField(choices=[('video', 'video影片'), ('article', 'article文章')])
-    site = SelectField(choices=[('HK', 'HK港生活'), ('Travel', 'Travel旅行'), ('Food', 'Food美食'), ('Beauty', 'Beauty美容'), ('Blog', 'Blog博客')])
     submit = SubmitField('發佈')
 
 

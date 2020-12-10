@@ -1,4 +1,4 @@
-{% extends "hk/hk_base.html" %}
+{% extends "beauty/beauty_base.html" %}
 
 {% block content %}
 
@@ -20,7 +20,7 @@
                 {{ form.hidden_tag() }}
                 <div class="card">
                   <div class="card-header">
-                    建立貼文 - HK
+                    建立貼文 - BEAUTY
                   </div>
                   <div class="card-body">
                     <div class="media-body" style="margin: 20px auto 20px;">
@@ -87,6 +87,10 @@
                             <span style="color: red;">{{ error }}</span>
                         {% endfor %}
                       </p>
+                      <p>
+                        {{ form.site.label(class="font-weight-bold") }}<br>
+                        {{ form.site(class="form-control",style="text-align:center;text-align-last:center;") }}
+                      </p>
                       <div class="card-footer text-muted">
                         <p>{{ form.submit(class="btn btn-primary float-right") }}</p>
                       </div>
@@ -102,7 +106,7 @@
                 {{ form.hidden_tag() }}
                 <div class="card">
                   <div class="card-header">
-                    建立影片 - HK
+                    建立影片 - BEAUTY
                   </div>
                     <div class="card-body">
                   <div style="margin-top: 20px;">
@@ -143,6 +147,11 @@
                           {% endfor %}
                         </p>
                       </div>
+
+                  <p>
+                      {{ form.site.label(class="font-weight-bold") }}<br>
+                      {{ form.site(class="form-control",style="text-align:center;text-align-last:center;") }}
+                  </p>
                     </div>
 
                   <div class="card-footer text-muted">

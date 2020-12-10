@@ -93,10 +93,10 @@ def index():
 def add_tag():
     form = TagForm()
     if form.validate_on_submit():
-        tag = tag(
+        tags = tag(
             tag=form.tag.data
         )
-        db.session.add(tag)
+        db.session.add(tags)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('admin/add_tag.html', title="Add Tag", form=form)
@@ -351,7 +351,63 @@ def add_hkpost():
     form = PostForm()
     if form.validate_on_submit():
         if(form.type.data == "article"):
-          posts = post(
+          posts = hkpost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = hkpost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('hk'))
+    return render_template('admin/add_hkpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_foodpost', methods=['GET', 'POST'])
+def add_foodpost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = foodpost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = foodpost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('food'))
+    return render_template('admin/add_foodpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_travelpost', methods=['GET', 'POST'])
+def add_travelpost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = travelpost(
               author=form.author.query,
               theme=form.theme.data,
               title=form.title.data,
@@ -363,7 +419,7 @@ def add_hkpost():
         else:
           videoFile = request.files['video']
           videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = post(
+          posts = travelpost(
               author=form.author.query,
               title=form.title.data,
               body1="uploads/" + secure_filename(videoFile.filename),
@@ -372,8 +428,36 @@ def add_hkpost():
               type=form.type.data)
         db.session.add(posts)
         db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('admin/add_hkpost.html', title="新增貼文", form=form)
+        return redirect(url_for('hk'))
+    return render_template('admin/add_travelpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_beautypost', methods=['GET', 'POST'])
+def add_beautypost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = beautypost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = beautypost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('hk'))
+    return render_template('admin/add_beautypost.html', title="新增貼文", form=form)
 
 
 if __name__ == '__main__':

@@ -67,7 +67,7 @@ def author_query():
     return author.query
 
 
-class post(UserMixin, db.Model):
+class hkpost(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
     author = db.Column(db.ForeignKey(author.username), nullable=True)
@@ -77,10 +77,54 @@ class post(UserMixin, db.Model):
     theme = db.Column(db.String(10), nullable=True)
     tag = db.Column(db.String(10), nullable=True)
     type = db.Column(db.String(10), nullable=False)
-    site = db.Column(db.String(30), nullable=True)
 
     def __repr__(self):
-        return '<post {}>'.format(self.body)
+        return '<hkpost {}>'.format(self.body)
+
+
+class foodpost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    body2 = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+    theme = db.Column(db.String(10), nullable=True)
+    tag = db.Column(db.String(10), nullable=True)
+    type = db.Column(db.String(10), nullable=False)
+
+    def __repr__(self):
+        return '<foodpost {}>'.format(self.body)
+
+
+class travelpost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    body2 = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+    theme = db.Column(db.String(10), nullable=True)
+    tag = db.Column(db.String(10), nullable=True)
+    type = db.Column(db.String(10), nullable=False)
+
+    def __repr__(self):
+        return '<travelpost {}>'.format(self.body)
+
+
+class beautypost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    body2 = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+    theme = db.Column(db.String(10), nullable=True)
+    tag = db.Column(db.String(10), nullable=True)
+    type = db.Column(db.String(10), nullable=False)
+
+    def __repr__(self):
+        return '<beautypost {}>'.format(self.body)
 
 
 class tag(db.Model):
