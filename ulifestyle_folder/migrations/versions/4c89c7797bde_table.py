@@ -1,8 +1,8 @@
-"""users table
+"""table
 
-Revision ID: 6821f75f7968
+Revision ID: 4c89c7797bde
 Revises: 
-Create Date: 2020-12-10 18:21:16.769688
+Create Date: 2020-12-10 21:41:52.407173
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6821f75f7968'
+revision = '4c89c7797bde'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -25,6 +25,12 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_author_username'), 'author', ['username'], unique=True)
+    op.create_table('beautymenu',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=20), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_beautymenu_name'), 'beautymenu', ['name'], unique=False)
     op.create_table('carousel',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=True),
@@ -37,19 +43,30 @@ def upgrade():
     op.create_index(op.f('ix_carousel_title'), 'carousel', ['title'], unique=False)
     op.create_table('contact',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('contype', sa.String(), nullable=True),
-    sa.Column('conway', sa.String(), nullable=True),
+    sa.Column('contype', sa.String(length=10), nullable=True),
+    sa.Column('conway', sa.String(length=30), nullable=True),
     sa.Column('phoneno', sa.Integer(), nullable=True),
     sa.Column('email', sa.String(), nullable=True),
     sa.Column('address', sa.String(), nullable=True),
-    sa.Column('hyperlink', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_table('foodmenu',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=20), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_foodmenu_name'), 'foodmenu', ['name'], unique=False)
+    op.create_table('hkmenu',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=20), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_hkmenu_name'), 'hkmenu', ['name'], unique=False)
     op.create_table('mediaapp',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('mediatype', sa.String(), nullable=True),
+    sa.Column('mediatype', sa.String(length=20), nullable=True),
     sa.Column('hyperlink', sa.String(), nullable=True),
-    sa.Column('side', sa.String(), nullable=True),
+    sa.Column('side', sa.String(length=10), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('tag',
@@ -58,6 +75,12 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_tag_tag'), 'tag', ['tag'], unique=False)
+    op.create_table('travelmenu',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=20), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_travelmenu_name'), 'travelmenu', ['name'], unique=False)
     op.create_table('user',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=30), nullable=True),
@@ -90,6 +113,17 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_beautypost_timestamp'), 'beautypost', ['timestamp'], unique=False)
+    op.create_table('beautyvideopost',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('title', sa.String(length=50), nullable=False),
+    sa.Column('author', sa.String(length=30), nullable=True),
+    sa.Column('body1', sa.String(length=100), nullable=True),
+    sa.Column('video', sa.String(length=100), nullable=False),
+    sa.Column('timestamp', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['author'], ['author.username'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_beautyvideopost_timestamp'), 'beautyvideopost', ['timestamp'], unique=False)
     op.create_table('foodpost',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=False),
@@ -104,6 +138,17 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_foodpost_timestamp'), 'foodpost', ['timestamp'], unique=False)
+    op.create_table('foodvideopost',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('title', sa.String(length=50), nullable=False),
+    sa.Column('author', sa.String(length=30), nullable=True),
+    sa.Column('body1', sa.String(length=100), nullable=True),
+    sa.Column('video', sa.String(length=100), nullable=False),
+    sa.Column('timestamp', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['author'], ['author.username'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_foodvideopost_timestamp'), 'foodvideopost', ['timestamp'], unique=False)
     op.create_table('hkpost',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=False),
@@ -118,6 +163,17 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_hkpost_timestamp'), 'hkpost', ['timestamp'], unique=False)
+    op.create_table('hkvideopost',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('title', sa.String(length=50), nullable=False),
+    sa.Column('author', sa.String(length=30), nullable=True),
+    sa.Column('body1', sa.String(length=100), nullable=True),
+    sa.Column('video', sa.String(length=100), nullable=False),
+    sa.Column('timestamp', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['author'], ['author.username'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_hkvideopost_timestamp'), 'hkvideopost', ['timestamp'], unique=False)
     op.create_table('travelpost',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=50), nullable=False),
@@ -132,30 +188,57 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_travelpost_timestamp'), 'travelpost', ['timestamp'], unique=False)
+    op.create_table('travelvideopost',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('title', sa.String(length=50), nullable=False),
+    sa.Column('author', sa.String(length=30), nullable=True),
+    sa.Column('body1', sa.String(length=100), nullable=True),
+    sa.Column('video', sa.String(length=100), nullable=False),
+    sa.Column('timestamp', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['author'], ['author.username'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_travelvideopost_timestamp'), 'travelvideopost', ['timestamp'], unique=False)
     # ### end Alembic commands ###
 
 
 def downgrade():
     # ### commands auto generated by Alembic - please adjust! ###
+    op.drop_index(op.f('ix_travelvideopost_timestamp'), table_name='travelvideopost')
+    op.drop_table('travelvideopost')
     op.drop_index(op.f('ix_travelpost_timestamp'), table_name='travelpost')
     op.drop_table('travelpost')
+    op.drop_index(op.f('ix_hkvideopost_timestamp'), table_name='hkvideopost')
+    op.drop_table('hkvideopost')
     op.drop_index(op.f('ix_hkpost_timestamp'), table_name='hkpost')
     op.drop_table('hkpost')
+    op.drop_index(op.f('ix_foodvideopost_timestamp'), table_name='foodvideopost')
+    op.drop_table('foodvideopost')
     op.drop_index(op.f('ix_foodpost_timestamp'), table_name='foodpost')
     op.drop_table('foodpost')
+    op.drop_index(op.f('ix_beautyvideopost_timestamp'), table_name='beautyvideopost')
+    op.drop_table('beautyvideopost')
     op.drop_index(op.f('ix_beautypost_timestamp'), table_name='beautypost')
     op.drop_table('beautypost')
     op.drop_index(op.f('ix_user_username'), table_name='user')
     op.drop_index(op.f('ix_user_email'), table_name='user')
     op.drop_table('user')
+    op.drop_index(op.f('ix_travelmenu_name'), table_name='travelmenu')
+    op.drop_table('travelmenu')
     op.drop_index(op.f('ix_tag_tag'), table_name='tag')
     op.drop_table('tag')
     op.drop_table('mediaapp')
+    op.drop_index(op.f('ix_hkmenu_name'), table_name='hkmenu')
+    op.drop_table('hkmenu')
+    op.drop_index(op.f('ix_foodmenu_name'), table_name='foodmenu')
+    op.drop_table('foodmenu')
     op.drop_table('contact')
     op.drop_index(op.f('ix_carousel_title'), table_name='carousel')
     op.drop_index(op.f('ix_carousel_link'), table_name='carousel')
     op.drop_index(op.f('ix_carousel_img'), table_name='carousel')
     op.drop_table('carousel')
+    op.drop_index(op.f('ix_beautymenu_name'), table_name='beautymenu')
+    op.drop_table('beautymenu')
     op.drop_index(op.f('ix_author_username'), table_name='author')
     op.drop_table('author')
     # ### end Alembic commands ###

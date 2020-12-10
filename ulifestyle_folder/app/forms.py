@@ -258,6 +258,11 @@ class TagForm(FlaskForm):
     submit = SubmitField('完成')
 
 
+class MenuForm(FlaskForm):
+    name = StringField('Add menu：', validators=[DataRequired()])
+    submit = SubmitField('完成')
+
+
 class CarouselForm(FlaskForm):
     title = StringField('Title：', validators=[DataRequired()])
     img = StringField('Cover：', validators=[DataRequired()])

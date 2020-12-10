@@ -102,6 +102,63 @@ def add_tag():
     return render_template('admin/add_tag.html', title="Add Tag", form=form)
 
 
+@app.route('/add_menu', methods=['GET', 'POST'])
+def add_menu():
+    return render_template('admin/add_menu.html', title="Add Menu")
+
+
+@app.route('/add_hkmenu', methods=['GET', 'POST'])
+def add_hkmenu():
+    form = MenuForm()
+    if form.validate_on_submit():
+        menus = hkmenu(
+            name=form.name.data
+        )
+        db.session.add(menus)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('admin/add_hkmenu.html', title="Add Menu", form=form)
+
+
+@app.route('/add_travelmenu', methods=['GET', 'POST'])
+def add_travelmenu():
+    form = MenuForm()
+    if form.validate_on_submit():
+        menus = travelmenu(
+            name=form.name.data
+        )
+        db.session.add(menus)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('admin/add_travelmenu.html', title="Add Menu", form=form)
+
+
+@app.route('/add_foodmenu', methods=['GET', 'POST'])
+def add_foodmenu():
+    form = MenuForm()
+    if form.validate_on_submit():
+        menus = foodmenu(
+            name=form.name.data
+        )
+        db.session.add(menus)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('admin/add_foodmenu.html', title="Add Menu", form=form)
+
+
+@app.route('/add_beautymenu', methods=['GET', 'POST'])
+def add_beautymenu():
+    form = MenuForm()
+    if form.validate_on_submit():
+        menus = beautymenu(
+            name=form.name.data
+        )
+        db.session.add(menus)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('admin/add_beautymenu.html', title="Add Menu", form=form)
+
+
 @app.route('/add_author', methods=['GET', 'POST'])
 def add_author():
     form = AuthorForm()
@@ -301,7 +358,8 @@ def blog():
 
 @app.route('/hk', methods=['GET', 'POST'])
 def hk():
-    return render_template('hk/hk.html', title="港生活")
+    menus = hkmenu.query.order_by(hkmenu.name).all()
+    return render_template('hk/hk.html', title="港生活", menus=menus)
 
 
 @app.route('/travel', methods=['GET', 'POST'])
