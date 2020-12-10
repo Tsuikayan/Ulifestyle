@@ -295,7 +295,7 @@ def blog():
         'link12': 'https://blog.ulifestyle.com.hk/blogger/?s=%23digital%20marketing&scope=tag',
         'link13': 'https://blog.ulifestyle.com.hk/blogger/?s=%23SMS%20Cosmetics%20%23NEO%20%23%E8%86%A0%E5%8E%9F%20%23Beauty%20%23Skincare%20%23Annielittlecake%20%23hbgxo%20%23hbgxoxo&scope=tag',
     }
-    return render_template('blog.html', title="博客主頁", slides=slides, publish=publish, popular=popular, travel=travel,
+    return render_template('blog/blog.html', title="博客主頁", slides=slides, publish=publish, popular=popular, travel=travel,
                            food=food, beauty=beauty, blogger=blogger, rank=rank, comment=comment, tag=tag)
 
 
@@ -343,7 +343,7 @@ def profile():
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('profile'))
-    return render_template('profile.html', title="個人檔案", form=form)
+    return render_template('auth/profile.html', title="個人檔案", form=form)
 
 
 @app.route('/add_hkpost', methods=['GET', 'POST'])
