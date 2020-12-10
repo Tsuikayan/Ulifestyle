@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="779545dc-30ee-4a93-9bf4-2548b78af41f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base3_1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/errors/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/errors/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base3.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/base3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/reset_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ulifestyle_folder/app/templates/reset_password_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/app/templates/reset_password_request.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ulifestyle_folder/logs/microblog.log" beforeDir="false" afterPath="$PROJECT_DIR$/ulifestyle_folder/logs/microblog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/dominate/tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/dominate/tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/nav.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/nav.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/static/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/static/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_bootstrap/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/filters/optionaltags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/filters/optionaltags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/html5parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/html5lib/html5parser.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,36 +21,101 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Ulifestyle2$ulifetyle.coverage" NAME="ulifetyle Coverage Results" MODIFIED="1586631723229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ulifestyle_folder" />
-    <SUITE FILE_PATH="coverage/Ulifestyle$ulifestyle.coverage" NAME="ulifestyle Coverage Results" MODIFIED="1587222092207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Ulifestyle$ulifestyle.coverage" NAME="ulifestyle Coverage Results" MODIFIED="1607589566423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ulifestyle_folder" />
     <SUITE FILE_PATH="coverage/Ulifestyle$app.coverage" NAME="app Coverage Results" MODIFIED="1587212124024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ulifestyle_folder/app" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="app.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1589479405">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="5" />
-          <entry key="py" value="3" />
+          <entry key="author" value="3" />
+          <entry key="beautypost" value="1" />
+          <entry key="carousel" value="1" />
+          <entry key="foodpost" value="3" />
+          <entry key="gitignore" value="1" />
+          <entry key="hkpost" value="2" />
+          <entry key="html" value="81" />
+          <entry key="png" value="2" />
+          <entry key="post" value="2" />
+          <entry key="py" value="25" />
+          <entry key="sql" value="7" />
+          <entry key="tag" value="1" />
+          <entry key="travelpost" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="5" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="Database Element" value="14" />
+          <entry key="HTML" value="81" />
+          <entry key="Image" value="2" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="25" />
+          <entry key="SQL" value="5" />
+          <entry key="Scratch" value="2" />
           <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="23" />
+          <entry key="dummy" value="11" />
+          <entry key="html" value="816" />
+          <entry key="py" value="1035" />
+          <entry key="sql" value="497" />
+          <entry key="txt" value="67" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="816" />
+          <entry key="PLAIN_TEXT" value="78" />
+          <entry key="Python" value="1035" />
+          <entry key="SQL" value="497" />
+          <entry key="Scratch" value="23" />
         </counts>
       </usages-collector>
     </session>
@@ -111,48 +174,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html">
+        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="2057">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/blog.html">
+        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="476">
+              <caret line="308" column="29" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="e#0#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>blog</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,6 +222,29 @@
         <option value="$PROJECT_DIR$/ulifestyle_folder/app/app.py" />
         <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html" />
         <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/blog.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_author.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base1.2.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/hk.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/menu/hk_menu.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base1_2.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk_menu.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_post.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base1.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk_base.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/food/food_base.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/beauty/beauty_base.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/travel/travel_base.html" />
+        <option value="460961fb-f602-4093-902c-269337f80c70/schema/main/table/hkpost.sql" />
+        <option value="460961fb-f602-4093-902c-269337f80c70/schema/main/table/foodpost.sql" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/forms.py" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_foodpost.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_hkpost.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_beautypost.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_travelpost.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/routes.py" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index.html" />
+        <option value="$PROJECT_DIR$/ulifestyle_folder/app/models.py" />
       </list>
     </option>
   </component>
@@ -173,45 +254,67 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1107" />
-    <option name="width" value="1158" />
-    <option name="height" value="1455" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="width" value="1167" />
+    <option name="height" value="1452" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Ulifestyle - Copy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ulifestyle - Copy" type="462c0819:PsiDirectoryNode" />
+              <item name="Ulifestyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ulifestyle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Ulifestyle - Copy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ulifestyle - Copy" type="462c0819:PsiDirectoryNode" />
+              <item name="Ulifestyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ulifestyle" type="462c0819:PsiDirectoryNode" />
               <item name="ulifestyle_folder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ulifestyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ulifestyle" type="462c0819:PsiDirectoryNode" />
+              <item name="ulifestyle_folder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ulifestyle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ulifestyle" type="462c0819:PsiDirectoryNode" />
+              <item name="ulifestyle_folder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ulifestyle2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\admin" />
       <recent name="C:\Users\kirac\PycharmProjects\Ulifestyle" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\blog" />
+      <recent name="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\auth" />
+      <recent name="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\hk" />
+      <recent name="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\templates\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -249,6 +352,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unnamed" type="Python.FlaskServer" factoryName="Flask server">
+      <option name="additionalOptions" value="" />
+      <option name="application" value="" />
+      <module name="Ulifestyle" />
+      <option name="target" value="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\fungz\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Python.FlaskServer" factoryName="Flask server">
       <option name="additionalOptions" value="" />
       <option name="application" value="" />
@@ -270,13 +390,13 @@
       <option name="additionalOptions" value="" />
       <option name="application" value="" />
       <module name="Ulifestyle" />
-      <option name="target" value="C:\Users\kirac\PycharmProjects\Ulifestyle\ulifestyle_folder\app\app.py" />
+      <option name="target" value="C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\run.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\fungz\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ulifestyle_folder" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -285,6 +405,7 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.ulifestyle" />
+      <item itemvalue="Flask server.Unnamed" />
       <item itemvalue="Python.app" />
     </list>
     <recent_temporary>
@@ -307,32 +428,60 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1519" height="977" extended-state="7" />
+    <frame x="-8" y="0" width="778" height="968" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26936257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.216" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905483" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28004667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32938388" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32905483" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50066936" side_tool="true" weight="0.32603687" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49933067" weight="0.27421236" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.32198954" />
       <window_info anchor="right" id="R Graphics" order="5" />
       <window_info anchor="right" id="R Packages" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657068" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32949308" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28004667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32905483" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50066936" side_tool="true" weight="0.32603687" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49933067" weight="0.27421236" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3298731" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.5235602" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -341,20 +490,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin_ver/base.html" />
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/models.py" />
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin_ver/check_result.html" />
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/auth/register.html" />
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin_ver/add_video.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin_ver/add_article.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -362,37 +497,289 @@
     <entry file="file://$PROJECT_DIR$/ulifestyle_folder/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/blog.html">
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base1.html" />
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/register.html" />
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/blog/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
-          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/author">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/tag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/alembic/templates/hk.html" />
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index_video.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/carousel">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base3.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index_beauty.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/auth/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/auth/reset_password.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base3_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index_hk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sqlalchemy/engine/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1247" selection-start-line="1247" selection-end-line="1247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/travel/travel_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/beauty/beauty_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/hk/hk_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/food/food_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/460961fb-f602-4093-902c-269337f80c70/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/foodpost.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/hkpost.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="244" column="80" selection-start-line="244" selection-start-column="80" selection-end-line="244" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_foodpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_travelpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2669">
+          <caret line="157" column="35" lean-forward="true" selection-start-line="157" selection-start-column="35" selection-end-line="157" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_beautypost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="103" column="43" lean-forward="true" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/foodpost">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/travelpost">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/hkpost">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/admin/add_hkpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://460961fb-f602-4093-902c-269337f80c70/schema/main/table/beautypost">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/auth/profile.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/home_page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5797">
+          <caret line="341" column="16" selection-start-line="341" selection-start-column="16" selection-end-line="341" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/templates/base/base1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/uploads/155439_c5ee0ef1b3d3c76b614b20da3f6f6220.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/uploads/screencapture-127-0-0-1-5000-1588320986112.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ulifestyle_folder/app/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="308" column="29" selection-start-line="308" selection-start-column="29" selection-end-line="308" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
