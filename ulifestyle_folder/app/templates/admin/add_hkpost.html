@@ -126,19 +126,21 @@
                           {% endfor %}
                         </p>
                   </div>
-                  <div class="input-group mb-3" style="margin-top: 20px;">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="video" onchange="fileChange(event)">
-                      <label id="fileNameLabel" class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
-
+                  <div class="media-body">
+                        <p>
+                          {{ form.body1.label(class="font-weight-bold") }}<br>
+                          {{ form.body1(size=32, class="form-control", rows="5") }}
+                          {% for error in form.body1.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
                   </div>
 
                       <div class="media-body">
                         <p>
-                          {{ form.body2.label(class="font-weight-bold") }}<br>
-                          {{ form.body2(size=32, class="form-control", rows="5") }}
-                          {% for error in form.body2.errors %}
+                          {{ form.video.label(class="font-weight-bold") }}<br>
+                          {{ form.video(size=32, class="form-control", rows="5") }}
+                          {% for error in form.video.errors %}
                               <span style="color: red;">{{ error }}</span>
                           {% endfor %}
                         </p>

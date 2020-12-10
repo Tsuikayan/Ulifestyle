@@ -240,9 +240,10 @@ class PostForm(FlaskForm):
     author = QuerySelectField('作者', query_factory=author_query, allow_blank=True, get_label="username")
     body1 = StringField('主旨')
     body2 = TextAreaField('內文')
+    video = StringField('影片連結')
     theme = StringField('主題')
     tag = StringField('標籤')
-    type = SelectField(choices=[('video', 'video影片'), ('article', 'article文章')])
+    type = StringField('type')
     submit = SubmitField('發佈')
 
 

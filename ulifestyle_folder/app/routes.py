@@ -360,14 +360,11 @@ def add_hkpost():
               tag=form.tag.data,
               type=form.type.data)
         else:
-          videoFile = request.files['video']
-          videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = hkpost(
+          posts = hkvideopost(
               author=form.author.query,
               title=form.title.data,
-              body1="uploads/" + secure_filename(videoFile.filename),
-              body2=form.body2.data,
-              type=form.type.data)
+              video=form.video.data,
+              body1=form.body1.data)
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('hk'))
@@ -388,14 +385,11 @@ def add_foodpost():
               tag=form.tag.data,
               type=form.type.data)
         else:
-          videoFile = request.files['video']
-          videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = foodpost(
+          posts = foodvideopost(
               author=form.author.query,
               title=form.title.data,
-              body1="uploads/" + secure_filename(videoFile.filename),
-              body2=form.body2.data,
-              type=form.type.data)
+              video=form.video.data,
+              body1=form.body1.data)
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('food'))
@@ -416,17 +410,14 @@ def add_travelpost():
               tag=form.tag.data,
               type=form.type.data)
         else:
-          videoFile = request.files['video']
-          videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = travelpost(
+          posts = travelvideopost(
               author=form.author.query,
               title=form.title.data,
-              body1="uploads/" + secure_filename(videoFile.filename),
-              body2=form.body2.data,
-              type=form.type.data)
+              video=form.video.data,
+              body1=form.body1.data)
         db.session.add(posts)
         db.session.commit()
-        return redirect(url_for('hk'))
+        return redirect(url_for('travel'))
     return render_template('admin/add_travelpost.html', title="新增貼文", form=form)
 
 
@@ -444,17 +435,14 @@ def add_beautypost():
               tag=form.tag.data,
               type=form.type.data)
         else:
-          videoFile = request.files['video']
-          videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          posts = beautypost(
+          posts = beautyvideopost(
               author=form.author.query,
               title=form.title.data,
-              body1="uploads/" + secure_filename(videoFile.filename),
-              body2=form.body2.data,
-              type=form.type.data)
+              video=form.video.data,
+              body1=form.body1.data)
         db.session.add(posts)
         db.session.commit()
-        return redirect(url_for('hk'))
+        return redirect(url_for('beauty'))
     return render_template('admin/add_beautypost.html', title="新增貼文", form=form)
 
 

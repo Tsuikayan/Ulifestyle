@@ -76,7 +76,7 @@ class hkpost(UserMixin, db.Model):
     type = db.Column(db.String(10), nullable=False)
 
     def __repr__(self):
-        return '<hkpost {}>'.format(self.body)
+        return '<hkpost {}>'.format(self.title)
 
 
 class foodpost(UserMixin, db.Model):
@@ -91,7 +91,7 @@ class foodpost(UserMixin, db.Model):
     type = db.Column(db.String(10), nullable=False)
 
     def __repr__(self):
-        return '<foodpost {}>'.format(self.body)
+        return '<foodpost {}>'.format(self.title)
 
 
 class travelpost(db.Model):
@@ -106,7 +106,7 @@ class travelpost(db.Model):
     type = db.Column(db.String(10), nullable=False)
 
     def __repr__(self):
-        return '<travelpost {}>'.format(self.body)
+        return '<travelpost {}>'.format(self.title)
 
 
 class beautypost(UserMixin, db.Model):
@@ -121,7 +121,55 @@ class beautypost(UserMixin, db.Model):
     type = db.Column(db.String(10), nullable=False)
 
     def __repr__(self):
-        return '<beautypost {}>'.format(self.body)
+        return '<beautypost {}>'.format(self.title)
+
+
+class hkvideopost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    video = db.Column(db.String(100), nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+
+    def __repr__(self):
+        return '<hkvideopost {}>'.format(self.title)
+
+
+class foodvideopost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    video = db.Column(db.String(100), nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+
+    def __repr__(self):
+        return '<foodvideopost {}>'.format(self.title)
+
+
+class travelvideopost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    video = db.Column(db.String(100), nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+
+    def __repr__(self):
+        return '<travelvideopost {}>'.format(self.title)
+
+
+class beautyvideopost(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), nullable=False)
+    author = db.Column(db.ForeignKey(author.username), nullable=True)
+    body1 = db.Column(db.String(100), nullable=True)
+    video = db.Column(db.String(100), nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow, nullable=True)
+
+    def __repr__(self):
+        return '<beautyvideopost {}>'.format(self.title)
 
 
 class tag(db.Model):
