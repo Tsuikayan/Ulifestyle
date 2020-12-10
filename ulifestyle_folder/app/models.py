@@ -192,9 +192,9 @@ class carousel(db.Model):
 
 class mediaapp(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    mediatype = db.Column(db.String)
+    mediatype = db.Column(db.String(20))
     hyperlink = db.Column(db.String)
-    side = db.Column(db.String)
+    side = db.Column(db.String(10), nullable=True)
 
     def _repr_(self):
         return '< mediaapp{}>'.format(self.mediatype)
@@ -202,12 +202,43 @@ class mediaapp(db.Model):
 
 class contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    contype = db.Column(db.String)
-    conway = db.Column(db.String)
+    contype = db.Column(db.String(10))
+    conway = db.Column(db.String(30))
     phoneno = db.Column(db.Integer)
     email = db.Column(db.String)
-    address= db.Column(db.String)
-    hyperlink = db.Column(db.String)
+    address = db.Column(db.String)
 
     def _repr_(self):
         return '< contact{}>'.format(self.contype)
+
+
+class hkmenu(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20), index=True)
+
+    def __repr__(self):
+        return '<hkmenu {}>'.format(self.name)
+
+
+class travelmenu(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20), index=True)
+
+    def __repr__(self):
+        return '<travelmenu {}>'.format(self.name)
+
+
+class foodmenu(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20), index=True)
+
+    def __repr__(self):
+        return '<foodmenu {}>'.format(self.name)
+
+
+class beautymenu(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20), index=True)
+
+    def __repr__(self):
+        return '<beautymenu {}>'.format(self.name)
