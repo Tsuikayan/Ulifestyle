@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
 from app.forms import *
 from app import app, db
-from app.models import User, Post, Tag, Carousel, Author
+from app.models import *
 
 
 bootstrap = Bootstrap()
@@ -18,8 +18,8 @@ ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
 @app.route('/')
 @app.route('/index')
 def index():
-    tags = Tag.query.order_by(Tag.tag).all()
-    slides = Carousel.query.order_by(Carousel.id.desc()).all()
+    tags = tag.query.order_by(tag.tag).all()
+    slides = carousel.query.order_by(carousel.id.desc()).all()
     title1 = "title"
     img = "https://www.ulifestyle.com.hk/store/content/video_form/thumbnail/small/202004/9d2538357fe708d454a2c83abc889073.jpg"
     icon = "https://blog.ulifestyle.com.hk/travel_blogger/wp-content/uploads/avatars/40000/800000090/1495357286-bpfull.jpg"
@@ -93,10 +93,10 @@ def index():
 def add_tag():
     form = TagForm()
     if form.validate_on_submit():
-        tag = Tag(
+        tags = tag(
             tag=form.tag.data
         )
-        db.session.add(tag)
+        db.session.add(tags)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('admin/add_tag.html', title="Add Tag", form=form)
@@ -106,10 +106,11 @@ def add_tag():
 def add_author():
     form = AuthorForm()
     if form.validate_on_submit():
-        author = Author(
-            username=form.username.data
+        authors = author(
+            username=form.username.data,
+            usergroup=form.usergroup.data
         )
-        db.session.add(author)
+        db.session.add(authors)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('admin/add_author.html', title="Add Author", form=form)
@@ -119,12 +120,12 @@ def add_author():
 def edit_carousel():
     form = CarouselForm()
     if form.validate_on_submit():
-        carousel = Carousel(
+        carousels = carousel(
             title=form.title.data,
             img=form.img.data,
             link=form.link.data
         )
-        db.session.add(carousel)
+        db.session.add(carousels)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('admin/edit_carousel.html', title="Edit Carousel", form=form)
@@ -134,7 +135,7 @@ def edit_carousel():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(
+        users = user(
             username=form.username.data,
             email=form.email.data,
             gender=form.gender.data,
@@ -146,8 +147,8 @@ def register():
             income=form.income.data,
             usergroup=form.usergroup.data,
             getinfo=form.getinfo.data)
-        user.set_password(form.password.data)
-        db.session.add(user)
+        users.set_password(form.password.data)
+        db.session.add(users)
         db.session.commit()
         return redirect(url_for('login'))
     return render_template('auth/register.html', title="會員登記", form=form)
@@ -159,10 +160,10 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
+        users = user.query.filter_by(username=form.username.data).first()
+        if users is None or not users.check_password(form.password.data):
             return redirect(url_for('login'))
-        login_user(user, remember=form.remember_me.data)
+        login_user(users, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
@@ -174,12 +175,12 @@ def login():
 def reset_password(token):
     if current_user.is_authenticated:
         return redirect(url_for('index'))
-    user = User.verify_reset_password_token(token)
-    if not user:
+    users = user.verify_reset_password_token(token)
+    if not users:
         return redirect(url_for('index'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
-        user.set_password(form.password.data)
+        users.set_password(form.password.data)
         db.session.commit()
         return redirect(url_for('login'))
     return render_template('auth/reset_password.html', title="重設密碼", form=form)
@@ -191,9 +192,9 @@ def reset_password_request():
         return redirect(url_for('index'))
     form = ResetPasswordRequestForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
-        if user:
-            send_password_reset_email(user)
+        users = user.query.filter_by(email=form.email.data).first()
+        if users:
+            send_password_reset_email(users)
         return redirect(url_for('login'))
     return render_template('auth/reset_password_request.html',
                            title='忘記密碼', form=form)
@@ -294,7 +295,7 @@ def blog():
         'link12': 'https://blog.ulifestyle.com.hk/blogger/?s=%23digital%20marketing&scope=tag',
         'link13': 'https://blog.ulifestyle.com.hk/blogger/?s=%23SMS%20Cosmetics%20%23NEO%20%23%E8%86%A0%E5%8E%9F%20%23Beauty%20%23Skincare%20%23Annielittlecake%20%23hbgxo%20%23hbgxoxo&scope=tag',
     }
-    return render_template('blog.html', title="博客主頁", slides=slides, publish=publish, popular=popular, travel=travel,
+    return render_template('blog/blog.html', title="博客主頁", slides=slides, publish=publish, popular=popular, travel=travel,
                            food=food, beauty=beauty, blogger=blogger, rank=rank, comment=comment, tag=tag)
 
 
@@ -342,37 +343,119 @@ def profile():
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('profile'))
-    return render_template('profile.html', title="個人檔案", form=form)
+    return render_template('auth/profile.html', title="個人檔案", form=form)
 
 
-@app.route('/add_post', methods=['GET', 'POST'])
-def add_post():
+@app.route('/add_hkpost', methods=['GET', 'POST'])
+def add_hkpost():
     form = PostForm()
     if form.validate_on_submit():
         if(form.type.data == "article"):
-          post = Post(
-              author=form.author.data,
+          posts = hkpost(
+              author=form.author.query,
               theme=form.theme.data,
               title=form.title.data,
               body1=form.body1.data,
               body2=form.body2.data,
               tag=form.tag.data,
-              site=form.site.data,
               type=form.type.data)
         else:
           videoFile = request.files['video']
           videoFile.save("uploads/" + secure_filename(videoFile.filename))
-          post = Post(
-              author=form.author.data,
+          posts = hkpost(
+              author=form.author.query,
               title=form.title.data,
               body1="uploads/" + secure_filename(videoFile.filename),
               body2=form.body2.data,
-              site=form.site.data,
               type=form.type.data)
-        db.session.add(post)
+        db.session.add(posts)
         db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('admin/add_post.html', title="新增貼文", form=form)
+        return redirect(url_for('hk'))
+    return render_template('admin/add_hkpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_foodpost', methods=['GET', 'POST'])
+def add_foodpost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = foodpost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = foodpost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('food'))
+    return render_template('admin/add_foodpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_travelpost', methods=['GET', 'POST'])
+def add_travelpost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = travelpost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = travelpost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('hk'))
+    return render_template('admin/add_travelpost.html', title="新增貼文", form=form)
+
+
+@app.route('/add_beautypost', methods=['GET', 'POST'])
+def add_beautypost():
+    form = PostForm()
+    if form.validate_on_submit():
+        if(form.type.data == "article"):
+          posts = beautypost(
+              author=form.author.query,
+              theme=form.theme.data,
+              title=form.title.data,
+              body1=form.body1.data,
+              body2=form.body2.data,
+              tag=form.tag.data,
+              type=form.type.data)
+        else:
+          videoFile = request.files['video']
+          videoFile.save("uploads/" + secure_filename(videoFile.filename))
+          posts = beautypost(
+              author=form.author.query,
+              title=form.title.data,
+              body1="uploads/" + secure_filename(videoFile.filename),
+              body2=form.body2.data,
+              type=form.type.data)
+        db.session.add(posts)
+        db.session.commit()
+        return redirect(url_for('hk'))
+    return render_template('admin/add_beautypost.html', title="新增貼文", form=form)
 
 
 if __name__ == '__main__':

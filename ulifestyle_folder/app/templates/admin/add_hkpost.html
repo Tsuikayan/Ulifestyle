@@ -1,0 +1,172 @@
+{% extends "hk/hk_base.html" %}
+
+{% block content %}
+
+<html>
+<body>
+
+
+    <nav style="margin-top: 100px;">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-article-tab" data-toggle="tab" href="#nav-article" role="tab" aria-controls="nav-home" aria-selected="article">Article</a>
+            <a class="nav-item nav-link" id="nav-video-tab" data-toggle="tab" href="#nav-video" role="tab" aria-controls="nav-profile" aria-selected="vidoe">Vidoe</a>
+          </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-article" role="tabpanel" aria-labelledby="nav-article-tab">
+            <div class="w-50 mx-auto mt-2">
+              <form action="" enctype='multipart/form-data' method="post">
+                {{ form.hidden_tag() }}
+                <div class="card">
+                  <div class="card-header">
+                    建立貼文 - HK
+                  </div>
+                  <div class="card-body">
+                    <div class="media-body" style="margin: 20px auto 20px;">
+                      <div class="float-right">
+                        <label class="font-weight-light small">(只限50中文字以內)</label>
+                      </div>
+                      <p>
+                        {{ form.title.label(class="font-weight-bold") }}<br>
+                        {{ form.title(size=32, class="form-control", rows="2", placeholder="title....") }}
+                        {% for error in form.title.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </p>
+                    </div>
+                      <div class="media-body" style="margin: 20px auto 20px;">
+                        <p>
+                          {{ form.author.label(class="font-weight-bold") }}<br>
+                          {{ form.author(class="form-control") }}
+                          {% for error in form.author.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                      </div>
+                    <div class="media-body" style="margin: 20px auto 20px;">
+                      <div class="float-right">
+                        <label class="font-weight-light small">(只限100中文字以內)</label>
+                      </div>
+                      <p>
+                        {{ form.body1.label(class="font-weight-bold") }}<br>
+                        {{ form.body1(size=32, class="form-control", rows="2", placeholder="body1....") }}
+                        {% for error in form.body1.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </p>
+                    </div>
+                    <div class="media-body">
+                      <p>
+                        {{ form.body2.label(class="font-weight-bold") }}<br>
+                        {{ form.body2(size=32, class="form-control", rows="5", placeholder="body2....") }}
+                        {% for error in form.body2.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <div class="float-right" >
+                          <label class="font-weight-light small">(只限10中文字以內)</label>
+                        </div>
+                        <p>
+                          {{ form.theme.label(class="font-weight-bold") }}<br>
+                          {{ form.theme(size=32, class="form-control", placeholder="theme....") }}
+                          {% for error in form.theme.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                    </div>
+                      <div class="float-right">
+                        <label class="font-weight-light small">(只限10中文字以內)</label>
+                      </div>
+                      <p>
+                        {{ form.tag.label(class="font-weight-bold") }}<br>
+                        {{ form.tag(size=32, class="form-control", placeholder="#....") }}
+                        {% for error in form.tag.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                      </p>
+                      <div class="card-footer text-muted">
+                        <p>{{ form.submit(class="btn btn-primary float-right") }}</p>
+                      </div>
+                      <input type="hidden" name="type" value="article" />
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
+            <div class="w-50 mx-auto mt-2">
+              <form action="" enctype='multipart/form-data' method="post">
+                {{ form.hidden_tag() }}
+                <div class="card">
+                  <div class="card-header">
+                    建立影片 - HK
+                  </div>
+                    <div class="card-body">
+                  <div style="margin-top: 20px;">
+                    <div class="float-right">
+                      <label class="font-weight-light small">(只限50中文字以內)</label>
+                    </div>
+                    <p>
+                      {{ form.title.label(class="font-weight-bold") }}<br>
+                      {{ form.title(size=32, class="form-control", rows="2", placeholder="title....") }}
+                      {% for error in form.title.errors %}
+                          <span style="color: red;">{{ error }}</span>
+                      {% endfor %}
+                    </p>
+                  </div>
+                  <div class="media-body" style="margin: 20px auto 20px;">
+                        <p>
+                          {{ form.author.label(class="font-weight-bold") }}<br>
+                          {{ form.author(class="form-control") }}
+                          {% for error in form.author.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                  </div>
+                  <div class="input-group mb-3" style="margin-top: 20px;">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="video" onchange="fileChange(event)">
+                      <label id="fileNameLabel" class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+
+                  </div>
+
+                      <div class="media-body">
+                        <p>
+                          {{ form.body2.label(class="font-weight-bold") }}<br>
+                          {{ form.body2(size=32, class="form-control", rows="5") }}
+                          {% for error in form.body2.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </p>
+                      </div>
+                    </div>
+
+                  <div class="card-footer text-muted">
+                    <p>{{ form.submit(class="btn btn-primary float-right") }}</p>
+                  </div>
+                  <input type="hidden" name="type" value="video" />
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fileChange(event){
+            document.getElementById("fileNameLabel").innerText = event.target.files[0].name;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<style>
+
+
+</style>
+{% endblock %}

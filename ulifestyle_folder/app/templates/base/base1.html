@@ -42,12 +42,7 @@
         </ul>
       </div>
 
-      {% if current_user.usergroup == "admin" or current_user.usergroup == "author" %}
-          <a class="nav-link" href="{{url_for('add_post')}}">
-              <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
-              <span id="download-app">新增貼文</span>
-          </a>
-      {% endif %}
+
       {% if current_user.usergroup == "admin" %}
           <a class="nav-link" href="{{url_for('add_author')}}">
               <img src="https://member.ulifestyle.com.hk/images/v2/btn_upload.png" width="35" height="35" style="position: relative; right: 10px;">
