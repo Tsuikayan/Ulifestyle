@@ -7,9 +7,6 @@ import jwt
 from app import app, db, login
 
 
-db = SQLAlchemy(app)
-
-
 class user(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), index=True, unique=True)
@@ -97,7 +94,7 @@ class foodpost(UserMixin, db.Model):
         return '<foodpost {}>'.format(self.body)
 
 
-class travelpost(UserMixin, db.Model):
+class travelpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
     author = db.Column(db.ForeignKey(author.username), nullable=True)
