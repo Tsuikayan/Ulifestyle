@@ -91,3 +91,5 @@ Traceback (most recent call last):
   File "C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\routes.py", line 361, in add_hkpost
     site=form.site.data,
 AttributeError: 'PostForm' object has no attribute 'site'
+2020-12-10 15:55:18,887 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]
+2020-12-10 16:25:25,341 INFO: Microblog startup [in C:\Users\fungz\PycharmProjects\Ulifestyle\ulifestyle_folder\app\__init__.py:46]

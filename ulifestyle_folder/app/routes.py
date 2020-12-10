@@ -414,7 +414,6 @@ def add_travelpost():
               body1=form.body1.data,
               body2=form.body2.data,
               tag=form.tag.data,
-              site=form.site.data,
               type=form.type.data)
         else:
           videoFile = request.files['video']
@@ -424,7 +423,6 @@ def add_travelpost():
               title=form.title.data,
               body1="uploads/" + secure_filename(videoFile.filename),
               body2=form.body2.data,
-              site=form.site.data,
               type=form.type.data)
         db.session.add(posts)
         db.session.commit()
