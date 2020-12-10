@@ -145,17 +145,17 @@ class carousel(db.Model):
         return '< Carousel{}>'.format(self.title)
 
 
-class MediaApp(db.Model):
+class mediaapp(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     mediatype = db.Column(db.String)
     hyperlink = db.Column(db.String)
     side = db.Column(db.String)
 
     def _repr_(self):
-        return '< MediaApp{}>'.format(self.mediatype)
+        return '< mediaapp{}>'.format(self.mediatype)
 
 
-class Contact(db.Model):
+class contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     contype = db.Column(db.String)
     conway = db.Column(db.String)
@@ -165,4 +165,4 @@ class Contact(db.Model):
     hyperlink = db.Column(db.String)
 
     def _repr_(self):
-        return '< Contact{}>'.format(self.contype)
+        return '< contact{}>'.format(self.contype)
