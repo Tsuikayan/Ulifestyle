@@ -368,7 +368,7 @@ def add_hkpost():
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('hk'))
-    return render_template('admin/add_hkpost.html', title="新增貼文", form=form)
+    return render_template('admin/add_post/add_hkpost.html', title="新增貼文", form=form)
 
 
 @app.route('/add_foodpost', methods=['GET', 'POST'])
@@ -393,7 +393,7 @@ def add_foodpost():
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('food'))
-    return render_template('admin/add_foodpost.html', title="新增貼文", form=form)
+    return render_template('admin/add_post/add_foodpost.html', title="新增貼文", form=form)
 
 
 @app.route('/add_travelpost', methods=['GET', 'POST'])
@@ -418,7 +418,7 @@ def add_travelpost():
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('travel'))
-    return render_template('admin/add_travelpost.html', title="新增貼文", form=form)
+    return render_template('admin/add_post/add_travelpost.html', title="新增貼文", form=form)
 
 
 @app.route('/add_beautypost', methods=['GET', 'POST'])
@@ -443,7 +443,7 @@ def add_beautypost():
         db.session.add(posts)
         db.session.commit()
         return redirect(url_for('beauty'))
-    return render_template('admin/add_beautypost.html', title="新增貼文", form=form)
+    return render_template('admin/add_post/add_beautypost.html', title="新增貼文", form=form)
 
 
 if __name__ == '__main__':
