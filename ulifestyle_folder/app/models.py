@@ -101,3 +101,26 @@ class Carousel(db.Model):
 
     def _repr_(self):
         return '< Carousel{}>'.format(self.title)
+
+
+class MediaApp(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    mediatype = db.Column(db.String)
+    hyperlink = db.Column(db.String)
+    side = db.Column(db.String)
+
+    def _repr_(self):
+        return '< MediaApp{}>'.format(self.mediatype)
+
+
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    contype = db.Column(db.String)
+    conway = db.Column(db.String)
+    phoneno = db.Column(db.Integer)
+    email = db.Column(db.String)
+    address= db.Column(db.String)
+    hyperlink = db.Column(db.String)
+
+    def _repr_(self):
+        return '< Contact{}>'.format(self.contype)
